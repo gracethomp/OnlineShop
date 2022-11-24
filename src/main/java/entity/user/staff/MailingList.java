@@ -1,4 +1,4 @@
-package entity;
+package entity.user.staff;
 
 public class MailingList {
     private boolean newsAlert;

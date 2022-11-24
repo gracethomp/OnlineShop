@@ -1,9 +1,11 @@
-package entity;
+package entity.lists;
+
+import entity.Product;
 
 import java.util.List;
 
 public abstract class ListForUsers {
-    List<Product> products;
+    private List<Product> products;
 
     public void clear() {
         products.clear();

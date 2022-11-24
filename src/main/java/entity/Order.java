@@ -4,6 +4,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class Order {
+    //private Client client;
     private List<Product> products;
     private String recipientName;
     private String recipientSurname;
@@ -12,9 +13,10 @@ public class Order {
     private double totalPrice;
     private String wayToPay;
     private String promocode;
+    private String status;
     public Order() {}
-    public Order(String recipientName, String recipientSurname, String location, String post,
-                 double totalPrice, String wayToPay, String promocode) {
+    public Order(String recipientName, String recipientSurname, String location,
+                 String post, double totalPrice, String wayToPay, String promocode, String status) {
         this.recipientName = recipientName;
         this.recipientSurname = recipientSurname;
         this.location = location;
@@ -22,7 +24,8 @@ public class Order {
         this.totalPrice = totalPrice;
         this.wayToPay = wayToPay;
         this.promocode = promocode;
-        products = new ArrayList<>();
+        this.status = status;
+        this.products = new ArrayList<>();
     }
 
     public double getTotalPrice() {
@@ -51,6 +54,10 @@ public class Order {
 
     public String getRecipientSurname() {
         return recipientSurname;
+    }
+
+    public String getStatus() {
+        return status;
     }
 
     public List<Product> getProducts() {
@@ -87,5 +94,9 @@ public class Order {
 
     public void setProducts(List<Product> products) {
         this.products = products;
+    }
+
+    public void setStatus(String status) {
+        this.status = status;
     }
 }

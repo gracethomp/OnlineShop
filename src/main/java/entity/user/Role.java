@@ -1,4 +1,4 @@
-package entity;
+package entity.user;
 
 public enum Role {
     CLIENT(1), MANAGER(2), OWNER(3), ADMIN(4);

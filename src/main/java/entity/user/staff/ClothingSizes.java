@@ -1,4 +1,4 @@
-package entity;
+package entity.user.staff;
 
 import java.util.Objects;
 

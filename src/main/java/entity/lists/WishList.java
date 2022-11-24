@@ -1,6 +1,6 @@
-package entity;
+package entity.lists;
 
-public class WishList extends ListForUsers{
+public class WishList extends ListForUsers {
     String title;
     public WishList() {}
     public WishList(String title) {

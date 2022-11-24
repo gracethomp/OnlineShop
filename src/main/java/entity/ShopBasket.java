@@ -1,5 +1,8 @@
 package entity;
 
+import entity.user.Client;
+import entity.user.Manager;
+
 import java.util.List;
 
 public class ShopBasket {
@@ -12,6 +15,25 @@ public class ShopBasket {
             sum += p.getPrice();
         }
         return sum;
+    }
+
+    public void formOrder(Client client, String recipientName, String recipientSurname, String location,
+                          String post, double totalPrice, String wayToPay, Manager manager) {
+        Order order = new Order();
+        order.setClient(client);
+        order.setRecipientName(recipientName);
+        order.setRecipientSurname(recipientSurname);
+        order.setLocation(location);
+        order.setPost(post);
+        order.setTotalPrice(totalPrice);
+        order.setWayToPay(wayToPay);
+        manager.addOrderToProcess(order);
+        client.addOrder(order);
+    }
+
+    public void formOrder(Client client, String recipientName, String recipientSurname, String location,
+                          String post, double totalPrice, String wayToPay, String promocode) {
+
     }
 
     public double calculateTotalPrice(double delivery) {

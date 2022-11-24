@@ -1,4 +1,7 @@
-package entity;
+package entity.user;
+
+import entity.Review;
+import entity.user.Role;
 
 import java.util.ArrayList;
 import java.util.List;

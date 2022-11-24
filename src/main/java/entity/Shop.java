@@ -10,6 +10,7 @@ public class Shop {
     private List<Review> reviews;
     private int rating;
     private int ordersCount;
+
     public Shop() {}
     public Shop(String title, String description, int rating, int ordersCount){
         this.reviews = new ArrayList<>();
