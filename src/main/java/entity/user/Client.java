@@ -9,6 +9,7 @@ import entity.user.staff.PaymentCard;
 
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Objects;
 
 public class Client extends User {
     private String country;
@@ -27,11 +28,11 @@ public class Client extends User {
 
     public Client() {}
 
-    public Client(String name, String surname, String email, String password, String phoneNumber,
+    public Client(String name, String surname, String email, String password, String phoneNumber, String status,
                   String country, String city, String streetTitle, int streetNumber, int appartmentNumber,
                   ShopBasket shopBasket, MailingList mailingList, PaymentCard card,
                   ClothingSizes clothingSizes, SeenList seenList) {
-        super(name, surname, email, password, Role.CLIENT, phoneNumber);
+        super(name, surname, email, password, Role.CLIENT, phoneNumber, status);
         this.country = country;
         this.city = city;
         this.streetTitle = streetTitle;
@@ -157,5 +158,42 @@ public class Client extends User {
 
     public void setOrders(List<Order> orders) {
         this.orders = orders;
+    }
+
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (o == null || getClass() != o.getClass()) return false;
+        if (!super.equals(o)) return false;
+        Client client = (Client) o;
+        return super.equals(o) && streetNumber == client.streetNumber
+                && appartmentNumber == client.appartmentNumber
+                && Objects.equals(country, client.country) && Objects.equals(city, client.city)
+                && Objects.equals(streetTitle, client.streetTitle) &&
+                Objects.equals(shopBasket, client.shopBasket) && Objects.equals(mailingList, client.mailingList)
+                && Objects.equals(card, client.card) && Objects.equals(clothingSizes, client.clothingSizes)
+                && Objects.equals(wishLists, client.wishLists) && Objects.equals(seenList, client.seenList)
+                && Objects.equals(stocks, client.stocks) && Objects.equals(orders, client.orders);
+    }
+
+    @Override
+    public int hashCode() {
+        return Objects.hash(super.hashCode(), country, city, streetTitle, streetNumber,
+                appartmentNumber, shopBasket, mailingList, card, clothingSizes, wishLists, seenList, stocks, orders);
+    }
+
+    @Override
+    public String toString() {
+        return super.toString() + ", country: " + country +
+                " city: " + city +
+                ", address: " + streetTitle + " " + streetNumber + ", " + appartmentNumber +
+                "\n" + shopBasket +
+                "\n" + mailingList +
+                "\n" + card +
+                "\n" + clothingSizes +
+                "\n" + wishLists +
+                ", seenList=" + seenList +
+                ", stocks=" + stocks +
+                ", orders=" + orders;
     }
 }

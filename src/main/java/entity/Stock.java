@@ -1,6 +1,7 @@
 package entity;
 
 import java.time.LocalDate;
+import java.util.Objects;
 
 public class Stock {
     private String title;
@@ -66,5 +67,28 @@ public class Stock {
 
     public void setProductType(String productType) {
         this.productType = productType;
+    }
+
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (o == null || getClass() != o.getClass()) return false;
+        Stock stock = (Stock) o;
+        return discount == stock.discount && Objects.equals(title, stock.title)
+                && Objects.equals(dateFrom, stock.dateFrom) && Objects.equals(dateTo, stock.dateTo)
+                && Objects.equals(productType, stock.productType) && Objects.equals(description, stock.description);
+    }
+
+    @Override
+    public int hashCode() {
+        return Objects.hash(title, discount, dateFrom, dateTo, productType, description);
+    }
+
+    @Override
+    public String toString() {
+        return "Stock title is" + title +
+                ", discount " + discount + "%, Termin: " + dateFrom + "-" +
+                dateTo + ", Product types, included to stock: " + productType +
+                ", description: " + description;
     }
 }

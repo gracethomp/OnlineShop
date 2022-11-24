@@ -2,9 +2,9 @@ package entity;
 
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Objects;
 
 public class Order {
-    //private Client client;
     private List<Product> products;
     private String recipientName;
     private String recipientSurname;
@@ -98,5 +98,37 @@ public class Order {
 
     public void setStatus(String status) {
         this.status = status;
+    }
+
+    @Override
+    public String toString() {
+        return "Order has the next products: " + products +
+                "\n The recipient full name: '" + recipientName + " " + recipientSurname +
+                ", location: " + location +
+                ", post: " + post +
+                ", totalPrice: " + totalPrice +
+                ", wayToPay: " + wayToPay +
+                ", promocode: " + promocode +
+                ", status: " + status ;
+    }
+
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (o == null || getClass() != o.getClass()) return false;
+        Order order = (Order) o;
+        return Double.compare(order.totalPrice, totalPrice) == 0 &&
+                Objects.equals(products, order.products) &&
+                Objects.equals(recipientName, order.recipientName) &&
+                Objects.equals(recipientSurname, order.recipientSurname) &&
+                Objects.equals(location, order.location) && Objects.equals(post, order.post)
+                && Objects.equals(wayToPay, order.wayToPay) && Objects.equals(promocode, order.promocode)
+                && Objects.equals(status, order.status);
+    }
+
+    @Override
+    public int hashCode() {
+        return Objects.hash(products, recipientName, recipientSurname,
+                location, post, totalPrice, wayToPay, promocode, status);
     }
 }

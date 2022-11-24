@@ -1,12 +1,14 @@
 package entity.user;
 
+import entity.Order;
 import entity.Review;
-import entity.user.Role;
 
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Objects;
 
 public abstract class User {
+    private final String PHONE_NUMBER_PREFIX = "+380";
     private String name;
     private String surname;
     private String email;
@@ -14,17 +16,22 @@ public abstract class User {
     private List<Review> reviews;
     private Role role;
     private String phoneNumber;
+    private String status;
+    private List<Order> orders;
 
     public User(){}
 
-    public User(String name, String surname, String email, String password, Role role, String phoneNumber){
+    public User(String name, String surname, String email, String password,
+                Role role, String phoneNumber, String status){
         this.name = name;
         this.surname = surname;
         this.email = email;
         this.password = password;
         this.role = role;
-        this.phoneNumber = "+380" + phoneNumber;
+        this.phoneNumber = PHONE_NUMBER_PREFIX + phoneNumber;
         this.reviews = new ArrayList<>();
+        this.status = status;
+        this.orders = new ArrayList<>();
     }
 
     public void addReview(Review review) {
@@ -34,6 +41,7 @@ public abstract class User {
     public String getSurname() {
         return surname;
     }
+
     public String getName() {
         return name;
     }
@@ -58,6 +66,14 @@ public abstract class User {
         return phoneNumber;
     }
 
+    public String getStatus() {
+        return status;
+    }
+
+    public List<Order> getOrders() {
+        return orders;
+    }
+
     public void setName(String name) {
         this.name = name;
     }
@@ -75,7 +91,7 @@ public abstract class User {
     }
 
     public void setPhoneNumber(String phoneNumber) {
-        this.phoneNumber = "+380" + phoneNumber;
+        this.phoneNumber = PHONE_NUMBER_PREFIX + phoneNumber;
     }
 
     public void setReviews(List<Review> reviews) {
@@ -84,5 +100,42 @@ public abstract class User {
 
     public void setRole(Role role) {
         this.role = role;
+    }
+
+    public void setStatus(String status) {
+        this.status = status;
+    }
+
+    public void setOrders(List<Order> orders) {
+        this.orders = orders;
+    }
+
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (o == null || getClass() != o.getClass()) return false;
+        User user = (User) o;
+        return Objects.equals(name, user.name) && Objects.equals(surname, user.surname)
+                && Objects.equals(email, user.email) && Objects.equals(password, user.password)
+                && Objects.equals(reviews, user.reviews) && role == user.role
+                && Objects.equals(phoneNumber, user.phoneNumber) && Objects.equals(status, user.status)
+                && Objects.equals(orders, user.getOrders());
+    }
+
+    @Override
+    public int hashCode() {
+        return Objects.hash(name, surname, email, password, reviews, role, phoneNumber, status, orders);
+    }
+
+    @Override
+    public String toString() {
+        return "User info: \n" +
+                "name and surname: " + name + " " + surname +
+                ", email: " + email +
+                ", password: " + password +
+                ", reviews: " + reviews +
+                ", role: " + role +
+                ", phoneNumber: " + phoneNumber +
+                ", status: '" + status;
     }
 }

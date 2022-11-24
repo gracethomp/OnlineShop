@@ -3,6 +3,7 @@ package entity.lists;
 import entity.Product;
 
 import java.util.List;
+import java.util.Objects;
 
 public abstract class ListForUsers {
     private List<Product> products;
@@ -21,5 +22,23 @@ public abstract class ListForUsers {
 
     public void setProducts(List<Product> products) {
         this.products = products;
+    }
+
+    @Override
+    public String toString() {
+        return products.toString();
+    }
+
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (o == null || getClass() != o.getClass()) return false;
+        ListForUsers that = (ListForUsers) o;
+        return Objects.equals(products, that.products);
+    }
+
+    @Override
+    public int hashCode() {
+        return Objects.hash(products);
     }
 }

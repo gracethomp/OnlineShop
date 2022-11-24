@@ -10,6 +10,7 @@ public class Shop {
     private List<Review> reviews;
     private int rating;
     private int ordersCount;
+    private List<Product> products;
 
     public Shop() {}
     public Shop(String title, String description, int rating, int ordersCount){
@@ -18,11 +19,19 @@ public class Shop {
         this.description = description;
         this.rating = rating;
         this.ordersCount = ordersCount;
+        this.products = new ArrayList<>();
     }
     public void addReview(Review review) {
         reviews.add(review);
     }
 
+    public boolean addProduct(Product product){
+        return products.add(product);
+    }
+
+    public boolean deleteProduct(Product product) {
+        return products.remove(product);
+    }
     public String getTitle() {
         return title;
     }
@@ -43,6 +52,10 @@ public class Shop {
         return ordersCount;
     }
 
+    public List<Product> getProducts() {
+        return products;
+    }
+
     public void setReviews(List<Review> reviews) {
         this.reviews = reviews;
     }
@@ -61,6 +74,10 @@ public class Shop {
 
     public void setOrdersCount(int ordersCount) {
         this.ordersCount = ordersCount;
+    }
+
+    public void setProducts(List<Product> products) {
+        this.products = products;
     }
 
     @Override

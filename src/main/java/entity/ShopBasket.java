@@ -20,20 +20,23 @@ public class ShopBasket {
     public void formOrder(Client client, String recipientName, String recipientSurname, String location,
                           String post, double totalPrice, String wayToPay, Manager manager) {
         Order order = new Order();
-        order.setClient(client);
         order.setRecipientName(recipientName);
         order.setRecipientSurname(recipientSurname);
         order.setLocation(location);
         order.setPost(post);
         order.setTotalPrice(totalPrice);
         order.setWayToPay(wayToPay);
+        order.setStatus("registered");
         manager.addOrderToProcess(order);
         client.addOrder(order);
     }
 
     public void formOrder(Client client, String recipientName, String recipientSurname, String location,
-                          String post, double totalPrice, String wayToPay, String promocode) {
-
+                          String post, double totalPrice, String wayToPay, String promocode, Manager manager) {
+        Order order = new Order(recipientName, recipientSurname, location, post,
+                totalPrice, wayToPay, promocode, "registered");
+        manager.addOrderToProcess(order);
+        client.addOrder(order);
     }
 
     public double calculateTotalPrice(double delivery) {
@@ -57,5 +60,11 @@ public class ShopBasket {
 
     public void setTotalPrice(double totalPrice) {
         this.totalPrice = totalPrice;
+    }
+
+    @Override
+    public String toString() {
+        return "ShopBasket has the next products: " + products +
+                "and totalPrice " + totalPrice;
     }
 }
