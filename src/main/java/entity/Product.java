@@ -1,5 +1,7 @@
 package entity;
 
+import entity.user.Client;
+
 import java.util.List;
 import java.util.Objects;
 
@@ -20,6 +22,30 @@ public class Product {
         this.count = count;
         this.description = description;
         this.type = type;
+    }
+
+    public boolean addWayToPay(String way) {
+        return waysToPay.add(way);
+    }
+
+    public boolean deleteWayToPay(String way) {
+        return waysToPay.remove(way);
+    }
+
+    public boolean reduceCount(int countOrdered) {
+        if(countOrdered <= 0)
+            return false;
+        if((count - countOrdered) < 0)
+            throw new IllegalArgumentException();
+        count -= countOrdered;
+        return true;
+    }
+
+    public boolean addReview(Review review, Shop shop, Client client) {
+        if(client.addReview(review))
+            if(shop.addReview(review))
+                return reviews.add(review);
+        return false;
     }
 
     public String getTitle() {

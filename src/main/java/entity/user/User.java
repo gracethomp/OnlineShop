@@ -34,8 +34,8 @@ public abstract class User {
         this.orders = new ArrayList<>();
     }
 
-    public void addReview(Review review) {
-        reviews.add(review);
+    public boolean addReview(Review review) {
+        return reviews.add(review);
     }
 
     public String getSurname() {

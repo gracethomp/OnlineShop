@@ -16,6 +16,17 @@ public class Order {
     private String status;
     public Order() {}
     public Order(String recipientName, String recipientSurname, String location,
+                 String post, double totalPrice, String wayToPay, String status){
+        this.recipientName = recipientName;
+        this.recipientSurname = recipientSurname;
+        this.location = location;
+        this.post = post;
+        this.totalPrice = totalPrice;
+        this.wayToPay = wayToPay;
+        this.status = status;
+        this.products = new ArrayList<>();
+    }
+    public Order(String recipientName, String recipientSurname, String location,
                  String post, double totalPrice, String wayToPay, String promocode, String status) {
         this.recipientName = recipientName;
         this.recipientSurname = recipientSurname;

@@ -7,6 +7,7 @@ public class ClothingSizes {
     private float bust;
     private float hips;
     private float waist;
+
     public ClothingSizes() {}
     public ClothingSizes(String title, float bust, float hips, float waist) {
         if(bust <= 0 || hips <=0 || waist <= 0)

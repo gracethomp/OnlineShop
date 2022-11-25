@@ -19,14 +19,8 @@ public class ShopBasket {
 
     public void formOrder(Client client, String recipientName, String recipientSurname, String location,
                           String post, double totalPrice, String wayToPay, Manager manager) {
-        Order order = new Order();
-        order.setRecipientName(recipientName);
-        order.setRecipientSurname(recipientSurname);
-        order.setLocation(location);
-        order.setPost(post);
-        order.setTotalPrice(totalPrice);
-        order.setWayToPay(wayToPay);
-        order.setStatus("registered");
+        Order order = new Order(recipientName, recipientSurname, location, post,
+                totalPrice, wayToPay,"registered");
         manager.addOrderToProcess(order);
         client.addOrder(order);
     }

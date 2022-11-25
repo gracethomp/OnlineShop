@@ -21,8 +21,8 @@ public class Shop {
         this.ordersCount = ordersCount;
         this.products = new ArrayList<>();
     }
-    public void addReview(Review review) {
-        reviews.add(review);
+    public boolean addReview(Review review) {
+        return reviews.add(review);
     }
 
     public boolean addProduct(Product product){

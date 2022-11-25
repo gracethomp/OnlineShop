@@ -52,6 +52,15 @@ public class Client extends User {
         return orders.add(order);
     }
 
+    public boolean deleteCard() {
+        if(card.getCVV() != 0 && card.getMonth() != 0 && card.getNumber() != 0 && card.getYear() != 0) {
+            card = new PaymentCard();
+            return true;
+        }
+        else
+            return false;
+    }
+
     public boolean createWishList(WishList wishList) {
         return wishLists.add(wishList);
     }

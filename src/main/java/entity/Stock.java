@@ -10,6 +10,7 @@ public class Stock {
     private LocalDate dateTo;
     private String productType;
     private String description;
+
     public Stock(){}
     public Stock(String title, int discount, LocalDate dateFrom,
                  LocalDate dateTo, String productType, String description) {
