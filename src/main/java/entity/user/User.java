@@ -7,8 +7,9 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.Objects;
 
-public abstract class User {
+public abstract class User implements IComment{
     private final String PHONE_NUMBER_PREFIX = "+380";
+
     private String name;
     private String surname;
     private String email;

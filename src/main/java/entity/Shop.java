@@ -1,10 +1,12 @@
 package entity;
 
+import entity.user.IComment;
+
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Objects;
 
-public class Shop {
+public class Shop implements IComment {
     private String title;
     private String description;
     private List<Review> reviews;

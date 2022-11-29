@@ -1,8 +1,11 @@
 package entity;
 
-public class Review {
+import entity.user.User;
+
+public abstract class Review {
     private String comment;
     private int rating;
+
     public Review(){}
     public Review(String comment, int rating) {
         this.comment = comment;
@@ -17,6 +20,8 @@ public class Review {
         return comment;
     }
 
+
+
     public void setComment(String comment) {
         this.comment = comment;
     }
@@ -24,6 +29,7 @@ public class Review {
     public void setRating(int rating) {
         this.rating = rating;
     }
+
 
     @Override
     public String toString() {

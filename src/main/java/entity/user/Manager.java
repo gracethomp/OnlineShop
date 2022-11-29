@@ -2,7 +2,7 @@ package entity.user;
 
 import entity.Order;
 
-public class Manager extends User implements Management {
+public class Manager extends User implements IManage {
 
     public Manager(){}
     public Manager(String name, String surname, String email, String password, String phoneNumber, String status){

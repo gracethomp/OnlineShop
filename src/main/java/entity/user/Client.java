@@ -3,9 +3,9 @@ package entity.user;
 import entity.*;
 import entity.lists.SeenList;
 import entity.lists.WishList;
-import entity.user.staff.ClothingSizes;
-import entity.user.staff.MailingList;
-import entity.user.staff.PaymentCard;
+import entity.user.stuff.ClothingSizes;
+import entity.user.stuff.MailingList;
+import entity.user.stuff.PaymentCard;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -16,7 +16,7 @@ public class Client extends User {
     private String city;
     private String streetTitle;
     private int streetNumber;
-    private int appartmentNumber;
+    private int apartmentNumber;
     private ShopBasket shopBasket;
     private MailingList mailingList;
     private PaymentCard card;
@@ -29,7 +29,7 @@ public class Client extends User {
     public Client() {}
 
     public Client(String name, String surname, String email, String password, String phoneNumber, String status,
-                  String country, String city, String streetTitle, int streetNumber, int appartmentNumber,
+                  String country, String city, String streetTitle, int streetNumber, int apartmentNumber,
                   ShopBasket shopBasket, MailingList mailingList, PaymentCard card,
                   ClothingSizes clothingSizes, SeenList seenList) {
         super(name, surname, email, password, Role.CLIENT, phoneNumber, status);
@@ -37,7 +37,7 @@ public class Client extends User {
         this.city = city;
         this.streetTitle = streetTitle;
         this.streetNumber = streetNumber;
-        this.appartmentNumber = appartmentNumber;
+        this.apartmentNumber = apartmentNumber;
         this.shopBasket = shopBasket;
         this.mailingList = mailingList;
         this.card = card;
@@ -73,8 +73,8 @@ public class Client extends User {
         return clothingSizes;
     }
 
-    public int getAppartmentNumber() {
-        return appartmentNumber;
+    public int getApartmentNumber() {
+        return apartmentNumber;
     }
 
     public int getStreetNumber() {
@@ -121,8 +121,8 @@ public class Client extends User {
         this.country = country;
     }
 
-    public void setAppartmentNumber(int appartmentNumber) {
-        this.appartmentNumber = appartmentNumber;
+    public void setApartmentNumber(int apartmentNumber) {
+        this.apartmentNumber = apartmentNumber;
     }
 
     public void setCard(PaymentCard card) {
@@ -176,7 +176,7 @@ public class Client extends User {
         if (!super.equals(o)) return false;
         Client client = (Client) o;
         return super.equals(o) && streetNumber == client.streetNumber
-                && appartmentNumber == client.appartmentNumber
+                && apartmentNumber == client.apartmentNumber
                 && Objects.equals(country, client.country) && Objects.equals(city, client.city)
                 && Objects.equals(streetTitle, client.streetTitle) &&
                 Objects.equals(shopBasket, client.shopBasket) && Objects.equals(mailingList, client.mailingList)
@@ -188,14 +188,14 @@ public class Client extends User {
     @Override
     public int hashCode() {
         return Objects.hash(super.hashCode(), country, city, streetTitle, streetNumber,
-                appartmentNumber, shopBasket, mailingList, card, clothingSizes, wishLists, seenList, stocks, orders);
+                apartmentNumber, shopBasket, mailingList, card, clothingSizes, wishLists, seenList, stocks, orders);
     }
 
     @Override
     public String toString() {
         return super.toString() + ", country: " + country +
                 " city: " + city +
-                ", address: " + streetTitle + " " + streetNumber + ", " + appartmentNumber +
+                ", address: " + streetTitle + " " + streetNumber + ", " + apartmentNumber +
                 "\n" + shopBasket +
                 "\n" + mailingList +
                 "\n" + card +

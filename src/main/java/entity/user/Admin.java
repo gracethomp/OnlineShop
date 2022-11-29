@@ -3,7 +3,7 @@ package entity.user;
 import entity.Product;
 import entity.Shop;
 
-public class Admin extends User implements Management {
+public class Admin extends User implements IManage {
 
     public Admin(){}
 

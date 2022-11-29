@@ -5,7 +5,7 @@ import entity.user.Client;
 
 import java.util.List;
 
-public interface Management {
+public interface IManage {
     default boolean acceptOrder(Order order, Client client, List<Order> ordersToProcess) {
         if(ordersToProcess.contains(order) && client.getOrders().contains(order)) {
             int index = client.getOrders().indexOf(order);

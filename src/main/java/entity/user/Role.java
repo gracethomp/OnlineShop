@@ -1,7 +1,7 @@
 package entity.user;
 
 public enum Role {
-    CLIENT(1), MANAGER(2), OWNER(3), ADMIN(4);
+    CLIENT(1), MANAGER(2),  ADMIN(3);
 
     private int value;
 
@@ -11,9 +11,5 @@ public enum Role {
 
     public int getValue() {
         return value;
-    }
-
-    public void setValue(int value) {
-        this.value = value;
     }
 }

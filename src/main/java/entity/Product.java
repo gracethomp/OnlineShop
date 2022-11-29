@@ -1,11 +1,12 @@
 package entity;
 
 import entity.user.Client;
+import entity.user.IComment;
 
 import java.util.List;
 import java.util.Objects;
 
-public class Product {
+public class Product implements IComment {
     private String title;
     private int rating;
     private double price;
@@ -39,6 +40,11 @@ public class Product {
             throw new IllegalArgumentException();
         count -= countOrdered;
         return true;
+    }
+
+    @Override
+    public boolean addReview(Review review) {
+        return false;
     }
 
     public boolean addReview(Review review, Shop shop, Client client) {
@@ -124,4 +130,5 @@ public class Product {
     public int hashCode() {
         return Objects.hash(title, rating, price, count, description, type, reviews, waysToPay);
     }
+
 }

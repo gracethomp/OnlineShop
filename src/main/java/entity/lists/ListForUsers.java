@@ -5,9 +5,15 @@ import entity.Product;
 import java.util.List;
 import java.util.Objects;
 
-public abstract class ListForUsers {
+public abstract class ListForUsers implements Clearable{
     private List<Product> products;
 
+    public ListForUsers(){}
+    public ListForUsers(List<Product> products) {
+        this.products = products;
+    }
+
+    @Override
     public void clear() {
         products.clear();
     }

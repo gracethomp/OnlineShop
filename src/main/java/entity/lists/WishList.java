@@ -3,7 +3,7 @@ package entity.lists;
 import java.util.Objects;
 
 public class WishList extends ListForUsers {
-    String title;
+    private String title;
     public WishList() {}
     public WishList(String title) {
         this.title = title;
@@ -34,4 +34,5 @@ public class WishList extends ListForUsers {
     public String toString() {
         return "WishList title is" + title + '\n' + super.toString();
     }
+
 }
