@@ -3,7 +3,7 @@ package entity.user;
 public enum Role {
     CLIENT(1), MANAGER(2),  ADMIN(3);
 
-    private int value;
+    private final int value;
 
     Role(int i) {
         this.value = i;

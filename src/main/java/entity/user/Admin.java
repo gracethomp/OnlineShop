@@ -4,21 +4,37 @@ import entity.goods.Product;
 import entity.goods.Shop;
 import entity.user.interfaces.IRule;
 
+import java.util.Objects;
+
 public class Admin extends User implements IRule {
+    private boolean rightsForStatus;
+    private boolean rightsForShop;
+    private boolean rightsForProduct;
 
     public Admin(){}
 
-    public Admin(String name, String surname, String email,
-                 String password, String phoneNumber, String status) {
+    public Admin(String name, String surname, String email, String password,
+                 String phoneNumber, String status, boolean rightsForStatus,
+                 boolean rightsForShop, boolean rightsForProduct) {
         super(name, surname, email, password, Role.ADMIN, phoneNumber, status);
+        this.rightsForStatus = rightsForStatus;
+        this.rightsForShop = rightsForShop;
+        this.rightsForProduct = rightsForProduct;
     }
 
     public void blockUser(User user) {
         user.setStatus("blocked");
+        if(user instanceof Manager)
+            setManagerRights((Manager) user, false);
     }
 
     public void unblockUser(User user) {
         user.setStatus("ok");
+    }
+
+    @Override
+    public void setManagerRights(Manager manager, boolean value) {
+        manager.setProcessRights(value);
     }
 
     public Shop createShop(String title, String description, int rating, int ordersCount){
@@ -34,5 +50,53 @@ public class Admin extends User implements IRule {
 
     public boolean deleteProduct(Product product, Shop shop) {
         return shop.deleteProduct(product);
+    }
+
+    public boolean isRightsForProduct() {
+        return rightsForProduct;
+    }
+
+    public boolean isRightsForShop() {
+        return rightsForShop;
+    }
+
+    public boolean isRightsForStatus() {
+        return rightsForStatus;
+    }
+
+    public void setRightsForProduct(boolean rightsForProduct) {
+        this.rightsForProduct = rightsForProduct;
+    }
+
+    public void setRightsForShop(boolean rightsForShop) {
+        this.rightsForShop = rightsForShop;
+    }
+
+    public void setRightsForStatus(boolean rightsForStatus) {
+        this.rightsForStatus = rightsForStatus;
+    }
+
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (o == null || getClass() != o.getClass()) return false;
+        if (!super.equals(o)) return false;
+        Admin admin = (Admin) o;
+        return super.equals(admin) && rightsForStatus == admin.rightsForStatus
+                && rightsForShop == admin.rightsForShop && rightsForProduct == admin.rightsForProduct;
+    }
+
+    @Override
+    public int hashCode() {
+        return Objects.hash(super.hashCode(), rightsForStatus, rightsForShop, rightsForProduct);
+    }
+
+    @Override
+    public String toString() {
+        return super.toString() + "Admin{" +
+                "rightsForStatus=" + rightsForStatus +
+                ", rightsForShop=" + rightsForShop +
+                ", rightsForProduct=" + rightsForProduct +
+                '}';
     }
 }
