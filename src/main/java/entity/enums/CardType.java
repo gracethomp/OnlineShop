@@ -1,11 +1,10 @@
-package entity.user;
+package entity.enums;
 
-public enum Role {
-    CLIENT(1), MANAGER(2),  ADMIN(3);
-
+public enum CardType {
+    VISA(1), MASTERCARD(2);
     private final int value;
 
-    Role(int i) {
+    CardType(int i) {
         this.value = i;
     }
 

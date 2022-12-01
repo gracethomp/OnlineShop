@@ -1,6 +1,7 @@
 package entity.user.stuff;
 
 import entity.goods.Product;
+import entity.enums.WaysToPay;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -13,12 +14,12 @@ public class Order {
     private String location;
     private String post;
     private double totalPrice;
-    private String wayToPay;
+    private WaysToPay wayToPay;
     private String promocode;
     private String status;
     public Order() {}
     public Order(String recipientName, String recipientSurname, String location,
-                 String post, double totalPrice, String wayToPay, String status){
+                 String post, double totalPrice, WaysToPay wayToPay, String status){
         this.recipientName = recipientName;
         this.recipientSurname = recipientSurname;
         this.location = location;
@@ -29,7 +30,7 @@ public class Order {
         this.products = new ArrayList<>();
     }
     public Order(String recipientName, String recipientSurname, String location,
-                 String post, double totalPrice, String wayToPay, String promocode, String status) {
+                 String post, double totalPrice, WaysToPay wayToPay, String promocode, String status) {
         this.recipientName = recipientName;
         this.recipientSurname = recipientSurname;
         this.location = location;
@@ -45,7 +46,7 @@ public class Order {
         return totalPrice;
     }
 
-    public String getWayToPay() {
+    public WaysToPay getWayToPay() {
         return wayToPay;
     }
 
@@ -81,7 +82,7 @@ public class Order {
         this.totalPrice = totalPrice;
     }
 
-    public void setWayToPay(String wayToPay) {
+    public void setWayToPay(WaysToPay wayToPay) {
         this.wayToPay = wayToPay;
     }
 

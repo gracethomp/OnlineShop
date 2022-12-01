@@ -1,6 +1,9 @@
 package entity.user;
 
+import entity.enums.Rating;
+import entity.enums.Role;
 import entity.goods.Product;
+import entity.enums.ProductTypes;
 import entity.goods.Shop;
 import entity.user.interfaces.IRule;
 
@@ -41,8 +44,8 @@ public class Admin extends User implements IRule {
         return new Shop(title, description, rating, ordersCount);
     }
 
-    public Product createProduct(String title, int rating, double price, int count,
-                                 String description, String type, Shop shop) {
+    public Product createProduct(String title, Rating rating, double price, int count,
+                                 String description, ProductTypes type, Shop shop) {
         Product product = new Product(title, rating, price, count, description, type);
         shop.addProduct(product);
         return product;

@@ -1,6 +1,7 @@
 package entity.user.stuff;
 
 import entity.goods.Product;
+import entity.enums.WaysToPay;
 import entity.user.Client;
 import entity.user.Manager;
 import entity.user.interfaces.Calculable;
@@ -23,7 +24,7 @@ public class ShopBasket implements Calculable {
         return sum + delivery;
     }
     public void formOrder(Client client, String recipientName, String recipientSurname, String location,
-                          String post, double totalPrice, String wayToPay, Manager manager) {
+                          String post, double totalPrice, WaysToPay wayToPay, Manager manager) {
         Order order = new Order(recipientName, recipientSurname, location, post,
                 totalPrice, wayToPay,"registered");
         manager.addOrderToProcess(order);
@@ -31,7 +32,7 @@ public class ShopBasket implements Calculable {
     }
 
     public void formOrder(Client client, String recipientName, String recipientSurname, String location,
-                          String post, double totalPrice, String wayToPay, String promocode, Manager manager) {
+                          String post, double totalPrice, WaysToPay wayToPay, String promocode, Manager manager) {
         Order order = new Order(recipientName, recipientSurname, location, post,
                 totalPrice, wayToPay, promocode, "registered");
         manager.addOrderToProcess(order);

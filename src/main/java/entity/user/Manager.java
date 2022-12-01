@@ -1,5 +1,6 @@
 package entity.user;
 
+import entity.enums.Role;
 import entity.user.interfaces.IManage;
 import entity.user.stuff.Order;
 

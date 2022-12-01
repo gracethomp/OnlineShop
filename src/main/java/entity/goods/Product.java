@@ -1,32 +1,38 @@
 package entity.goods;
 
+import entity.enums.Rating;
+import entity.enums.ProductTypes;
+import entity.enums.WaysToPay;
 import entity.reviews.Review;
 import entity.reviews.ReviewProduct;
 import entity.user.interfaces.IComment;
 
+import java.util.ArrayList;
 import java.util.List;
 import java.util.Objects;
 
 public class Product implements IComment {
     private String title;
-    private int rating;
+    private Rating rating;
     private double price;
     private int count;
     private String description;
-    private String type;
+    private ProductTypes type;
     private List<Review> reviews;
-    private List<String> waysToPay;
+    private List<WaysToPay> waysToPay;
     public Product(){}
-    public Product(String title, int rating, double price, int count, String description, String type) {
+    public Product(String title, Rating rating, double price, int count, String description, ProductTypes type) {
         this.title = title;
         this.rating = rating;
         this.price = price;
         this.count = count;
         this.description = description;
         this.type = type;
+        this.reviews = new ArrayList<>();
+        this.waysToPay = new ArrayList<>();
     }
 
-    public boolean addWayToPay(String way) {
+    public boolean addWayToPay(WaysToPay way) {
         return waysToPay.add(way);
     }
 
@@ -56,7 +62,7 @@ public class Product implements IComment {
         return title;
     }
 
-    public int getRating() {
+    public Rating getRating() {
         return rating;
     }
 
@@ -76,11 +82,11 @@ public class Product implements IComment {
         return count;
     }
 
-    public String getType() {
+    public ProductTypes getType() {
         return type;
     }
 
-    public List<String> getWaysToPay() {
+    public List<WaysToPay> getWaysToPay() {
         return waysToPay;
     }
 
@@ -92,7 +98,7 @@ public class Product implements IComment {
         this.title = title;
     }
 
-    public void setRating(int rating) {
+    public void setRating(Rating rating) {
         this.rating = rating;
     }
 
@@ -108,11 +114,11 @@ public class Product implements IComment {
         this.count = count;
     }
 
-    public void setType(String type) {
+    public void setType(ProductTypes type) {
         this.type = type;
     }
 
-    public void setWaysToPay(List<String> waysToPay) {
+    public void setWaysToPay(List<WaysToPay> waysToPay) {
         this.waysToPay = waysToPay;
     }
 
@@ -121,7 +127,10 @@ public class Product implements IComment {
         if (this == o) return true;
         if (o == null || getClass() != o.getClass()) return false;
         Product product = (Product) o;
-        return rating == product.rating && Double.compare(product.price, price) == 0 && count == product.count && Objects.equals(title, product.title) && Objects.equals(description, product.description) && Objects.equals(type, product.type) && Objects.equals(reviews, product.reviews) && Objects.equals(waysToPay, product.waysToPay);
+        return rating == product.rating && Double.compare(product.price, price) == 0
+                && count == product.count && Objects.equals(title, product.title)
+                && Objects.equals(description, product.description) && Objects.equals(type, product.type)
+                && Objects.equals(reviews, product.reviews) && Objects.equals(waysToPay, product.waysToPay);
     }
 
     @Override

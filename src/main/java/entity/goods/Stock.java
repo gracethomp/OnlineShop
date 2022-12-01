@@ -1,5 +1,6 @@
 package entity.goods;
 
+import entity.enums.ProductTypes;
 import entity.reviews.Review;
 import entity.user.interfaces.IComment;
 
@@ -13,13 +14,13 @@ public class Stock implements IComment {
     private int discount;
     private LocalDate dateFrom;
     private LocalDate dateTo;
-    private String productType;
+    private ProductTypes productType;
     private String description;
     private List<Review> reviews;
 
     public Stock(){}
     public Stock(String title, int discount, LocalDate dateFrom,
-                 LocalDate dateTo, String productType, String description) {
+                 LocalDate dateTo, ProductTypes productType, String description) {
         this.title = title;
         this.discount = discount;
         this.dateFrom = dateFrom;
@@ -54,7 +55,7 @@ public class Stock implements IComment {
         return dateTo;
     }
 
-    public String getProductType() {
+    public ProductTypes getProductType() {
         return productType;
     }
 
@@ -78,7 +79,7 @@ public class Stock implements IComment {
         this.discount = discount;
     }
 
-    public void setProductType(String productType) {
+    public void setProductType(ProductTypes productType) {
         this.productType = productType;
     }
 

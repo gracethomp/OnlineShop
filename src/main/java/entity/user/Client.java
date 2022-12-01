@@ -1,5 +1,6 @@
 package entity.user;
 
+import entity.enums.Role;
 import entity.goods.Stock;
 import entity.lists.SeenList;
 import entity.lists.WishList;
