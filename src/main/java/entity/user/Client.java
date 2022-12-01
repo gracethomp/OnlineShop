@@ -22,10 +22,10 @@ public class Client extends User implements Calculable {
     private MailingList mailingList;
     private PaymentCard card;
     private ClothingSizes clothingSizes;
-    private List<WishList> wishLists;
+    private List<WishList> wishLists = new ArrayList<>();;
     private SeenList seenList;
-    private List<Stock> stocks;
-    private List<Order> orders;
+    private List<Stock> stocks = new ArrayList<>();;
+    private List<Order> orders = new ArrayList<>();;
 
     public Client() {}
 
@@ -33,7 +33,7 @@ public class Client extends User implements Calculable {
                   String country, String city, String streetTitle, int streetNumber, int apartmentNumber,
                   ShopBasket shopBasket, MailingList mailingList, PaymentCard card,
                   ClothingSizes clothingSizes, SeenList seenList) {
-        super(name, surname, email, password, Role.CLIENT, phoneNumber, status);
+        super(name, surname, email, password, phoneNumber, status);
         this.country = country;
         this.city = city;
         this.streetTitle = streetTitle;
@@ -44,9 +44,7 @@ public class Client extends User implements Calculable {
         this.card = card;
         this.clothingSizes = clothingSizes;
         this.seenList = seenList;
-        this.wishLists = new ArrayList<>();
-        this.stocks = new ArrayList<>();
-        this.orders = new ArrayList<>();
+        setRole(Role.CLIENT);
     }
 
     public boolean addOrder(Order order){

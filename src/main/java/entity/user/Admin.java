@@ -7,10 +7,12 @@ import entity.goods.Product;
 import entity.enums.ProductTypes;
 import entity.goods.Shop;
 import entity.user.interfaces.IRule;
+import entity.user.stuff.Order;
 
+import java.util.ArrayList;
 import java.util.Objects;
 
-public class Admin extends User implements IRule {
+public class Admin extends Manager implements IRule {
     private boolean rightsForStatus;
     private boolean rightsForShop;
     private boolean rightsForProduct;
@@ -19,8 +21,8 @@ public class Admin extends User implements IRule {
 
     public Admin(String name, String surname, String email, String password,
                  String phoneNumber, UserStatus status, boolean rightsForStatus,
-                 boolean rightsForShop, boolean rightsForProduct) {
-        super(name, surname, email, password, Role.ADMIN, phoneNumber, status);
+                 boolean rightsForShop, boolean rightsForProduct, boolean rightsManager) {
+        super(name, surname, email, password, phoneNumber, status, rightsManager, Role.ADMIN);
         this.rightsForStatus = rightsForStatus;
         this.rightsForShop = rightsForShop;
         this.rightsForProduct = rightsForProduct;
@@ -54,6 +56,12 @@ public class Admin extends User implements IRule {
 
     public boolean deleteProduct(Product product, Shop shop) {
         return shop.deleteProduct(product);
+    }
+
+    @Override
+    public boolean acceptOrder(Order order, Client client) {
+        System.out.println("order accepts admin");
+        return super.acceptOrder(order, client);
     }
 
     public boolean isRightsForProduct() {

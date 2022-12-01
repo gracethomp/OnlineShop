@@ -17,25 +17,22 @@ public abstract class User implements IComment {
     private String surname;
     private String email;
     private String password;
-    private List<Review> reviews;
+    private List<Review> reviews = new ArrayList<>();;
     private Role role;
     private String phoneNumber;
     private UserStatus status;
-    private List<Order> orders;
+    private List<Order> orders = new ArrayList<>();;
 
     public User(){}
 
-    public User(String name, String surname, String email, String password,
-                Role role, String phoneNumber, UserStatus status){
+    public User(String name, String surname, String email,
+                String password, String phoneNumber, UserStatus status){
         this.name = name;
         this.surname = surname;
         this.email = email;
         this.password = password;
-        this.role = role;
         this.phoneNumber = PHONE_NUMBER_PREFIX + phoneNumber;
-        this.reviews = new ArrayList<>();
         this.status = status;
-        this.orders = new ArrayList<>();
     }
 
     public boolean addReview(Review review) {
