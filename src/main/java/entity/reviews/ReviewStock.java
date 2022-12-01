@@ -1,0 +1,43 @@
+package entity.reviews;
+
+import entity.goods.Stock;
+
+import java.util.Objects;
+
+public class ReviewStock extends Review {
+    private Stock stock;
+
+    public ReviewStock(){}
+    public ReviewStock(String comment, int rating, Stock stock) {
+        super(comment, rating);
+        this.stock = stock;
+    }
+
+    public Stock getStock() {
+        return stock;
+    }
+
+    public void setStock(Stock stock) {
+        this.stock = stock;
+    }
+
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (o == null || getClass() != o.getClass()) return false;
+        ReviewStock that = (ReviewStock) o;
+        return Objects.equals(stock, that.stock) && super.equals(that);
+    }
+
+    @Override
+    public int hashCode() {
+        return Objects.hash(super.hashCode(), stock);
+    }
+
+    @Override
+    public String toString() {
+        return super.toString() +"ReviewStock{" +
+                "stock=" + stock +
+                '}';
+    }
+}

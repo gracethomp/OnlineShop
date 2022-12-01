@@ -1,6 +1,6 @@
 package entity.lists;
 
-import entity.Product;
+import entity.goods.Product;
 
 import java.time.LocalDate;
 import java.util.Comparator;

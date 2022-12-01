@@ -1,6 +1,7 @@
 package entity.user;
 
-import entity.Order;
+import entity.user.interfaces.IManage;
+import entity.user.stuff.Order;
 
 public class Manager extends User implements IManage {
 

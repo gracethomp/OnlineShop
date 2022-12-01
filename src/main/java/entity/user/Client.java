@@ -1,17 +1,16 @@
 package entity.user;
 
-import entity.*;
+import entity.goods.Stock;
 import entity.lists.SeenList;
 import entity.lists.WishList;
-import entity.user.stuff.ClothingSizes;
-import entity.user.stuff.MailingList;
-import entity.user.stuff.PaymentCard;
+import entity.user.interfaces.Calculable;
+import entity.user.stuff.*;
 
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Objects;
 
-public class Client extends User {
+public class Client extends User implements Calculable {
     private String country;
     private String city;
     private String streetTitle;
@@ -63,6 +62,11 @@ public class Client extends User {
 
     public boolean createWishList(WishList wishList) {
         return wishLists.add(wishList);
+    }
+
+    @Override
+    public double calculateTotalPrice() {
+        return orders.stream().mapToDouble(Order::getTotalPrice).sum();
     }
 
     public String getCountry() {
@@ -205,4 +209,5 @@ public class Client extends User {
                 ", stocks=" + stocks +
                 ", orders=" + orders;
     }
+
 }

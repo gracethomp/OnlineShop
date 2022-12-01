@@ -1,7 +1,7 @@
-package entity.user;
+package entity.user.interfaces;
 
-import entity.Order;
 import entity.user.Client;
+import entity.user.stuff.Order;
 
 import java.util.List;
 

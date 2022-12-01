@@ -1,6 +1,6 @@
-package entity.user;
+package entity.user.interfaces;
 
-import entity.Review;
+import entity.reviews.Review;
 
 public interface IComment {
     boolean addReview(Review review);

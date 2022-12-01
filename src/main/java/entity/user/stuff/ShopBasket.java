@@ -1,11 +1,13 @@
-package entity;
+package entity.user.stuff;
 
+import entity.goods.Product;
 import entity.user.Client;
 import entity.user.Manager;
+import entity.user.interfaces.Calculable;
 
 import java.util.List;
 
-public class ShopBasket {
+public class ShopBasket implements Calculable {
     private List<Product> products;
     private double totalPrice;
 
@@ -16,7 +18,10 @@ public class ShopBasket {
         }
         return sum;
     }
-
+    public double calculateTotalPrice(double delivery) {
+        double sum = calculateTotalPrice();
+        return sum + delivery;
+    }
     public void formOrder(Client client, String recipientName, String recipientSurname, String location,
                           String post, double totalPrice, String wayToPay, Manager manager) {
         Order order = new Order(recipientName, recipientSurname, location, post,
@@ -33,13 +38,10 @@ public class ShopBasket {
         client.addOrder(order);
     }
 
-    public double calculateTotalPrice(double delivery) {
-        double sum = calculateTotalPrice();
-        return sum + delivery;
-    }
     public boolean addProduct(Product product) {
         return products.add(product);
     }
+
     public double getTotalPrice() {
         return totalPrice;
     }

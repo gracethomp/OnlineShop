@@ -1,6 +1,7 @@
-package entity;
+package entity.goods;
 
-import entity.user.IComment;
+import entity.reviews.Review;
+import entity.user.interfaces.IComment;
 
 import java.util.ArrayList;
 import java.util.List;

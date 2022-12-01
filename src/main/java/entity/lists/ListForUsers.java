@@ -1,11 +1,12 @@
 package entity.lists;
 
-import entity.Product;
+import entity.goods.Product;
+import entity.lists.interfaces.Clearable;
 
 import java.util.List;
 import java.util.Objects;
 
-public abstract class ListForUsers implements Clearable{
+public abstract class ListForUsers implements Clearable {
     private List<Product> products;
 
     public ListForUsers(){}

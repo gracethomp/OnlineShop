@@ -1,7 +1,8 @@
-package entity;
+package entity.goods;
 
-import entity.user.Client;
-import entity.user.IComment;
+import entity.reviews.Review;
+import entity.reviews.ReviewProduct;
+import entity.user.interfaces.IComment;
 
 import java.util.List;
 import java.util.Objects;
@@ -44,13 +45,10 @@ public class Product implements IComment {
 
     @Override
     public boolean addReview(Review review) {
-        return false;
-    }
-
-    public boolean addReview(Review review, Shop shop, Client client) {
-        if(client.addReview(review))
-            if(shop.addReview(review))
-                return reviews.add(review);
+        if(review instanceof ReviewProduct)
+            if(((ReviewProduct) review).getShop().addReview(review))
+                if(((ReviewProduct) review).getProduct().addReview(review))
+                    return reviews.add(review);
         return false;
     }
 

@@ -1,4 +1,6 @@
-package entity;
+package entity.user.stuff;
+
+import entity.goods.Product;
 
 import java.util.ArrayList;
 import java.util.List;

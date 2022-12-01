@@ -1,9 +1,10 @@
 package entity.user;
 
-import entity.Product;
-import entity.Shop;
+import entity.goods.Product;
+import entity.goods.Shop;
+import entity.user.interfaces.IRule;
 
-public class Admin extends User implements IManage {
+public class Admin extends User implements IRule {
 
     public Admin(){}
 

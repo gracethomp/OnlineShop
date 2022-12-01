@@ -1,6 +1,4 @@
-package entity;
-
-import entity.user.User;
+package entity.reviews;
 
 public abstract class Review {
     private String comment;
@@ -19,8 +17,6 @@ public abstract class Review {
     public String getComment() {
         return comment;
     }
-
-
 
     public void setComment(String comment) {
         this.comment = comment;
