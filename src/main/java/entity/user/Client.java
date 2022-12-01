@@ -1,6 +1,7 @@
 package entity.user;
 
 import entity.enums.Role;
+import entity.enums.UserStatus;
 import entity.goods.Stock;
 import entity.lists.SeenList;
 import entity.lists.WishList;
@@ -28,7 +29,7 @@ public class Client extends User implements Calculable {
 
     public Client() {}
 
-    public Client(String name, String surname, String email, String password, String phoneNumber, String status,
+    public Client(String name, String surname, String email, String password, String phoneNumber, UserStatus status,
                   String country, String city, String streetTitle, int streetNumber, int apartmentNumber,
                   ShopBasket shopBasket, MailingList mailingList, PaymentCard card,
                   ClothingSizes clothingSizes, SeenList seenList) {

@@ -1,5 +1,7 @@
 package entity.user.stuff;
 
+import entity.enums.OrderStatus;
+import entity.enums.UserStatus;
 import entity.goods.Product;
 import entity.enums.WaysToPay;
 
@@ -16,10 +18,10 @@ public class Order {
     private double totalPrice;
     private WaysToPay wayToPay;
     private String promocode;
-    private String status;
+    private OrderStatus status;
     public Order() {}
     public Order(String recipientName, String recipientSurname, String location,
-                 String post, double totalPrice, WaysToPay wayToPay, String status){
+                 String post, double totalPrice, WaysToPay wayToPay, OrderStatus status){
         this.recipientName = recipientName;
         this.recipientSurname = recipientSurname;
         this.location = location;
@@ -30,7 +32,7 @@ public class Order {
         this.products = new ArrayList<>();
     }
     public Order(String recipientName, String recipientSurname, String location,
-                 String post, double totalPrice, WaysToPay wayToPay, String promocode, String status) {
+                 String post, double totalPrice, WaysToPay wayToPay, String promocode, OrderStatus status) {
         this.recipientName = recipientName;
         this.recipientSurname = recipientSurname;
         this.location = location;
@@ -70,7 +72,7 @@ public class Order {
         return recipientSurname;
     }
 
-    public String getStatus() {
+    public OrderStatus getStatus() {
         return status;
     }
 
@@ -110,7 +112,7 @@ public class Order {
         this.products = products;
     }
 
-    public void setStatus(String status) {
+    public void setStatus(OrderStatus status) {
         this.status = status;
     }
 

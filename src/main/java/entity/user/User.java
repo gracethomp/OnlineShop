@@ -1,6 +1,7 @@
 package entity.user;
 
 import entity.enums.Role;
+import entity.enums.UserStatus;
 import entity.user.interfaces.IComment;
 import entity.user.stuff.Order;
 import entity.reviews.Review;
@@ -19,13 +20,13 @@ public abstract class User implements IComment {
     private List<Review> reviews;
     private Role role;
     private String phoneNumber;
-    private String status;
+    private UserStatus status;
     private List<Order> orders;
 
     public User(){}
 
     public User(String name, String surname, String email, String password,
-                Role role, String phoneNumber, String status){
+                Role role, String phoneNumber, UserStatus status){
         this.name = name;
         this.surname = surname;
         this.email = email;
@@ -69,7 +70,7 @@ public abstract class User implements IComment {
         return phoneNumber;
     }
 
-    public String getStatus() {
+    public UserStatus getStatus() {
         return status;
     }
 
@@ -105,7 +106,7 @@ public abstract class User implements IComment {
         this.role = role;
     }
 
-    public void setStatus(String status) {
+    public void setStatus(UserStatus status) {
         this.status = status;
     }
 

@@ -2,6 +2,7 @@ package entity.user;
 
 import entity.enums.Rating;
 import entity.enums.Role;
+import entity.enums.UserStatus;
 import entity.goods.Product;
 import entity.enums.ProductTypes;
 import entity.goods.Shop;
@@ -17,7 +18,7 @@ public class Admin extends User implements IRule {
     public Admin(){}
 
     public Admin(String name, String surname, String email, String password,
-                 String phoneNumber, String status, boolean rightsForStatus,
+                 String phoneNumber, UserStatus status, boolean rightsForStatus,
                  boolean rightsForShop, boolean rightsForProduct) {
         super(name, surname, email, password, Role.ADMIN, phoneNumber, status);
         this.rightsForStatus = rightsForStatus;
@@ -26,13 +27,13 @@ public class Admin extends User implements IRule {
     }
 
     public void blockUser(User user) {
-        user.setStatus("blocked");
+        user.setStatus(UserStatus.BLOCKED);
         if(user instanceof Manager)
             setManagerRights((Manager) user, false);
     }
 
     public void unblockUser(User user) {
-        user.setStatus("ok");
+        user.setStatus(UserStatus.BLOCKED);
     }
 
     @Override
@@ -40,7 +41,7 @@ public class Admin extends User implements IRule {
         manager.setProcessRights(value);
     }
 
-    public Shop createShop(String title, String description, int rating, int ordersCount){
+    public Shop createShop(String title, String description, Rating rating, int ordersCount){
         return new Shop(title, description, rating, ordersCount);
     }
 

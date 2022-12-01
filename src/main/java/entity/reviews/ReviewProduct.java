@@ -1,5 +1,6 @@
 package entity.reviews;
 
+import entity.enums.Rating;
 import entity.goods.Product;
 import entity.goods.Shop;
 import entity.user.User;
@@ -12,7 +13,7 @@ public class ReviewProduct extends Review {
     private Product product;
 
     public ReviewProduct(){}
-    public ReviewProduct(String comment, int rating, Shop shop, User user, Product product) {
+    public ReviewProduct(String comment, Rating rating, Shop shop, User user, Product product) {
         super(comment, rating);
         this.shop = shop;
         this.user = user;

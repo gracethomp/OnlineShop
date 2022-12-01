@@ -1,5 +1,6 @@
 package entity.goods;
 
+import entity.enums.Rating;
 import entity.reviews.Review;
 import entity.user.interfaces.IComment;
 
@@ -11,12 +12,12 @@ public class Shop implements IComment {
     private String title;
     private String description;
     private List<Review> reviews;
-    private int rating;
+    private Rating rating;
     private int ordersCount;
     private List<Product> products;
 
     public Shop() {}
-    public Shop(String title, String description, int rating, int ordersCount){
+    public Shop(String title, String description, Rating rating, int ordersCount){
         this.reviews = new ArrayList<>();
         this.title = title;
         this.description = description;
@@ -47,7 +48,7 @@ public class Shop implements IComment {
         return reviews;
     }
 
-    public int getRating() {
+    public Rating getRating() {
         return rating;
     }
 
@@ -63,7 +64,7 @@ public class Shop implements IComment {
         this.reviews = reviews;
     }
 
-    public void setRating(int rating) {
+    public void setRating(Rating rating) {
         this.rating = rating;
     }
 

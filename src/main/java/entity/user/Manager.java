@@ -1,6 +1,7 @@
 package entity.user;
 
 import entity.enums.Role;
+import entity.enums.UserStatus;
 import entity.user.interfaces.IManage;
 import entity.user.stuff.Order;
 
@@ -11,7 +12,7 @@ public class Manager extends User implements IManage {
 
     public Manager(){}
     public Manager(String name, String surname, String email, String password,
-                   String phoneNumber, String status, boolean rightsManager){
+                   String phoneNumber, UserStatus status, boolean rightsManager){
         super(name, surname, email, password, Role.MANAGER, phoneNumber, status);
         this.processRights = rightsManager;
     }

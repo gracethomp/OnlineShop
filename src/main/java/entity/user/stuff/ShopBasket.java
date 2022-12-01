@@ -1,5 +1,6 @@
 package entity.user.stuff;
 
+import entity.enums.OrderStatus;
 import entity.goods.Product;
 import entity.enums.WaysToPay;
 import entity.user.Client;
@@ -26,7 +27,7 @@ public class ShopBasket implements Calculable {
     public void formOrder(Client client, String recipientName, String recipientSurname, String location,
                           String post, double totalPrice, WaysToPay wayToPay, Manager manager) {
         Order order = new Order(recipientName, recipientSurname, location, post,
-                totalPrice, wayToPay,"registered");
+                totalPrice, wayToPay, OrderStatus.REGISTERED);
         manager.addOrderToProcess(order);
         client.addOrder(order);
     }
@@ -34,7 +35,7 @@ public class ShopBasket implements Calculable {
     public void formOrder(Client client, String recipientName, String recipientSurname, String location,
                           String post, double totalPrice, WaysToPay wayToPay, String promocode, Manager manager) {
         Order order = new Order(recipientName, recipientSurname, location, post,
-                totalPrice, wayToPay, promocode, "registered");
+                totalPrice, wayToPay, promocode, OrderStatus.REGISTERED);
         manager.addOrderToProcess(order);
         client.addOrder(order);
     }
