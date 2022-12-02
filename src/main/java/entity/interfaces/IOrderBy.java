@@ -4,7 +4,8 @@ import entity.goods.Product;
 
 import java.util.List;
 
-public interface IOrder {
+public interface IOrderBy {
     List<Product> orderByPrice();
+
     List<Product> orderByTitle();
 }

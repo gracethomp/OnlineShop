@@ -5,7 +5,7 @@ import entity.enums.Sizes;
 import java.util.Locale;
 import java.util.Objects;
 
-public class ClothingSizes {
+public final class ClothingSizes {
     private static final String ANSI_CYAN = "\u001B[36m";
     private static final String ANSI_RESET = "\u001B[0m";
 

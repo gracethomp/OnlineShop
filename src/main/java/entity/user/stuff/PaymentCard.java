@@ -4,7 +4,7 @@ import entity.enums.CardType;
 
 import java.util.Objects;
 
-public final class PaymentCard {
+public class PaymentCard {
     private long number;
     private int month;
     private int year;

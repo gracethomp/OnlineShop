@@ -40,8 +40,8 @@ public class Main {
         manageList.add(new Manager());
         manageList.add(manager);
 
-        for (IManage e: manageList) {
-            if(e instanceof Admin && e.acceptOrder(order, client)) {
+        for (IManage e : manageList) {
+            if (e instanceof Admin && e.acceptOrder(order, client)) {
                 System.out.println(Admin.ORDER_PROCESSED_BY_ADMIN);
                 System.out.println(Manager.ORDER_ACCEPTED);
                 continue;

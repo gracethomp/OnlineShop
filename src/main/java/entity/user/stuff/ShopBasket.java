@@ -13,6 +13,7 @@ public class ShopBasket implements Calculable {
     private List<Product> products;
     private double totalPrice;
 
+    @Override
     public double calculateTotalPrice() {
         double sum = 0;
         for (Product p : products) {

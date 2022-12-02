@@ -1,14 +1,14 @@
 package entity.lists;
 
 import entity.goods.Product;
-import entity.interfaces.IOrder;
+import entity.interfaces.IOrderBy;
 
 import java.time.LocalDate;
 import java.util.Comparator;
 import java.util.List;
 import java.util.Objects;
 
-public class SeenList extends ListForUsers implements IOrder {
+public class SeenList extends ListForUsers implements IOrderBy {
     private LocalDate dateFrom;
 
     public SeenList(){}
@@ -21,6 +21,7 @@ public class SeenList extends ListForUsers implements IOrder {
         getProducts().sort(comparator);
         return getProducts();
     }
+
     public List<Product> orderByTitle() {
         Comparator<Product> comparator = Comparator.comparing(Product::getTitle);
         getProducts().sort(comparator);
