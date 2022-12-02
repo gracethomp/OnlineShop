@@ -5,7 +5,7 @@ import entity.enums.ProductTypes;
 import entity.enums.WaysToPay;
 import entity.reviews.Review;
 import entity.reviews.ReviewProduct;
-import entity.user.interfaces.IComment;
+import entity.interfaces.IComment;
 
 import java.util.ArrayList;
 import java.util.List;

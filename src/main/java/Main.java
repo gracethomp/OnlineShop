@@ -5,7 +5,7 @@ import entity.user.Admin;
 import entity.user.Client;
 import entity.user.Manager;
 import entity.user.User;
-import entity.user.interfaces.IManage;
+import entity.interfaces.IManage;
 import entity.user.stuff.ClothingSizes;
 import entity.user.stuff.Order;
 

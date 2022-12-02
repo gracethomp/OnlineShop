@@ -3,7 +3,7 @@ package entity.user;
 import entity.enums.OrderStatus;
 import entity.enums.Role;
 import entity.enums.UserStatus;
-import entity.user.interfaces.IManage;
+import entity.interfaces.IManage;
 import entity.user.stuff.Order;
 
 import java.util.Objects;

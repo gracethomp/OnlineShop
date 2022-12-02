@@ -1,13 +1,14 @@
 package entity.lists;
 
 import entity.goods.Product;
+import entity.interfaces.IOrder;
 
 import java.time.LocalDate;
 import java.util.Comparator;
 import java.util.List;
 import java.util.Objects;
 
-public class SeenList extends ListForUsers {
+public class SeenList extends ListForUsers implements IOrder {
     private LocalDate dateFrom;
 
     public SeenList(){}

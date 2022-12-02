@@ -1,4 +1,4 @@
-package entity.lists.interfaces;
+package entity.interfaces;
 
 public interface Clearable {
     void clear();

@@ -1,7 +1,7 @@
 package entity.lists;
 
 import entity.goods.Product;
-import entity.lists.interfaces.Clearable;
+import entity.interfaces.Clearable;
 
 import java.util.List;
 import java.util.Objects;

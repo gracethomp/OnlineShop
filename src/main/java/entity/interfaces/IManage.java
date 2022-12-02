@@ -1,4 +1,4 @@
-package entity.user.interfaces;
+package entity.interfaces;
 
 import entity.user.Client;
 import entity.user.stuff.Order;

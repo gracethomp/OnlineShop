@@ -2,7 +2,7 @@ package entity.user;
 
 import entity.enums.Role;
 import entity.enums.UserStatus;
-import entity.user.interfaces.IComment;
+import entity.interfaces.IComment;
 import entity.user.stuff.Order;
 import entity.reviews.Review;
 

@@ -1,4 +1,4 @@
-package entity.user.interfaces;
+package entity.interfaces;
 
 public interface Calculable {
     double calculateTotalPrice();

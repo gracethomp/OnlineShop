@@ -5,7 +5,7 @@ import entity.goods.Product;
 import entity.enums.WaysToPay;
 import entity.user.Client;
 import entity.user.Manager;
-import entity.user.interfaces.Calculable;
+import entity.interfaces.Calculable;
 
 import java.util.List;
 

@@ -6,7 +6,7 @@ import entity.enums.UserStatus;
 import entity.goods.Product;
 import entity.enums.ProductTypes;
 import entity.goods.Shop;
-import entity.user.interfaces.IRule;
+import entity.interfaces.IRule;
 
 import java.util.Objects;
 

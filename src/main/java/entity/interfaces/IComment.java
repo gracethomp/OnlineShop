@@ -1,4 +1,4 @@
-package entity.user.interfaces;
+package entity.interfaces;
 
 import entity.reviews.Review;
 

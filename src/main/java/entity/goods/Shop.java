@@ -2,7 +2,7 @@ package entity.goods;
 
 import entity.enums.Rating;
 import entity.reviews.Review;
-import entity.user.interfaces.IComment;
+import entity.interfaces.IComment;
 
 import java.util.ArrayList;
 import java.util.List;

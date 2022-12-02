@@ -2,7 +2,7 @@ package entity.goods;
 
 import entity.enums.ProductTypes;
 import entity.reviews.Review;
-import entity.user.interfaces.IComment;
+import entity.interfaces.IComment;
 
 import java.time.LocalDate;
 import java.util.ArrayList;

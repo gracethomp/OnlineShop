@@ -5,7 +5,7 @@ import entity.enums.UserStatus;
 import entity.goods.Stock;
 import entity.lists.SeenList;
 import entity.lists.WishList;
-import entity.user.interfaces.Calculable;
+import entity.interfaces.Calculable;
 import entity.user.stuff.*;
 
 import java.util.ArrayList;
