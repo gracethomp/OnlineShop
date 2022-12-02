@@ -4,12 +4,13 @@ import entity.enums.CardType;
 
 import java.util.Objects;
 
-public class PaymentCard {
+public final class PaymentCard {
     private long number;
     private int month;
     private int year;
     private int CVV;
     private CardType cardType;
+    
     public PaymentCard() {
 
     }

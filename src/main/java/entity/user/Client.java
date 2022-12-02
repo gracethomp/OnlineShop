@@ -22,10 +22,10 @@ public class Client extends User implements Calculable {
     private MailingList mailingList;
     private PaymentCard card;
     private ClothingSizes clothingSizes;
-    private List<WishList> wishLists = new ArrayList<>();;
+    private List<WishList> wishLists = new ArrayList<>();
     private SeenList seenList;
-    private List<Stock> stocks = new ArrayList<>();;
-    private List<Order> orders = new ArrayList<>();;
+    private List<Stock> stocks = new ArrayList<>();
+    private List<Order> orders = new ArrayList<>();
 
     public Client() {}
 

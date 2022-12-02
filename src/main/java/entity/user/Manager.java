@@ -6,10 +6,12 @@ import entity.enums.UserStatus;
 import entity.user.interfaces.IManage;
 import entity.user.stuff.Order;
 
-import java.util.List;
 import java.util.Objects;
 
 public class Manager extends User implements IManage {
+    public static final String ORDER_ACCEPTED = "order accepted\n";
+    public static final String ORDER_CANCELLED = "order cancelled\n";
+
     private boolean processRights;
 
     public Manager(){}
@@ -26,27 +28,22 @@ public class Manager extends User implements IManage {
 
     @Override
     public boolean acceptOrder(Order order, Client client) {
-        if(getOrders().contains(order) && client.getOrders().contains(order)) {
+        if(getOrders().contains(order) && client.getOrders().contains(order)
+                && order.getStatus() != OrderStatus.IN_PROGRESS) {
             int index = client.getOrders().indexOf(order);
             client.getOrders().get(index).setStatus(OrderStatus.IN_PROGRESS);
-            if(getOrders().remove(order)) {
-                System.out.println("order accepted\n");
-                return true;
-            }
+            return getOrders().remove(order);
         }
-        System.out.println("order not accepted\n");
         return false;
     }
 
     @Override
     public boolean cancelOrder(Order order, Client client) {
-        if(getOrders().contains(order) && client.getOrders().contains(order)) {
+        if(getOrders().contains(order) && client.getOrders().contains(order)
+                && order.getStatus() != OrderStatus.CANCELLED) {
             int index = client.getOrders().indexOf(order);
             client.getOrders().get(index).setStatus(OrderStatus.CANCELLED);
-            if(getOrders().remove(order)) {
-                System.out.println("order cancelled");
-                return true;
-            }
+            return getOrders().remove(order);
         }
         return false;
     }

@@ -36,8 +36,10 @@ public class Product implements IComment {
         return waysToPay.add(way);
     }
 
-    public boolean deleteWayToPay(String way) {
-        return waysToPay.remove(way);
+    public boolean deleteWayToPay(WaysToPay way) {
+        if(waysToPay.contains(way))
+            return waysToPay.remove(way);
+        return false;
     }
 
     public boolean reduceCount(int countOrdered) {

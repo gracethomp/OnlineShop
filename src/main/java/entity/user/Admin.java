@@ -7,12 +7,12 @@ import entity.goods.Product;
 import entity.enums.ProductTypes;
 import entity.goods.Shop;
 import entity.user.interfaces.IRule;
-import entity.user.stuff.Order;
 
-import java.util.ArrayList;
 import java.util.Objects;
 
 public class Admin extends Manager implements IRule {
+    public static final String ORDER_PROCESSED_BY_ADMIN = "order processed by admin";
+
     private boolean rightsForStatus;
     private boolean rightsForShop;
     private boolean rightsForProduct;
@@ -56,12 +56,6 @@ public class Admin extends Manager implements IRule {
 
     public boolean deleteProduct(Product product, Shop shop) {
         return shop.deleteProduct(product);
-    }
-
-    @Override
-    public boolean acceptOrder(Order order, Client client) {
-        System.out.println("order accepts admin");
-        return super.acceptOrder(order, client);
     }
 
     public boolean isRightsForProduct() {

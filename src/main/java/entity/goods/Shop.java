@@ -25,6 +25,7 @@ public class Shop implements IComment {
         this.ordersCount = ordersCount;
         this.products = new ArrayList<>();
     }
+
     public boolean addReview(Review review) {
         return reviews.add(review);
     }
@@ -36,6 +37,7 @@ public class Shop implements IComment {
     public boolean deleteProduct(Product product) {
         return products.remove(product);
     }
+
     public String getTitle() {
         return title;
     }

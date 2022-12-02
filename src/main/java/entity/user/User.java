@@ -17,11 +17,11 @@ public abstract class User implements IComment {
     private String surname;
     private String email;
     private String password;
-    private List<Review> reviews = new ArrayList<>();;
+    private List<Review> reviews = new ArrayList<>();
     private Role role;
     private String phoneNumber;
     private UserStatus status;
-    private List<Order> orders = new ArrayList<>();;
+    private List<Order> orders = new ArrayList<>();
 
     public User(){}
 
@@ -35,7 +35,7 @@ public abstract class User implements IComment {
         this.status = status;
     }
 
-    public boolean addReview(Review review) {
+    public final boolean addReview(Review review) {
         return reviews.add(review);
     }
 

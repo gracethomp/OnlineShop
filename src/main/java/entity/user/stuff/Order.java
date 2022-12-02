@@ -1,7 +1,6 @@
 package entity.user.stuff;
 
 import entity.enums.OrderStatus;
-import entity.enums.UserStatus;
 import entity.goods.Product;
 import entity.enums.WaysToPay;
 

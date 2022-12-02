@@ -63,6 +63,6 @@ public class ReviewProduct extends Review {
                 "shop=" + shop +
                 ", user=" + user +
                 ", product=" + product +
-                '}';
+                '}' + super.toString();
     }
 }
