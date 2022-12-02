@@ -1,10 +1,11 @@
-package enums;
+package entity.enums;
 
-public enum CardType {
-    VISA(1), MASTERCARD(2);
+public enum Sizes {
+    XS(1), S(2), M(3), L(4), XL(5);
+
     private final int value;
 
-    CardType(int i) {
+    Sizes(int i) {
         this.value = i;
     }
 

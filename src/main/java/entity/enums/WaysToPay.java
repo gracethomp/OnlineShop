@@ -1,4 +1,4 @@
-package enums;
+package entity.enums;
 
 public enum WaysToPay {
     CASH(1), FULL_PREPAYMENT(2), PARTIAL_PREPAYMENT(3);

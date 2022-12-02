@@ -1,11 +1,10 @@
-package enums;
+package entity.enums;
 
-public enum UserStatus {
-    OK(1), BLOCKED(2);
-
+public enum CardType {
+    VISA(1), MASTERCARD(2);
     private final int value;
 
-    UserStatus(int i) {
+    CardType(int i) {
         this.value = i;
     }
 

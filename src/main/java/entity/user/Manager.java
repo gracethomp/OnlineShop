@@ -1,8 +1,8 @@
 package entity.user;
 
-import enums.OrderStatus;
-import enums.Role;
-import enums.UserStatus;
+import entity.enums.OrderStatus;
+import entity.enums.Role;
+import entity.enums.UserStatus;
 import entity.user.interfaces.IManage;
 import entity.user.stuff.Order;
 

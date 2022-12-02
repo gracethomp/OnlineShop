@@ -1,8 +1,8 @@
 package entity.goods;
 
-import enums.Rating;
-import enums.ProductTypes;
-import enums.WaysToPay;
+import entity.enums.Rating;
+import entity.enums.ProductTypes;
+import entity.enums.WaysToPay;
 import entity.reviews.Review;
 import entity.reviews.ReviewProduct;
 import entity.user.interfaces.IComment;

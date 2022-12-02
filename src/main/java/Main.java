@@ -1,6 +1,6 @@
-import enums.OrderStatus;
-import enums.Role;
-import enums.WaysToPay;
+import entity.enums.OrderStatus;
+import entity.enums.Role;
+import entity.enums.WaysToPay;
 import entity.user.Admin;
 import entity.user.Client;
 import entity.user.Manager;

@@ -1,11 +1,11 @@
-package enums;
+package entity.enums;
 
-public enum Role {
-    CLIENT(1), MANAGER(2),  ADMIN(3);
+public enum Rating {
+    STAR1(1), STAR2(2), STAR3(3), STAR4(4), STAR(5);
 
     private final int value;
 
-    Role(int i) {
+    Rating(int i) {
         this.value = i;
     }
 

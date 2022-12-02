@@ -1,6 +1,7 @@
 package entity.reviews;
 
-import enums.Rating;
+import entity.user.User;
+import entity.enums.Rating;
 import entity.goods.Stock;
 
 import java.util.Objects;
@@ -9,8 +10,8 @@ public class ReviewStock extends Review {
     private Stock stock;
 
     public ReviewStock(){}
-    public ReviewStock(String comment, Rating rating, Stock stock) {
-        super(comment, rating);
+    public ReviewStock(String comment, Rating rating, User user, Stock stock) {
+        super(comment, rating, user);
         this.stock = stock;
     }
 

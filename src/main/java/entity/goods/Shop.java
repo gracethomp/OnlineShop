@@ -1,6 +1,6 @@
 package entity.goods;
 
-import enums.Rating;
+import entity.enums.Rating;
 import entity.reviews.Review;
 import entity.user.interfaces.IComment;
 

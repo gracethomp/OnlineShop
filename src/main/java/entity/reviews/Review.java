@@ -1,7 +1,7 @@
 package entity.reviews;
 
 import entity.user.User;
-import enums.Rating;
+import entity.enums.Rating;
 
 public abstract class Review {
     private String comment;

@@ -1,8 +1,8 @@
 package entity.user.stuff;
 
-import enums.OrderStatus;
+import entity.enums.OrderStatus;
 import entity.goods.Product;
-import enums.WaysToPay;
+import entity.enums.WaysToPay;
 
 import java.util.ArrayList;
 import java.util.List;

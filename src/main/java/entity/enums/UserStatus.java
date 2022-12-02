@@ -1,11 +1,11 @@
-package enums;
+package entity.enums;
 
-public enum Sizes {
-    XS(1), S(2), M(3), L(4), XL(5);
+public enum UserStatus {
+    OK(1), BLOCKED(2);
 
     private final int value;
 
-    Sizes(int i) {
+    UserStatus(int i) {
         this.value = i;
     }
 

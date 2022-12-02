@@ -1,8 +1,8 @@
 package entity.user.interfaces;
 
-import enums.Rating;
+import entity.enums.Rating;
 import entity.goods.Product;
-import enums.ProductTypes;
+import entity.enums.ProductTypes;
 import entity.goods.Shop;
 import entity.user.Manager;
 import entity.user.User;
