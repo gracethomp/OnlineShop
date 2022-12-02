@@ -1,4 +1,4 @@
-package entity.enums;
+package enums;
 
 public enum OrderStatus {
     REGISTERED(1), IN_PROGRESS(2), CANCELLED(3), DONE(4);

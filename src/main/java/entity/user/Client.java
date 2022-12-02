@@ -1,7 +1,7 @@
 package entity.user;
 
-import entity.enums.Role;
-import entity.enums.UserStatus;
+import enums.Role;
+import enums.UserStatus;
 import entity.goods.Stock;
 import entity.lists.SeenList;
 import entity.lists.WishList;

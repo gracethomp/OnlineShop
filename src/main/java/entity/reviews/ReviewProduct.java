@@ -1,6 +1,6 @@
 package entity.reviews;
 
-import entity.enums.Rating;
+import enums.Rating;
 import entity.goods.Product;
 import entity.goods.Shop;
 import entity.user.User;
@@ -9,14 +9,12 @@ import java.util.Objects;
 
 public class ReviewProduct extends Review {
     private Shop shop;
-    private User user;
     private Product product;
 
     public ReviewProduct(){}
     public ReviewProduct(String comment, Rating rating, Shop shop, User user, Product product) {
-        super(comment, rating);
+        super(comment, rating, user);
         this.shop = shop;
-        this.user = user;
         this.product = product;
     }
 
@@ -24,19 +22,12 @@ public class ReviewProduct extends Review {
         return shop;
     }
 
-    public User getUser() {
-        return user;
-    }
-
     public Product getProduct() {
         return product;
     }
+
     public void setShop(Shop shop) {
         this.shop = shop;
-    }
-
-    public void setUser(User user) {
-        this.user = user;
     }
 
     public void setProduct(Product product) {
@@ -48,20 +39,18 @@ public class ReviewProduct extends Review {
         if (this == o) return true;
         if (o == null || getClass() != o.getClass()) return false;
         ReviewProduct that = (ReviewProduct) o;
-        return Objects.equals(shop, that.shop) && Objects.equals(user, that.user)
-                && Objects.equals(product, that.product) && super.equals(that);
+        return Objects.equals(shop, that.shop) && Objects.equals(product, that.product) && super.equals(that);
     }
 
     @Override
     public int hashCode() {
-        return Objects.hash(super.hashCode(), shop, user, product);
+        return Objects.hash(super.hashCode(), shop, product);
     }
 
     @Override
     public String toString() {
         return "ReviewProduct{" +
                 "shop=" + shop +
-                ", user=" + user +
                 ", product=" + product +
                 '}' + super.toString();
     }

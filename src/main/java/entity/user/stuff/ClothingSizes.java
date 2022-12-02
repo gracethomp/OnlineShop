@@ -1,6 +1,6 @@
 package entity.user.stuff;
 
-import entity.enums.Sizes;
+import enums.Sizes;
 
 import java.util.Locale;
 import java.util.Objects;

@@ -1,8 +1,8 @@
 package entity.user.stuff;
 
-import entity.enums.OrderStatus;
+import enums.OrderStatus;
 import entity.goods.Product;
-import entity.enums.WaysToPay;
+import enums.WaysToPay;
 import entity.user.Client;
 import entity.user.Manager;
 import entity.user.interfaces.Calculable;

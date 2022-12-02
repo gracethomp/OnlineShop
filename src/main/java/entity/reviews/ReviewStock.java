@@ -1,6 +1,6 @@
 package entity.reviews;
 
-import entity.enums.Rating;
+import enums.Rating;
 import entity.goods.Stock;
 
 import java.util.Objects;

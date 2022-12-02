@@ -1,6 +1,6 @@
 package entity.user.stuff;
 
-import entity.enums.CardType;
+import enums.CardType;
 
 import java.util.Objects;
 

@@ -1,14 +1,13 @@
-import entity.enums.OrderStatus;
-import entity.enums.Role;
-import entity.enums.UserStatus;
-import entity.enums.WaysToPay;
-import entity.lists.SeenList;
+import enums.OrderStatus;
+import enums.Role;
+import enums.WaysToPay;
 import entity.user.Admin;
 import entity.user.Client;
 import entity.user.Manager;
 import entity.user.User;
 import entity.user.interfaces.IManage;
-import entity.user.stuff.*;
+import entity.user.stuff.ClothingSizes;
+import entity.user.stuff.Order;
 
 import java.util.ArrayList;
 import java.util.List;

@@ -1,10 +1,10 @@
 package entity.user;
 
-import entity.enums.Rating;
-import entity.enums.Role;
-import entity.enums.UserStatus;
+import enums.Rating;
+import enums.Role;
+import enums.UserStatus;
 import entity.goods.Product;
-import entity.enums.ProductTypes;
+import enums.ProductTypes;
 import entity.goods.Shop;
 import entity.user.interfaces.IRule;
 

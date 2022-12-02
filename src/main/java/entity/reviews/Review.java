@@ -1,15 +1,18 @@
 package entity.reviews;
 
-import entity.enums.Rating;
+import entity.user.User;
+import enums.Rating;
 
 public abstract class Review {
     private String comment;
     private Rating rating;
+    private User user;
 
     public Review(){}
-    public Review(String comment, Rating rating) {
+    public Review(String comment, Rating rating, User user) {
         this.comment = comment;
         this.rating = rating;
+        this.user = user;
     }
 
     public Rating getRating() {
@@ -20,6 +23,10 @@ public abstract class Review {
         return comment;
     }
 
+    public User getUser() {
+        return user;
+    }
+
     public void setComment(String comment) {
         this.comment = comment;
     }
@@ -28,9 +35,12 @@ public abstract class Review {
         this.rating = rating;
     }
 
+    public void setUser(User user) {
+        this.user = user;
+    }
 
     @Override
     public String toString() {
-        return comment + "Stars: " + rating;
+        return comment + "Stars: " + rating + "User: " + user;
     }
 }
