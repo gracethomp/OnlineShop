@@ -1,2 +1,0 @@
-# OnlineShop
-Solvd Inc. homeworks
