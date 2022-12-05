@@ -8,6 +8,7 @@ import java.util.Objects;
 
 public class ReviewStock extends Review {
     private Stock stock;
+    public String g;
 
     public ReviewStock(){}
     public ReviewStock(String comment, Rating rating, User user, Stock stock) {
