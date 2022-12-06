@@ -9,8 +9,11 @@ import entity.interfaces.IComment;
 import exceptions.OnlineShopEmptyTitleException;
 import exceptions.OnlineShopNegativeValuesException;
 import exceptions.OnlineShopNullPointerException;
+import exceptions.OnlineShopIOException;
 import org.apache.log4j.Logger;
 
+import java.io.FileWriter;
+import java.io.IOException;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Objects;
@@ -73,11 +76,17 @@ public class Product implements IComment {
     }
 
     @Override
-    public boolean addReview(Review review) {
+    public boolean addReview(Review review) throws OnlineShopIOException {
         if(review instanceof ReviewProduct) {
             if (((ReviewProduct) review).getShop().addReview(review)) {
                 if (((ReviewProduct) review).getProduct().addReview(review)) {
                     LOGGER.debug(review + " is added to product");
+                    try(FileWriter fileWriter = new FileWriter(Review.fileName)){
+                        fileWriter.write(review.toString());
+                    } catch (IOException e) {
+                        LOGGER.error(OnlineShopIOException.REVIEW_IO_EXCEPTION);
+                        throw new OnlineShopIOException(e);
+                    }
                     return reviews.add(review);
                 }
             }

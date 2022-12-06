@@ -13,6 +13,8 @@ import java.util.List;
 import java.util.Objects;
 
 public class Shop implements IComment {
+    public static final String fileName = "src/main/resources/Shops.txt";
+
     private String title;
     private String description;
     private List<Review> reviews;

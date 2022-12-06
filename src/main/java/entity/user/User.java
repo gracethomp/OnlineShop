@@ -6,6 +6,7 @@ import entity.interfaces.IComment;
 import entity.user.stuff.Order;
 import entity.reviews.Review;
 import exceptions.NotMatchRegexException;
+import exceptions.OnlineShopIOException;
 import org.apache.log4j.Logger;
 
 import java.util.ArrayList;
@@ -18,7 +19,7 @@ public abstract class User implements IComment {
     private static final String PASSWORD_REGEX =
             "^(?=.*[0-9])(?=.*[a-z])(?=.*[A-Z])(?=.*[*.!@$%^&(){}\\[\\]:;<>,?/~_+-=|]).{8,32}$";
     private static final String PHONE_REGEX = "\\d{9}";
-    private final String PHONE_NUMBER_PREFIX = "+380";
+    private static final String PHONE_NUMBER_PREFIX = "+380";
 
     private String name;
     private String surname;
@@ -60,7 +61,7 @@ public abstract class User implements IComment {
         this.status = status;
     }
 
-    public final boolean addReview(Review review) {
+    public final boolean addReview(Review review) throws OnlineShopIOException {
         LOGGER.info("review was added to user");
         return reviews.add(review);
     }

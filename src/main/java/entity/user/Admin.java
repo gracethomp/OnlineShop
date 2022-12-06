@@ -7,8 +7,11 @@ import entity.goods.Product;
 import entity.enums.ProductTypes;
 import entity.goods.Shop;
 import entity.interfaces.IRule;
+import exceptions.OnlineShopIOException;
 import org.apache.log4j.Logger;
 
+import java.io.FileWriter;
+import java.io.IOException;
 import java.util.Objects;
 
 public class Admin extends Manager implements IRule {
@@ -49,8 +52,16 @@ public class Admin extends Manager implements IRule {
         manager.setProcessRights(value);
     }
 
-    public Shop createShop(String title, String description, Rating rating, int ordersCount){
+    public Shop createShop(String title, String description, Rating rating, int ordersCount)
+            throws OnlineShopIOException {
         Shop shop = new Shop(title, description, rating, ordersCount);
+        try{
+            FileWriter fileWriter = new FileWriter(Shop.fileName);
+            fileWriter.write(shop.toString());
+        } catch (IOException e) {
+            LOGGER.error(OnlineShopIOException.SHOP_IO_EXCEPTION);
+            throw new OnlineShopIOException(OnlineShopIOException.SHOP_IO_EXCEPTION, e);
+        }
         LOGGER.debug("new shop created " + shop);
         return shop;
     }

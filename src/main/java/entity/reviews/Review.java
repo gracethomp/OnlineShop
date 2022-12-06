@@ -6,6 +6,8 @@ import entity.enums.Rating;
 import org.apache.log4j.Logger;
 
 public abstract class Review {
+    public static final String fileName = "src/main/resources/Reviews.txt";
+
     private String comment;
     private Rating rating;
     private User user;
