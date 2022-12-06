@@ -3,6 +3,7 @@ package entity.user.stuff;
 import entity.enums.OrderStatus;
 import entity.goods.Product;
 import entity.enums.WaysToPay;
+import exceptions.NotMatchRegexException;
 import exceptions.OnlineShopNegativeValuesException;
 import org.apache.log4j.Logger;
 
@@ -28,6 +29,10 @@ public class Order {
     public Order() {}
     public Order(String recipientName, String recipientSurname, String location,
                  String post, double totalPrice, WaysToPay wayToPay, OrderStatus status){
+        if(!recipientName.matches(NAME_SURNAME_REGEX) && !recipientSurname.matches(NAME_SURNAME_REGEX)){
+            LOGGER.error(NotMatchRegexException.MESSAGE_FULL_NAME);
+            throw new NotMatchRegexException(NotMatchRegexException.MESSAGE_FULL_NAME);
+        }
         if(totalPrice < 0) {
             LOGGER.error(OnlineShopNegativeValuesException.NEGATIVE_VALUE_MESSAGE);
             throw new OnlineShopNegativeValuesException();
@@ -119,10 +124,18 @@ public class Order {
     }
 
     public void setRecipientName(String recipientName) {
+        if(!recipientName.matches(NAME_SURNAME_REGEX)){
+            LOGGER.error(NotMatchRegexException.MESSAGE_FULL_NAME);
+            throw new NotMatchRegexException(NotMatchRegexException.MESSAGE_FULL_NAME);
+        }
         this.recipientName = recipientName;
     }
 
     public void setRecipientSurname(String recipientSurname) {
+        if(!recipientSurname.matches(NAME_SURNAME_REGEX)){
+            LOGGER.error(NotMatchRegexException.MESSAGE_FULL_NAME);
+            throw new NotMatchRegexException(NotMatchRegexException.MESSAGE_FULL_NAME);
+        }
         this.recipientSurname = recipientSurname;
     }
 

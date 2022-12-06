@@ -3,7 +3,7 @@ package exceptions;
 import org.apache.log4j.Logger;
 
 public class OnlineShopEmptyTitleException extends IllegalArgumentException{
-    public static final String EMPTY_TITLE_MESSAGE = "empty title is not allowed ";
+    public static final String EMPTY_TITLE_MESSAGE = "empty title is not allowed";
 
     public static void check(String title, Logger LOGGER) {
         if(title.equals("")){

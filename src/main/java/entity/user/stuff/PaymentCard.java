@@ -1,6 +1,8 @@
 package entity.user.stuff;
 
 import entity.enums.CardType;
+import exceptions.PaymentCardIllegalArgumentException;
+import org.apache.log4j.Logger;
 
 import java.util.Objects;
 
@@ -10,12 +12,26 @@ public class PaymentCard {
     private int year;
     private int CVV;
     private CardType cardType;
+
+    private static final Logger LOGGER = Logger.getLogger(Order.class);
     
     public PaymentCard() {
 
     }
 
     public PaymentCard(long number, int month, int year, int CVV, CardType cardType) {
+        if(String.valueOf(number).length() != 16){
+            LOGGER.error(PaymentCardIllegalArgumentException.MESSAGE_CARD_NUMBER);
+            throw new PaymentCardIllegalArgumentException(PaymentCardIllegalArgumentException.MESSAGE_CARD_NUMBER);
+        }
+        if(month < 1 || month > 12 || year < 2021 || year > 2027) {
+            LOGGER.error(PaymentCardIllegalArgumentException.MESSAGE_DATE);
+            throw new PaymentCardIllegalArgumentException(PaymentCardIllegalArgumentException.MESSAGE_DATE);
+        }
+        if (String.valueOf(CVV).length() != 3){
+            LOGGER.error(PaymentCardIllegalArgumentException.MESSAGE_CVV);
+            throw new PaymentCardIllegalArgumentException(PaymentCardIllegalArgumentException.MESSAGE_CVV);
+        }
         this.number = number;
         this.month = month;
         this.year = year;
@@ -44,18 +60,34 @@ public class PaymentCard {
     }
 
     public void setCVV(int CVV) {
+        if (String.valueOf(CVV).length() != 3){
+            LOGGER.error(PaymentCardIllegalArgumentException.MESSAGE_CVV);
+            throw new PaymentCardIllegalArgumentException(PaymentCardIllegalArgumentException.MESSAGE_CVV);
+        }
         this.CVV = CVV;
     }
 
     public void setNumber(long number) {
+        if(String.valueOf(number).length() != 16){
+            LOGGER.error(PaymentCardIllegalArgumentException.MESSAGE_CARD_NUMBER);
+            throw new PaymentCardIllegalArgumentException(PaymentCardIllegalArgumentException.MESSAGE_CARD_NUMBER);
+        }
         this.number = number;
     }
 
     public void setMonth(int month) {
+        if(month < 1 || month > 12) {
+            LOGGER.error(PaymentCardIllegalArgumentException.MESSAGE_DATE);
+            throw new PaymentCardIllegalArgumentException(PaymentCardIllegalArgumentException.MESSAGE_DATE);
+        }
         this.month = month;
     }
 
     public void setYear(int year) {
+        if(year < 2021 || year > 2027) {
+            LOGGER.error(PaymentCardIllegalArgumentException.MESSAGE_DATE);
+            throw new PaymentCardIllegalArgumentException(PaymentCardIllegalArgumentException.MESSAGE_DATE);
+        }
         this.year = year;
     }
 
