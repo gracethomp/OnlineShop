@@ -4,12 +4,15 @@ import entity.enums.Rating;
 import entity.goods.Product;
 import entity.goods.Shop;
 import entity.user.User;
+import org.apache.log4j.Logger;
 
 import java.util.Objects;
 
 public class ReviewProduct extends Review {
     private Shop shop;
     private Product product;
+
+    private static final Logger LOGGER = Logger.getLogger(ReviewProduct.class);
 
     public ReviewProduct(){}
     public ReviewProduct(String comment, Rating rating, Shop shop, User user, Product product) {
@@ -19,18 +22,22 @@ public class ReviewProduct extends Review {
     }
 
     public Shop getShop() {
+        LOGGER.trace("shop was gotten");
         return shop;
     }
 
     public Product getProduct() {
+        LOGGER.trace("product was gotten");
         return product;
     }
 
     public void setShop(Shop shop) {
+        LOGGER.trace("shop was set");
         this.shop = shop;
     }
 
     public void setProduct(Product product) {
+        LOGGER.trace("product was set");
         this.product = product;
     }
 

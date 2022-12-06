@@ -22,22 +22,24 @@ public class SeenList extends ListForUsers implements IOrderBy {
     public List<Product> orderByPrice() {
         Comparator<Product> comparator = Comparator.comparing(Product::getPrice);
         getProducts().sort(comparator);
-        LOGGER.info("Products in seen list order by price");
+        LOGGER.debug("Products in seen list order by price");
         return getProducts();
     }
 
     public List<Product> orderByTitle() {
         Comparator<Product> comparator = Comparator.comparing(Product::getTitle);
         getProducts().sort(comparator);
-        LOGGER.info("Products in seen list order by title");
+        LOGGER.debug("Products in seen list order by title");
         return getProducts();
     }
 
     public LocalDate getDateFrom() {
+        LOGGER.trace("date from was gotten");
         return dateFrom;
     }
 
     public void setDateFrom(LocalDate dateFrom) {
+        LOGGER.trace("date from was set");
         this.dateFrom = dateFrom;
     }
 

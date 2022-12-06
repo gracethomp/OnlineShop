@@ -40,22 +40,27 @@ public class PaymentCard {
     }
 
     public long getNumber() {
+        LOGGER.trace("number was gotten");
         return number;
     }
 
     public int getMonth() {
+        LOGGER.trace("month was gotten");
         return month;
     }
 
     public int getYear() {
+        LOGGER.trace("year was gotten");
         return year;
     }
 
     public int getCVV() {
+        LOGGER.trace("CVV was gotten");
         return CVV;
     }
 
     public CardType getCardType() {
+        LOGGER.trace("card type was gotten");
         return cardType;
     }
 
@@ -64,6 +69,7 @@ public class PaymentCard {
             LOGGER.error(PaymentCardIllegalArgumentException.MESSAGE_CVV);
             throw new PaymentCardIllegalArgumentException(PaymentCardIllegalArgumentException.MESSAGE_CVV);
         }
+        LOGGER.trace("CVV was set");
         this.CVV = CVV;
     }
 
@@ -72,6 +78,7 @@ public class PaymentCard {
             LOGGER.error(PaymentCardIllegalArgumentException.MESSAGE_CARD_NUMBER);
             throw new PaymentCardIllegalArgumentException(PaymentCardIllegalArgumentException.MESSAGE_CARD_NUMBER);
         }
+        LOGGER.trace("number was set");
         this.number = number;
     }
 
@@ -80,6 +87,7 @@ public class PaymentCard {
             LOGGER.error(PaymentCardIllegalArgumentException.MESSAGE_DATE);
             throw new PaymentCardIllegalArgumentException(PaymentCardIllegalArgumentException.MESSAGE_DATE);
         }
+        LOGGER.trace("month was set");
         this.month = month;
     }
 
@@ -88,10 +96,12 @@ public class PaymentCard {
             LOGGER.error(PaymentCardIllegalArgumentException.MESSAGE_DATE);
             throw new PaymentCardIllegalArgumentException(PaymentCardIllegalArgumentException.MESSAGE_DATE);
         }
+        LOGGER.trace("year was set");
         this.year = year;
     }
 
     public void setCardType(CardType cardType) {
+        LOGGER.trace("card type was set");
         this.cardType = cardType;
     }
 

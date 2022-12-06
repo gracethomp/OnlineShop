@@ -1,7 +1,6 @@
 package entity.lists;
 
 import entity.goods.Product;
-import entity.goods.Shop;
 import entity.interfaces.Clearable;
 import org.apache.log4j.Logger;
 
@@ -21,7 +20,7 @@ public abstract class ListForUsers implements Clearable {
     @Override
     public void clear() {
         products.clear();
-        LOGGER.info("list is cleared");
+        LOGGER.debug("list is cleared" + this.getClass());
     }
 
     public boolean addProduct(Product product) {

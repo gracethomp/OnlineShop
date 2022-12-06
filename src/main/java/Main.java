@@ -18,7 +18,7 @@ public class Main {
     public static void main(String[] args) {
         PropertyConfigurator.configure("src/main/resources/log4j.properties");
         //ClothingSizes clothingSizes = new ClothingSizes("me", 0, 0, 0);
-        Catalog catalog = new Catalog(null);
+        //Catalog catalog = new Catalog(null);
         //static method
         ClothingSizes.printSizesInfo();
         System.out.println('\n');

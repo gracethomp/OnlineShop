@@ -31,13 +31,13 @@ public class ShopBasket implements Calculable {
         for (Product p : products) {
             sum += p.getPrice();
         }
-        LOGGER.info("total price is " + sum + " without delivery");
+        LOGGER.debug("total price is " + sum + " without delivery");
         return sum;
     }
     public double calculateTotalPrice(double delivery) {
         double sum = calculateTotalPrice();
         sum += delivery;
-        LOGGER.info("total price is " + sum + " without delivery");
+        LOGGER.debug("total price is " + sum + " without delivery");
         return sum;
 
     }
@@ -60,18 +60,22 @@ public class ShopBasket implements Calculable {
     }
 
     public boolean addProduct(Product product) {
+        LOGGER.debug(product + " was added");
         return products.add(product);
     }
 
     public double getTotalPrice() {
+        LOGGER.trace("total price was gotten");
         return totalPrice;
     }
 
     public List<Product> getProducts() {
+        LOGGER.trace("products were gotten");
         return products;
     }
 
     public void setProducts(List<Product> products) {
+        LOGGER.trace("products were set");
         this.products = products;
     }
 
@@ -80,6 +84,7 @@ public class ShopBasket implements Calculable {
             LOGGER.error(OnlineShopNegativeValuesException.NEGATIVE_VALUE_MESSAGE);
             throw new OnlineShopNegativeValuesException();
         }
+        LOGGER.trace("total price was set");
         this.totalPrice = totalPrice;
     }
 

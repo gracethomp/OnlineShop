@@ -19,12 +19,14 @@ public class WishList extends ListForUsers {
     }
 
     public String getTitle() {
+        LOGGER.trace("title was gotten");
         return title;
     }
 
     public void setTitle(String title) {
         OnlineShopNullPointerException.checkTitle(title, LOGGER);
         OnlineShopEmptyTitleException.check(title, LOGGER);
+        LOGGER.trace("title was set");
         this.title = title;
     }
 

@@ -64,38 +64,47 @@ public class Order {
     }
 
     public double getTotalPrice() {
+        LOGGER.trace("total price was gotten");
         return totalPrice;
     }
 
     public WaysToPay getWayToPay() {
+        LOGGER.trace("way to pay was gotten");
         return wayToPay;
     }
 
     public String getPost() {
+        LOGGER.trace("post was gotten");
         return post;
     }
 
     public String getLocation() {
+        LOGGER.trace("location was gotten");
         return location;
     }
 
     public String getPromocode() {
+        LOGGER.trace("promocode was gotten");
         return promocode;
     }
 
     public String getRecipientName() {
+        LOGGER.trace("recipient name was gotten");
         return recipientName;
     }
 
     public String getRecipientSurname() {
+        LOGGER.trace("recipient surname was gotten");
         return recipientSurname;
     }
 
     public OrderStatus getStatus() {
+        LOGGER.trace("status was gotten");
         return status;
     }
 
     public List<Product> getProducts() {
+        LOGGER.trace("products were gotten");
         return products;
     }
 
@@ -104,22 +113,27 @@ public class Order {
             LOGGER.error(OnlineShopNegativeValuesException.NEGATIVE_VALUE_MESSAGE);
             throw new OnlineShopNegativeValuesException();
         }
+        LOGGER.trace("total price was gotten");
         this.totalPrice = totalPrice;
     }
 
     public void setWayToPay(WaysToPay wayToPay) {
+        LOGGER.trace("way to pay was set");
         this.wayToPay = wayToPay;
     }
 
     public void setLocation(String location) {
+        LOGGER.trace("location was set");
         this.location = location;
     }
 
     public void setPost(String post) {
+        LOGGER.trace("post was set");
         this.post = post;
     }
 
     public void setPromocode(String promocode) {
+        LOGGER.trace("promocode was set");
         this.promocode = promocode;
     }
 
@@ -128,6 +142,7 @@ public class Order {
             LOGGER.error(NotMatchRegexException.MESSAGE_FULL_NAME);
             throw new NotMatchRegexException(NotMatchRegexException.MESSAGE_FULL_NAME);
         }
+        LOGGER.trace("recipient name was set");
         this.recipientName = recipientName;
     }
 
@@ -136,14 +151,17 @@ public class Order {
             LOGGER.error(NotMatchRegexException.MESSAGE_FULL_NAME);
             throw new NotMatchRegexException(NotMatchRegexException.MESSAGE_FULL_NAME);
         }
+        LOGGER.trace("recipient surname was set");
         this.recipientSurname = recipientSurname;
     }
 
     public void setProducts(List<Product> products) {
+        LOGGER.trace("products were set");
         this.products = products;
     }
 
     public void setStatus(OrderStatus status) {
+        LOGGER.trace("status was set");
         this.status = status;
     }
 

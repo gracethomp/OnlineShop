@@ -58,18 +58,22 @@ public final class ClothingSizes {
     }
 
     public float getBust() {
+        LOGGER.trace("bust was gotten");
         return bust;
     }
 
     public float getHips() {
+        LOGGER.trace("hips was gotten");
         return hips;
     }
 
     public float getWaist() {
+        LOGGER.trace("waist was gotten");
         return waist;
     }
 
     public String getTitle() {
+        LOGGER.trace("title was gotten");
         return title;
     }
 
@@ -78,6 +82,7 @@ public final class ClothingSizes {
             LOGGER.error(ClothingSizeIllegalArgumentException.MESSAGE_BUST);
             throw new ClothingSizeIllegalArgumentException();
         }
+        LOGGER.trace("bust was set");
         this.bust = bust;
     }
 
@@ -86,6 +91,7 @@ public final class ClothingSizes {
             LOGGER.error(ClothingSizeIllegalArgumentException.MESSAGE_HIPS);
             throw new ClothingSizeIllegalArgumentException();
         }
+        LOGGER.trace("hips was set");
         this.hips = hips;
     }
 
@@ -94,12 +100,14 @@ public final class ClothingSizes {
             LOGGER.error(ClothingSizeIllegalArgumentException.MESSAGE_WAIST);
             throw new ClothingSizeIllegalArgumentException();
         }
+        LOGGER.trace("waist was set");
         this.waist = waist;
     }
 
     public void setTitle(String title) {
         OnlineShopNullPointerException.checkTitle(title, LOGGER);
         OnlineShopEmptyTitleException.check(title, LOGGER);
+        LOGGER.trace("title was set");
         this.title = title;
     }
 

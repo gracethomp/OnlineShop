@@ -46,13 +46,13 @@ public class Product implements IComment {
     }
 
     public boolean addWayToPay(WaysToPay way) {
-        LOGGER.info(way + " was added");
+        LOGGER.debug(way + " was added");
         return waysToPay.add(way);
     }
 
     public boolean deleteWayToPay(WaysToPay way) {
         if(waysToPay.contains(way)) {
-            LOGGER.info("one of ways to pay (" + way + ") was deleted");
+            LOGGER.debug("one of ways to pay (" + way + ") was deleted");
             return waysToPay.remove(way);
         }
         LOGGER.warn("way not found");
@@ -77,7 +77,7 @@ public class Product implements IComment {
         if(review instanceof ReviewProduct) {
             if (((ReviewProduct) review).getShop().addReview(review)) {
                 if (((ReviewProduct) review).getProduct().addReview(review)) {
-                    LOGGER.info("review is added to product");
+                    LOGGER.debug(review + " is added to product");
                     return reviews.add(review);
                 }
             }
