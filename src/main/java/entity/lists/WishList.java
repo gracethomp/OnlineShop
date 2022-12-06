@@ -1,11 +1,20 @@
 package entity.lists;
 
+import exceptions.OnlineShopEmptyTitleException;
+import exceptions.OnlineShopNullPointerException;
+import org.apache.log4j.Logger;
+
 import java.util.Objects;
 
 public class WishList extends ListForUsers {
     private String title;
+
+    private static final Logger LOGGER = Logger.getLogger(WishList.class);
+
     public WishList() {}
     public WishList(String title) {
+        OnlineShopNullPointerException.checkTitle(title, LOGGER);
+        OnlineShopEmptyTitleException.check(title, LOGGER);
         this.title = title;
     }
 
@@ -14,6 +23,8 @@ public class WishList extends ListForUsers {
     }
 
     public void setTitle(String title) {
+        OnlineShopNullPointerException.checkTitle(title, LOGGER);
+        OnlineShopEmptyTitleException.check(title, LOGGER);
         this.title = title;
     }
 

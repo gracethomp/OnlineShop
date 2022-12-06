@@ -5,12 +5,18 @@ import entity.enums.UserStatus;
 import entity.interfaces.IComment;
 import entity.user.stuff.Order;
 import entity.reviews.Review;
+import exceptions.FullNameNotMatchRegexException;
+import exceptions.WrongPasswordException;
+import org.apache.log4j.Logger;
 
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Objects;
 
 public abstract class User implements IComment {
+    private static final String NAME_SURNAME_REGEX = "[a-zA-Z]{2,20}";
+    private static final String PASSWORD_REGEX =
+            "^(?=.*[0-9])(?=.*[a-z])(?=.*[A-Z])(?=.*[*.!@$%^&(){}\\[\\]:;<>,?/~_+-=|]).{8,32}$";
     private final String PHONE_NUMBER_PREFIX = "+380";
 
     private String name;
@@ -23,10 +29,20 @@ public abstract class User implements IComment {
     private UserStatus status;
     private List<Order> orders = new ArrayList<>();
 
+    private static final Logger LOGGER = Logger.getLogger(Order.class);
+
     public User(){}
 
     public User(String name, String surname, String email,
                 String password, String phoneNumber, UserStatus status){
+        if(!name.matches(NAME_SURNAME_REGEX) && !surname.matches(NAME_SURNAME_REGEX)){
+            LOGGER.error(FullNameNotMatchRegexException.MESSAGE);
+            throw new FullNameNotMatchRegexException(FullNameNotMatchRegexException.MESSAGE);
+        }
+        if (!password.matches(PASSWORD_REGEX)){
+            LOGGER.error(WrongPasswordException.MESSAGE);
+            throw new WrongPasswordException(WrongPasswordException.MESSAGE);
+        }
         this.name = name;
         this.surname = surname;
         this.email = email;
@@ -76,10 +92,18 @@ public abstract class User implements IComment {
     }
 
     public void setName(String name) {
+        if(!name.matches(NAME_SURNAME_REGEX)){
+            LOGGER.error(FullNameNotMatchRegexException.MESSAGE);
+            throw new FullNameNotMatchRegexException(FullNameNotMatchRegexException.MESSAGE);
+        }
         this.name = name;
     }
 
     public void setSurname(String surname) {
+        if(!surname.matches(NAME_SURNAME_REGEX)){
+            LOGGER.error(FullNameNotMatchRegexException.MESSAGE);
+            throw new FullNameNotMatchRegexException(FullNameNotMatchRegexException.MESSAGE);
+        }
         this.surname = surname;
     }
 
@@ -88,6 +112,10 @@ public abstract class User implements IComment {
     }
 
     public void setPassword(String password) {
+        if (!password.matches(PASSWORD_REGEX)){
+            LOGGER.error(WrongPasswordException.MESSAGE);
+            throw new WrongPasswordException(WrongPasswordException.MESSAGE);
+        }
         this.password = password;
     }
 

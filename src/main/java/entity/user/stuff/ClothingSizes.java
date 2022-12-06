@@ -1,6 +1,10 @@
 package entity.user.stuff;
 
 import entity.enums.Sizes;
+import exceptions.ClothingSizeIllegalArgumentException;
+import exceptions.OnlineShopEmptyTitleException;
+import exceptions.OnlineShopNullPointerException;
+import org.apache.log4j.Logger;
 
 import java.util.Locale;
 import java.util.Objects;
@@ -8,23 +12,27 @@ import java.util.Objects;
 public final class ClothingSizes {
     private static final String ANSI_CYAN = "\u001B[36m";
     private static final String ANSI_RESET = "\u001B[0m";
-
     private final int ZERO = 0;
+
     private String title;
     private float bust;
     private float hips;
     private float waist;
 
+    private static final Logger LOGGER = Logger.getLogger(ClothingSizes.class);
+
     public ClothingSizes() {}
     public ClothingSizes(String title, float bust, float hips, float waist) {
-        if(bust <= ZERO || hips <= ZERO || waist <= ZERO)
-            throw new IllegalArgumentException();
-        else {
-            this.title = title;
-            this.bust = bust;
-            this.hips = hips;
-            this.waist = waist;
+        if(bust <= ZERO || hips <= ZERO || waist <= ZERO) {
+            LOGGER.error(ClothingSizeIllegalArgumentException.MESSAGE_CONSTRUCTOR);
+            throw new ClothingSizeIllegalArgumentException(ClothingSizeIllegalArgumentException.MESSAGE_CONSTRUCTOR);
         }
+        OnlineShopNullPointerException.checkTitle(title, LOGGER);
+        OnlineShopEmptyTitleException.check(title, LOGGER);
+        this.title = title;
+        this.bust = bust;
+        this.hips = hips;
+        this.waist = waist;
     }
 
     public static void printSizesInfo(){
@@ -65,18 +73,32 @@ public final class ClothingSizes {
     }
 
     public void setBust(float bust) {
+        if(bust <= ZERO) {
+            LOGGER.error(ClothingSizeIllegalArgumentException.MESSAGE_BUST);
+            throw new ClothingSizeIllegalArgumentException();
+        }
         this.bust = bust;
     }
 
     public void setHips(float hips) {
+        if(hips <= ZERO) {
+            LOGGER.error(ClothingSizeIllegalArgumentException.MESSAGE_HIPS);
+            throw new ClothingSizeIllegalArgumentException();
+        }
         this.hips = hips;
     }
 
     public void setWaist(float waist) {
+        if(waist <= ZERO) {
+            LOGGER.error(ClothingSizeIllegalArgumentException.MESSAGE_WAIST);
+            throw new ClothingSizeIllegalArgumentException();
+        }
         this.waist = waist;
     }
 
     public void setTitle(String title) {
+        OnlineShopNullPointerException.checkTitle(title, LOGGER);
+        OnlineShopEmptyTitleException.check(title, LOGGER);
         this.title = title;
     }
 

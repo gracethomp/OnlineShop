@@ -3,12 +3,16 @@ package entity.user.stuff;
 import entity.enums.OrderStatus;
 import entity.goods.Product;
 import entity.enums.WaysToPay;
+import exceptions.OnlineShopNegativeValuesException;
+import org.apache.log4j.Logger;
 
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Objects;
 
 public class Order {
+    private static final String NAME_SURNAME_REGEX = "[a-zA-Z]{2,20}";
+
     private List<Product> products;
     private String recipientName;
     private String recipientSurname;
@@ -18,9 +22,16 @@ public class Order {
     private WaysToPay wayToPay;
     private String promocode;
     private OrderStatus status;
+
+    private static final Logger LOGGER = Logger.getLogger(Order.class);
+
     public Order() {}
     public Order(String recipientName, String recipientSurname, String location,
                  String post, double totalPrice, WaysToPay wayToPay, OrderStatus status){
+        if(totalPrice < 0) {
+            LOGGER.error(OnlineShopNegativeValuesException.NEGATIVE_VALUE_MESSAGE);
+            throw new OnlineShopNegativeValuesException();
+        }
         this.recipientName = recipientName;
         this.recipientSurname = recipientSurname;
         this.location = location;
@@ -32,6 +43,10 @@ public class Order {
     }
     public Order(String recipientName, String recipientSurname, String location,
                  String post, double totalPrice, WaysToPay wayToPay, String promocode, OrderStatus status) {
+        if(totalPrice < 0) {
+            LOGGER.error(OnlineShopNegativeValuesException.NEGATIVE_VALUE_MESSAGE);
+            throw new OnlineShopNegativeValuesException();
+        }
         this.recipientName = recipientName;
         this.recipientSurname = recipientSurname;
         this.location = location;
@@ -80,6 +95,10 @@ public class Order {
     }
 
     public void setTotalPrice(double totalPrice) {
+        if(totalPrice < 0) {
+            LOGGER.error(OnlineShopNegativeValuesException.NEGATIVE_VALUE_MESSAGE);
+            throw new OnlineShopNegativeValuesException();
+        }
         this.totalPrice = totalPrice;
     }
 

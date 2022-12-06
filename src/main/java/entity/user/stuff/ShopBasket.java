@@ -6,12 +6,24 @@ import entity.enums.WaysToPay;
 import entity.user.Client;
 import entity.user.Manager;
 import entity.interfaces.Calculable;
+import exceptions.OnlineShopNegativeValuesException;
+import org.apache.log4j.Logger;
 
 import java.util.List;
 
 public class ShopBasket implements Calculable {
     private List<Product> products;
     private double totalPrice;
+
+    private static final Logger LOGGER = Logger.getLogger(ShopBasket.class);
+
+    public ShopBasket(){}
+    public ShopBasket(double totalPrice){
+        if(totalPrice < 0) {
+            LOGGER.error(OnlineShopNegativeValuesException.NEGATIVE_VALUE_MESSAGE);
+            throw new OnlineShopNegativeValuesException();
+        }
+    }
 
     @Override
     public double calculateTotalPrice() {
@@ -58,6 +70,10 @@ public class ShopBasket implements Calculable {
     }
 
     public void setTotalPrice(double totalPrice) {
+        if(totalPrice < 0) {
+            LOGGER.error(OnlineShopNegativeValuesException.NEGATIVE_VALUE_MESSAGE);
+            throw new OnlineShopNegativeValuesException();
+        }
         this.totalPrice = totalPrice;
     }
 

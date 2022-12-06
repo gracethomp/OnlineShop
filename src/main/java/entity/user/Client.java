@@ -7,6 +7,8 @@ import entity.lists.SeenList;
 import entity.lists.WishList;
 import entity.interfaces.Calculable;
 import entity.user.stuff.*;
+import exceptions.OnlineShopNegativeValuesException;
+import org.apache.log4j.Logger;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -27,13 +29,18 @@ public class Client extends User implements Calculable {
     private List<Stock> stocks = new ArrayList<>();
     private List<Order> orders = new ArrayList<>();
 
-    public Client() {}
+    private static final Logger LOGGER = Logger.getLogger(Client.class);
 
+    public Client() {}
     public Client(String name, String surname, String email, String password, String phoneNumber, UserStatus status,
                   String country, String city, String streetTitle, int streetNumber, int apartmentNumber,
                   ShopBasket shopBasket, MailingList mailingList, PaymentCard card,
                   ClothingSizes clothingSizes, SeenList seenList) {
         super(name, surname, email, password, phoneNumber, status);
+        if(streetNumber < 0 || apartmentNumber < 0) {
+            LOGGER.error(OnlineShopNegativeValuesException.NEGATIVE_VALUE_MESSAGE);
+            throw new OnlineShopNegativeValuesException();
+        }
         this.country = country;
         this.city = city;
         this.streetTitle = streetTitle;
@@ -126,6 +133,10 @@ public class Client extends User implements Calculable {
     }
 
     public void setApartmentNumber(int apartmentNumber) {
+        if(apartmentNumber < 0) {
+            LOGGER.error(OnlineShopNegativeValuesException.NEGATIVE_VALUE_MESSAGE);
+            throw new OnlineShopNegativeValuesException();
+        }
         this.apartmentNumber = apartmentNumber;
     }
 
@@ -158,6 +169,10 @@ public class Client extends User implements Calculable {
     }
 
     public void setStreetNumber(int streetNumber) {
+        if(streetNumber < 0) {
+            LOGGER.error(OnlineShopNegativeValuesException.NEGATIVE_VALUE_MESSAGE);
+            throw new OnlineShopNegativeValuesException();
+        }
         this.streetNumber = streetNumber;
     }
 

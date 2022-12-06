@@ -3,6 +3,10 @@ package entity.goods;
 import entity.enums.Rating;
 import entity.reviews.Review;
 import entity.interfaces.IComment;
+import exceptions.OnlineShopEmptyTitleException;
+import exceptions.OnlineShopNegativeValuesException;
+import exceptions.OnlineShopNullPointerException;
+import org.apache.log4j.Logger;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -16,9 +20,17 @@ public class Shop implements IComment {
     private int ordersCount;
     private List<Product> products;
 
+    private static final Logger LOGGER = Logger.getLogger(Shop.class);
+
     public Shop() {}
     public Shop(String title, String description, Rating rating, int ordersCount){
         this.reviews = new ArrayList<>();
+        OnlineShopNullPointerException.checkTitle(title, LOGGER);
+        OnlineShopEmptyTitleException.check(title, LOGGER);
+        if(ordersCount < 0) {
+            LOGGER.error(OnlineShopNegativeValuesException.NEGATIVE_VALUE_MESSAGE);
+            throw new OnlineShopNegativeValuesException();
+        }
         this.title = title;
         this.description = description;
         this.rating = rating;
@@ -71,6 +83,11 @@ public class Shop implements IComment {
     }
 
     public void setTitle(String title) {
+        OnlineShopNullPointerException.checkTitle(title, LOGGER);
+        if(title.equals("")){
+            LOGGER.error(OnlineShopEmptyTitleException.EMPTY_TITLE_MESSAGE);
+            throw new OnlineShopEmptyTitleException();
+        }
         this.title = title;
     }
 
@@ -79,6 +96,10 @@ public class Shop implements IComment {
     }
 
     public void setOrdersCount(int ordersCount) {
+        if(ordersCount < 0) {
+            LOGGER.error(OnlineShopNegativeValuesException.NEGATIVE_VALUE_MESSAGE);
+            throw new OnlineShopNegativeValuesException();
+        }
         this.ordersCount = ordersCount;
     }
 

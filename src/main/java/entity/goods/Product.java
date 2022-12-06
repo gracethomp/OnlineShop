@@ -6,6 +6,10 @@ import entity.enums.WaysToPay;
 import entity.reviews.Review;
 import entity.reviews.ReviewProduct;
 import entity.interfaces.IComment;
+import exceptions.OnlineShopEmptyTitleException;
+import exceptions.OnlineShopNegativeValuesException;
+import exceptions.OnlineShopNullPointerException;
+import org.apache.log4j.Logger;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -20,8 +24,17 @@ public class Product implements IComment {
     private ProductTypes type;
     private List<Review> reviews;
     private List<WaysToPay> waysToPay;
+
+    private static final Logger LOGGER = Logger.getLogger(Product.class);
+
     public Product(){}
     public Product(String title, Rating rating, double price, int count, String description, ProductTypes type) {
+        OnlineShopNullPointerException.checkTitle(title, LOGGER);
+        OnlineShopEmptyTitleException.check(title, LOGGER);
+        if(count < 0 || price < 0) {
+            LOGGER.error(OnlineShopNegativeValuesException.NEGATIVE_VALUE_MESSAGE);
+            throw new OnlineShopNegativeValuesException();
+        }
         this.title = title;
         this.rating = rating;
         this.price = price;
@@ -39,24 +52,30 @@ public class Product implements IComment {
     public boolean deleteWayToPay(WaysToPay way) {
         if(waysToPay.contains(way))
             return waysToPay.remove(way);
+        LOGGER.warn("way not found");
         return false;
     }
 
     public boolean reduceCount(int countOrdered) {
-        if(countOrdered <= 0)
+        if(countOrdered <= 0) {
+            LOGGER.warn("Nothing to reduce");
             return false;
-        if((count - countOrdered) < 0)
+        }
+        if((count - countOrdered) < 0) {
             throw new IllegalArgumentException();
+        }
         count -= countOrdered;
         return true;
     }
 
     @Override
     public boolean addReview(Review review) {
-        if(review instanceof ReviewProduct)
-            if(((ReviewProduct) review).getShop().addReview(review))
-                if(((ReviewProduct) review).getProduct().addReview(review))
+        if(review instanceof ReviewProduct) {
+            if (((ReviewProduct) review).getShop().addReview(review))
+                if (((ReviewProduct) review).getProduct().addReview(review))
                     return reviews.add(review);
+        }
+        LOGGER.error("Review adding is wrong");
         return false;
     }
 
@@ -97,6 +116,8 @@ public class Product implements IComment {
     }
 
     public void setTitle(String title) {
+        OnlineShopNullPointerException.checkTitle(title, LOGGER);
+        OnlineShopEmptyTitleException.check(title, LOGGER);
         this.title = title;
     }
 
@@ -109,10 +130,18 @@ public class Product implements IComment {
     }
 
     public void setPrice(double price) {
+        if(price < 0) {
+            LOGGER.error(OnlineShopNegativeValuesException.NEGATIVE_VALUE_MESSAGE);
+            throw new OnlineShopNegativeValuesException();
+        }
         this.price = price;
     }
 
     public void setCount(int count) {
+        if(count < 0) {
+            LOGGER.error(OnlineShopNegativeValuesException.NEGATIVE_VALUE_MESSAGE);
+            throw new OnlineShopNegativeValuesException();
+        }
         this.count = count;
     }
 

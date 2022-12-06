@@ -1,5 +1,9 @@
 package entity.goods;
 
+import exceptions.OnlineShopEmptyTitleException;
+import exceptions.OnlineShopNullPointerException;
+import org.apache.log4j.Logger;
+
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Objects;
@@ -7,8 +11,13 @@ import java.util.Objects;
 public class Catalog {
     private String title;
     private List<Product> products;
+
+    private static final Logger LOGGER = Logger.getLogger(Catalog.class);
+
     public Catalog(){}
     public Catalog(String title) {
+        OnlineShopNullPointerException.checkTitle(title, LOGGER);
+        OnlineShopEmptyTitleException.check(title, LOGGER);
         this.title = title;
         products = new ArrayList<>();
     }
@@ -26,6 +35,8 @@ public class Catalog {
     }
 
     public void setTitle(String title) {
+        OnlineShopNullPointerException.checkTitle(title, LOGGER);
+        OnlineShopEmptyTitleException.check(title, LOGGER);
         this.title = title;
     }
 

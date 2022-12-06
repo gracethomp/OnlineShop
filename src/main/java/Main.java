@@ -1,6 +1,7 @@
 import entity.enums.OrderStatus;
 import entity.enums.Role;
 import entity.enums.WaysToPay;
+import entity.goods.Catalog;
 import entity.interfaces.IManage;
 import entity.user.Admin;
 import entity.user.Client;
@@ -8,20 +9,16 @@ import entity.user.Manager;
 import entity.user.User;
 import entity.user.stuff.ClothingSizes;
 import entity.user.stuff.Order;
+import org.apache.log4j.PropertyConfigurator;
 
 import java.util.ArrayList;
 import java.util.List;
-import org.apache.log4j.Logger;
-import org.apache.log4j.PropertyConfigurator;
-
 
 public class Main {
-    private static Logger logger = Logger.getLogger(Main.class);
-
-
     public static void main(String[] args) {
         PropertyConfigurator.configure("src/main/resources/log4j.properties");
-        logger.error("graceTHOM");
+        //ClothingSizes clothingSizes = new ClothingSizes("me", 0, 0, 0);
+        //Catalog catalog = new Catalog(null);
         //static method
         ClothingSizes.printSizesInfo();
         System.out.println('\n');

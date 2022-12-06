@@ -3,6 +3,10 @@ package entity.goods;
 import entity.enums.ProductTypes;
 import entity.reviews.Review;
 import entity.interfaces.IComment;
+import exceptions.OnlineShopEmptyTitleException;
+import exceptions.OnlineShopNegativeValuesException;
+import exceptions.OnlineShopNullPointerException;
+import org.apache.log4j.Logger;
 
 import java.time.LocalDate;
 import java.util.ArrayList;
@@ -18,9 +22,17 @@ public class Stock implements IComment {
     private String description;
     private List<Review> reviews;
 
+    private static final Logger LOGGER = Logger.getLogger(Stock.class);
+
     public Stock(){}
     public Stock(String title, int discount, LocalDate dateFrom,
                  LocalDate dateTo, ProductTypes productType, String description) {
+        OnlineShopNullPointerException.checkTitle(title, LOGGER);
+        OnlineShopEmptyTitleException.check(title, LOGGER);
+        if(discount < 0) {
+            LOGGER.error(OnlineShopNegativeValuesException.NEGATIVE_VALUE_MESSAGE);
+            throw new OnlineShopNegativeValuesException();
+        }
         this.title = title;
         this.discount = discount;
         this.dateFrom = dateFrom;
@@ -60,6 +72,11 @@ public class Stock implements IComment {
     }
 
     public void setTitle(String title) {
+        OnlineShopNullPointerException.checkTitle(title, LOGGER);
+        if(title.equals("")){
+            LOGGER.error(OnlineShopEmptyTitleException.EMPTY_TITLE_MESSAGE);
+            throw new OnlineShopEmptyTitleException();
+        }
         this.title = title;
     }
 
@@ -76,6 +93,10 @@ public class Stock implements IComment {
     }
 
     public void setDiscount(int discount) {
+        if(discount < 0) {
+            LOGGER.error(OnlineShopNegativeValuesException.NEGATIVE_VALUE_MESSAGE);
+            throw new OnlineShopNegativeValuesException();
+        }
         this.discount = discount;
     }
 
@@ -101,7 +122,7 @@ public class Stock implements IComment {
     @Override
     public String toString() {
         return "Stock title is" + title +
-                ", discount " + discount + "%, Termin: " + dateFrom + "-" +
+                ", discount " + discount + "%, Time: " + dateFrom + "-" +
                 dateTo + ", Product types, included to stock: " + productType +
                 ", description: " + description;
     }
