@@ -21,7 +21,6 @@ public class Admin extends Manager implements IRule {
     private static final Logger LOGGER = Logger.getLogger(Admin.class);
 
     public Admin(){}
-
     public Admin(String name, String surname, String email, String password,
                  String phoneNumber, UserStatus status, boolean rightsForStatus,
                  boolean rightsForShop, boolean rightsForProduct, boolean rightsManager) {
@@ -51,15 +50,16 @@ public class Admin extends Manager implements IRule {
     }
 
     public Shop createShop(String title, String description, Rating rating, int ordersCount){
-        LOGGER.info("new shop created");
-        return new Shop(title, description, rating, ordersCount);
+        Shop shop = new Shop(title, description, rating, ordersCount);
+        LOGGER.debug("new shop created " + shop);
+        return shop;
     }
 
     public Product createProduct(String title, Rating rating, double price, int count,
                                  String description, ProductTypes type, Shop shop) {
         Product product = new Product(title, rating, price, count, description, type);
         shop.addProduct(product);
-        LOGGER.info("new product created");
+        LOGGER.debug("new product created " + product);
         return product;
     }
 
@@ -73,26 +73,32 @@ public class Admin extends Manager implements IRule {
     }
 
     public boolean isRightsForProduct() {
+        LOGGER.trace("rights for product was checked");
         return rightsForProduct;
     }
 
     public boolean isRightsForShop() {
+        LOGGER.trace("rights for shop was checked");
         return rightsForShop;
     }
 
     public boolean isRightsForStatus() {
+        LOGGER.trace("rights for status was checked");
         return rightsForStatus;
     }
 
     public void setRightsForProduct(boolean rightsForProduct) {
+        LOGGER.trace("rights for product was set");
         this.rightsForProduct = rightsForProduct;
     }
 
     public void setRightsForShop(boolean rightsForShop) {
+        LOGGER.trace("rights for shop was set");
         this.rightsForShop = rightsForShop;
     }
 
     public void setRightsForStatus(boolean rightsForStatus) {
+        LOGGER.trace("rights for status was checked");
         this.rightsForStatus = rightsForStatus;
     }
 

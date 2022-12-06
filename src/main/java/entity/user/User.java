@@ -66,38 +66,47 @@ public abstract class User implements IComment {
     }
 
     public String getSurname() {
+        LOGGER.trace("surname was gotten");
         return surname;
     }
 
     public String getName() {
+        LOGGER.trace("name was gotten");
         return name;
     }
 
     public String getEmail() {
+        LOGGER.trace("email was gotten");
         return email;
     }
 
     public String getPassword() {
+        LOGGER.trace("password was gotten");
         return password;
     }
 
     public Role getRole() {
+        LOGGER.trace("role was gotten");
         return role;
     }
 
     public List<Review> getReviews() {
+        LOGGER.trace("reviews were gotten");
         return reviews;
     }
 
     public String getPhoneNumber() {
+        LOGGER.trace("phone number was gotten");
         return phoneNumber;
     }
 
     public UserStatus getStatus() {
+        LOGGER.trace("status was gotten");
         return status;
     }
 
     public List<Order> getOrders() {
+        LOGGER.trace("orders were gotten");
         return orders;
     }
 
@@ -106,6 +115,7 @@ public abstract class User implements IComment {
             LOGGER.error(NotMatchRegexException.MESSAGE_FULL_NAME);
             throw new NotMatchRegexException(NotMatchRegexException.MESSAGE_FULL_NAME);
         }
+        LOGGER.trace("name was set");
         this.name = name;
     }
 
@@ -114,6 +124,7 @@ public abstract class User implements IComment {
             LOGGER.error(NotMatchRegexException.MESSAGE_FULL_NAME);
             throw new NotMatchRegexException(NotMatchRegexException.MESSAGE_FULL_NAME);
         }
+        LOGGER.trace("surname was set");
         this.surname = surname;
     }
 
@@ -122,6 +133,7 @@ public abstract class User implements IComment {
             LOGGER.error(NotMatchRegexException.MESSAGE_EMAIL);
             throw new NotMatchRegexException(NotMatchRegexException.MESSAGE_EMAIL);
         }
+        LOGGER.trace("email was set");
         this.email = email;
     }
 
@@ -130,6 +142,7 @@ public abstract class User implements IComment {
             LOGGER.error(NotMatchRegexException.MESSAGE_PASSWORD);
             throw new NotMatchRegexException(NotMatchRegexException.MESSAGE_PASSWORD);
         }
+        LOGGER.trace("password was set");
         this.password = password;
     }
 
@@ -138,22 +151,27 @@ public abstract class User implements IComment {
             LOGGER.error(NotMatchRegexException.MESSAGE_PHONE);
             throw new NotMatchRegexException(NotMatchRegexException.MESSAGE_PHONE);
         }
+        LOGGER.trace("phone number was set");
         this.phoneNumber = PHONE_NUMBER_PREFIX + phoneNumber;
     }
 
     public void setReviews(List<Review> reviews) {
+        LOGGER.trace("reviews were set");
         this.reviews = reviews;
     }
 
     public void setRole(Role role) {
+        LOGGER.trace("role was set");
         this.role = role;
     }
 
     public void setStatus(UserStatus status) {
+        LOGGER.trace("status was set");
         this.status = status;
     }
 
     public void setOrders(List<Order> orders) {
+        LOGGER.trace("orders were set");
         this.orders = orders;
     }
 

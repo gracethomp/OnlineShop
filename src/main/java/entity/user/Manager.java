@@ -57,10 +57,12 @@ public class Manager extends User implements IManage {
     }
 
     public boolean isProcessRights() {
+        LOGGER.trace("process rights were checked");
         return processRights;
     }
 
     public void setProcessRights(boolean processRights) {
+        LOGGER.trace("process rights were set");
         this.processRights = processRights;
     }
 

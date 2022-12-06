@@ -8,6 +8,7 @@ import entity.lists.WishList;
 import entity.interfaces.Calculable;
 import entity.user.stuff.*;
 import exceptions.OnlineShopNegativeValuesException;
+import exceptions.PaymentCardIllegalArgumentException;
 import org.apache.log4j.Logger;
 
 import java.util.ArrayList;
@@ -58,83 +59,96 @@ public class Client extends User implements Calculable {
         return orders.add(order);
     }
 
-    public boolean deleteCard() {
+    public void deleteCard() {
         if(card.getCVV() != 0 && card.getMonth() != 0 && card.getNumber() != 0 && card.getYear() != 0) {
+            LOGGER.debug("card deleted " + card);
             card = new PaymentCard();
-            LOGGER.info("card deleted");
-            return true;
         }
         else {
-            LOGGER.warn("card can't be deleted because of troubles in data");
-            return false;
+            LOGGER.error("card can't be deleted because of troubles in data");
+            throw new PaymentCardIllegalArgumentException();
         }
     }
 
     public boolean createWishList(WishList wishList) {
-        LOGGER.info("wishlist was added");
+        LOGGER.debug(wishList + " was added");
         return wishLists.add(wishList);
     }
 
     @Override
     public double calculateTotalPrice() {
         double sum = orders.stream().mapToDouble(Order::getTotalPrice).sum();
-        LOGGER.info("total price is " + sum + " without delivery");
+        LOGGER.debug("total price is " + sum + " without delivery");
         return sum;
     }
 
     public String getCountry() {
+        LOGGER.trace("country was gotten");
         return country;
     }
 
     public ClothingSizes getClothingSizes() {
+        LOGGER.trace("clothing sizes was gotten");
         return clothingSizes;
     }
 
     public int getApartmentNumber() {
+        LOGGER.trace("apartment number was gotten");
         return apartmentNumber;
     }
 
     public int getStreetNumber() {
+        LOGGER.trace("street number was gotten");
         return streetNumber;
     }
 
     public List<Stock> getStocks() {
+        LOGGER.trace("country was gotten");
         return stocks;
     }
 
     public List<WishList> getWishLists() {
+        LOGGER.trace("wish lists were gotten");
         return wishLists;
     }
 
     public MailingList getMailingList() {
+        LOGGER.trace("mailing list was gotten");
         return mailingList;
     }
 
     public PaymentCard getCard() {
+        LOGGER.trace("payment card was gotten");
         return card;
     }
 
     public SeenList getSeenList() {
+        LOGGER.trace("seen list was gotten");
         return seenList;
     }
 
     public ShopBasket getShopBasket() {
+        LOGGER.trace("shop basket was gotten");
         return shopBasket;
     }
 
     public String getCity() {
+        LOGGER.trace("city was gotten");
         return city;
     }
 
     public List<Order> getOrders() {
+        LOGGER.trace("orders were gotten");
         return orders;
     }
 
     public String getStreetTitle() {
+        LOGGER.trace("street title was gotten");
         return streetTitle;
     }
 
     public void setCountry(String country) {
+        LOGGER.trace("country was set");
         this.country = country;
     }
 
@@ -143,34 +157,42 @@ public class Client extends User implements Calculable {
             LOGGER.error(OnlineShopNegativeValuesException.NEGATIVE_VALUE_MESSAGE);
             throw new OnlineShopNegativeValuesException();
         }
+        LOGGER.trace("apartment was set");
         this.apartmentNumber = apartmentNumber;
     }
 
     public void setCard(PaymentCard card) {
+        LOGGER.trace("card was set");
         this.card = card;
     }
 
     public void setCity(String city) {
+        LOGGER.trace("city was set");
         this.city = city;
     }
 
     public void setMailingList(MailingList mailingList) {
+        LOGGER.trace("mailing list was set");
         this.mailingList = mailingList;
     }
 
     public void setClothingSizes(ClothingSizes clothingSizes) {
+        LOGGER.trace("clothing sizes was set");
         this.clothingSizes = clothingSizes;
     }
 
     public void setSeenList(SeenList seenList) {
+        LOGGER.trace("seen list was set");
         this.seenList = seenList;
     }
 
     public void setShopBasket(ShopBasket shopBasket) {
+        LOGGER.trace("shop basket was set");
         this.shopBasket = shopBasket;
     }
 
     public void setStocks(List<Stock> stocks) {
+        LOGGER.trace("stocks were set");
         this.stocks = stocks;
     }
 
@@ -179,18 +201,22 @@ public class Client extends User implements Calculable {
             LOGGER.error(OnlineShopNegativeValuesException.NEGATIVE_VALUE_MESSAGE);
             throw new OnlineShopNegativeValuesException();
         }
+        LOGGER.trace("street number was set");
         this.streetNumber = streetNumber;
     }
 
     public void setStreetTitle(String streetTitle) {
+        LOGGER.trace("street title was set");
         this.streetTitle = streetTitle;
     }
 
     public void setWishLists(List<WishList> wishLists) {
+        LOGGER.trace("wish list was set");
         this.wishLists = wishLists;
     }
 
     public void setOrders(List<Order> orders) {
+        LOGGER.trace("orders were set");
         this.orders = orders;
     }
 

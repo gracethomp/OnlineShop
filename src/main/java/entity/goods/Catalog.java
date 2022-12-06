@@ -23,7 +23,7 @@ public class Catalog {
     }
 
     public List<Product> getProducts() {
-        LOGGER.trace("products from catalog was gotten");
+        LOGGER.trace("products from catalog were gotten");
         return products;
     }
 
@@ -33,7 +33,7 @@ public class Catalog {
     }
 
     public void setProducts(List<Product> products) {
-        LOGGER.trace("products was set");
+        LOGGER.trace("products were set");
         this.products = products;
     }
 
