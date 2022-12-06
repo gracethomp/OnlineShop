@@ -2,6 +2,7 @@ package entity.lists;
 
 import entity.goods.Product;
 import entity.interfaces.IOrderBy;
+import org.apache.log4j.Logger;
 
 import java.time.LocalDate;
 import java.util.Comparator;
@@ -11,20 +12,24 @@ import java.util.Objects;
 public class SeenList extends ListForUsers implements IOrderBy {
     private LocalDate dateFrom;
 
+    private static final Logger LOGGER = Logger.getLogger(SeenList.class);
+
     public SeenList(){}
-    public SeenList(List<Product> products, LocalDate dateFrom){
+    public SeenList(LocalDate dateFrom){
         this.dateFrom = dateFrom;
     }
 
     public List<Product> orderByPrice() {
         Comparator<Product> comparator = Comparator.comparing(Product::getPrice);
         getProducts().sort(comparator);
+        LOGGER.info("Products in seen list order by price");
         return getProducts();
     }
 
     public List<Product> orderByTitle() {
         Comparator<Product> comparator = Comparator.comparing(Product::getTitle);
         getProducts().sort(comparator);
+        LOGGER.info("Products in seen list order by title");
         return getProducts();
     }
 

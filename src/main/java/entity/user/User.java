@@ -61,6 +61,7 @@ public abstract class User implements IComment {
     }
 
     public final boolean addReview(Review review) {
+        LOGGER.info("review was added to user");
         return reviews.add(review);
     }
 

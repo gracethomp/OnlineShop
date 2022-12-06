@@ -31,11 +31,15 @@ public class ShopBasket implements Calculable {
         for (Product p : products) {
             sum += p.getPrice();
         }
+        LOGGER.info("total price is " + sum + " without delivery");
         return sum;
     }
     public double calculateTotalPrice(double delivery) {
         double sum = calculateTotalPrice();
-        return sum + delivery;
+        sum += delivery;
+        LOGGER.info("total price is " + sum + " without delivery");
+        return sum;
+
     }
     public void formOrder(Client client, String recipientName, String recipientSurname, String location,
                           String post, double totalPrice, WaysToPay wayToPay, Manager manager) {
@@ -43,6 +47,7 @@ public class ShopBasket implements Calculable {
                 totalPrice, wayToPay, OrderStatus.REGISTERED);
         manager.addOrderToProcess(order);
         client.addOrder(order);
+        LOGGER.info("new order was formed");
     }
 
     public void formOrder(Client client, String recipientName, String recipientSurname, String location,
@@ -51,6 +56,7 @@ public class ShopBasket implements Calculable {
                 totalPrice, wayToPay, promocode, OrderStatus.REGISTERED);
         manager.addOrderToProcess(order);
         client.addOrder(order);
+        LOGGER.info("new order was formed with promocode");
     }
 
     public boolean addProduct(Product product) {

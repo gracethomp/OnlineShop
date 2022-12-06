@@ -7,6 +7,7 @@ import entity.goods.Product;
 import entity.enums.ProductTypes;
 import entity.goods.Shop;
 import entity.interfaces.IRule;
+import org.apache.log4j.Logger;
 
 import java.util.Objects;
 
@@ -16,6 +17,8 @@ public class Admin extends Manager implements IRule {
     private boolean rightsForStatus;
     private boolean rightsForShop;
     private boolean rightsForProduct;
+
+    private static final Logger LOGGER = Logger.getLogger(Admin.class);
 
     public Admin(){}
 
@@ -30,12 +33,16 @@ public class Admin extends Manager implements IRule {
 
     public void blockUser(User user) {
         user.setStatus(UserStatus.BLOCKED);
-        if(user instanceof Manager)
+        LOGGER.info("user " + user.getName() + " " + user.getSurname() + "is blocked");
+        if(user instanceof Manager) {
+            LOGGER.info("manager " + user.getName() + " " + user.getSurname() + "loosed manager rights");
             setManagerRights((Manager) user, false);
+        }
     }
 
     public void unblockUser(User user) {
         user.setStatus(UserStatus.BLOCKED);
+        LOGGER.info("user " + user.getName() + " " + user.getSurname() + "is unblocked");
     }
 
     @Override
@@ -44,6 +51,7 @@ public class Admin extends Manager implements IRule {
     }
 
     public Shop createShop(String title, String description, Rating rating, int ordersCount){
+        LOGGER.info("new shop created");
         return new Shop(title, description, rating, ordersCount);
     }
 
@@ -51,11 +59,17 @@ public class Admin extends Manager implements IRule {
                                  String description, ProductTypes type, Shop shop) {
         Product product = new Product(title, rating, price, count, description, type);
         shop.addProduct(product);
+        LOGGER.info("new product created");
         return product;
     }
 
     public boolean deleteProduct(Product product, Shop shop) {
-        return shop.deleteProduct(product);
+        if(shop.deleteProduct(product)){
+            LOGGER.info("product was deleted");
+            return true;
+        }
+        LOGGER.warn("product wasn't deleted");
+        return false;
     }
 
     public boolean isRightsForProduct() {

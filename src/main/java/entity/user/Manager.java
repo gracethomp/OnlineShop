@@ -5,12 +5,15 @@ import entity.enums.Role;
 import entity.enums.UserStatus;
 import entity.interfaces.IManage;
 import entity.user.stuff.Order;
+import org.apache.log4j.Logger;
 
 import java.util.Objects;
 
 public class Manager extends User implements IManage {
     public static final String ORDER_ACCEPTED = "order accepted\n";
     public static final String ORDER_CANCELLED = "order cancelled\n";
+
+    private static final Logger LOGGER = Logger.getLogger(Manager.class);
 
     private boolean processRights;
 
@@ -23,6 +26,7 @@ public class Manager extends User implements IManage {
     }
 
     public boolean addOrderToProcess(Order order) {
+        LOGGER.info("order is in process");
         return getOrders().add(order);
     }
 
@@ -32,8 +36,10 @@ public class Manager extends User implements IManage {
                 && order.getStatus() != OrderStatus.IN_PROGRESS) {
             int index = client.getOrders().indexOf(order);
             client.getOrders().get(index).setStatus(OrderStatus.IN_PROGRESS);
+            LOGGER.debug(order + " was accepted");
             return getOrders().remove(order);
         }
+        LOGGER.debug(order + " isn't accepted");
         return false;
     }
 
@@ -43,8 +49,10 @@ public class Manager extends User implements IManage {
                 && order.getStatus() != OrderStatus.CANCELLED) {
             int index = client.getOrders().indexOf(order);
             client.getOrders().get(index).setStatus(OrderStatus.CANCELLED);
+            LOGGER.debug(order + " was cancelled");
             return getOrders().remove(order);
         }
+        LOGGER.debug(order + " can't be cancelled");
         return false;
     }
 

@@ -23,20 +23,24 @@ public class Catalog {
     }
 
     public List<Product> getProducts() {
+        LOGGER.trace("products from catalog was gotten");
         return products;
     }
 
     public String getTitle() {
+        LOGGER.trace("title from catalog was gotten");
         return title;
     }
 
     public void setProducts(List<Product> products) {
+        LOGGER.trace("products was set");
         this.products = products;
     }
 
     public void setTitle(String title) {
         OnlineShopNullPointerException.checkTitle(title, LOGGER);
         OnlineShopEmptyTitleException.check(title, LOGGER);
+        LOGGER.trace("title was set");
         this.title = title;
     }
 

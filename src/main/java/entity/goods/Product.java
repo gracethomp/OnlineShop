@@ -46,86 +46,105 @@ public class Product implements IComment {
     }
 
     public boolean addWayToPay(WaysToPay way) {
+        LOGGER.info(way + " was added");
         return waysToPay.add(way);
     }
 
     public boolean deleteWayToPay(WaysToPay way) {
-        if(waysToPay.contains(way))
+        if(waysToPay.contains(way)) {
+            LOGGER.info("one of ways to pay (" + way + ") was deleted");
             return waysToPay.remove(way);
+        }
         LOGGER.warn("way not found");
         return false;
     }
 
-    public boolean reduceCount(int countOrdered) {
+    public void reduceCount(int countOrdered) {
         if(countOrdered <= 0) {
-            LOGGER.warn("Nothing to reduce");
-            return false;
+            LOGGER.error("User chose illegal count of products");
+            throw new OnlineShopNegativeValuesException();
         }
         if((count - countOrdered) < 0) {
-            throw new IllegalArgumentException();
+            LOGGER.error("User chose more products than possible");
+            throw new OnlineShopNegativeValuesException();
         }
         count -= countOrdered;
-        return true;
+        LOGGER.info("reduce was successful");
     }
 
     @Override
     public boolean addReview(Review review) {
         if(review instanceof ReviewProduct) {
-            if (((ReviewProduct) review).getShop().addReview(review))
-                if (((ReviewProduct) review).getProduct().addReview(review))
+            if (((ReviewProduct) review).getShop().addReview(review)) {
+                if (((ReviewProduct) review).getProduct().addReview(review)) {
+                    LOGGER.info("review is added to product");
                     return reviews.add(review);
+                }
+            }
         }
-        LOGGER.error("Review adding is wrong");
+        LOGGER.warn("Review adding to product is wrong");
         return false;
     }
 
     public String getTitle() {
+        LOGGER.trace("title was gotten");
         return title;
     }
 
     public Rating getRating() {
+        LOGGER.trace("rating was gotten");
         return rating;
     }
 
     public double getPrice() {
+        LOGGER.trace("rating was gotten");
         return price;
     }
 
     public String getDescription() {
+        LOGGER.trace("description was gotten");
         return description;
     }
 
     public List<Review> getReviews() {
+        LOGGER.trace("reviews was gotten");
         return reviews;
     }
 
     public int getCount() {
+        LOGGER.trace("count was gotten");
         return count;
     }
 
     public ProductTypes getType() {
+        LOGGER.trace("type was gotten");
         return type;
     }
 
     public List<WaysToPay> getWaysToPay() {
+        LOGGER.trace("ways to pay was gotten");
         return waysToPay;
     }
 
     public void setDescription(String description) {
+        LOGGER.trace("description was set");
         this.description = description;
     }
 
     public void setTitle(String title) {
         OnlineShopNullPointerException.checkTitle(title, LOGGER);
         OnlineShopEmptyTitleException.check(title, LOGGER);
+        LOGGER.trace("title was set");
         this.title = title;
     }
 
     public void setRating(Rating rating) {
+        LOGGER.trace("rating was set");
         this.rating = rating;
     }
 
     public void setReviews(List<Review> reviews) {
+        LOGGER.trace("reviews was set");
         this.reviews = reviews;
     }
 
@@ -134,6 +153,7 @@ public class Product implements IComment {
             LOGGER.error(OnlineShopNegativeValuesException.NEGATIVE_VALUE_MESSAGE);
             throw new OnlineShopNegativeValuesException();
         }
+        LOGGER.trace("price was set");
         this.price = price;
     }
 
@@ -142,14 +162,17 @@ public class Product implements IComment {
             LOGGER.error(OnlineShopNegativeValuesException.NEGATIVE_VALUE_MESSAGE);
             throw new OnlineShopNegativeValuesException();
         }
+        LOGGER.trace("count was set");
         this.count = count;
     }
 
     public void setType(ProductTypes type) {
+        LOGGER.trace("type was set");
         this.type = type;
     }
 
     public void setWaysToPay(List<WaysToPay> waysToPay) {
+        LOGGER.trace("ways to pay was set");
         this.waysToPay = waysToPay;
     }
 

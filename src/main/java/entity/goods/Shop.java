@@ -39,10 +39,12 @@ public class Shop implements IComment {
     }
 
     public boolean addReview(Review review) {
+        LOGGER.info("review is added to shop");
         return reviews.add(review);
     }
 
     public boolean addProduct(Product product){
+        LOGGER.info("review is added to shop");
         return products.add(product);
     }
 
@@ -51,47 +53,54 @@ public class Shop implements IComment {
     }
 
     public String getTitle() {
+        LOGGER.trace("title was gotten");
         return title;
     }
 
     public String getDescription() {
+        LOGGER.trace("desc was gotten");
         return description;
     }
 
     public List<Review> getReviews() {
+        LOGGER.trace("reviews was gotten");
         return reviews;
     }
 
     public Rating getRating() {
+        LOGGER.trace("rating was gotten");
         return rating;
     }
 
     public int getOrdersCount() {
+        LOGGER.trace("orders count was gotten");
         return ordersCount;
     }
 
     public List<Product> getProducts() {
+        LOGGER.trace("products was gotten");
         return products;
     }
 
     public void setReviews(List<Review> reviews) {
+        LOGGER.trace("reviews was set");
         this.reviews = reviews;
     }
 
     public void setRating(Rating rating) {
+        LOGGER.trace("rating was set");
         this.rating = rating;
     }
 
     public void setTitle(String title) {
         OnlineShopNullPointerException.checkTitle(title, LOGGER);
-        if(title.equals("")){
-            LOGGER.error(OnlineShopEmptyTitleException.EMPTY_TITLE_MESSAGE);
-            throw new OnlineShopEmptyTitleException();
-        }
+        OnlineShopEmptyTitleException.check(title, LOGGER);
+        LOGGER.trace("title was set");
         this.title = title;
     }
 
     public void setDescription(String description) {
+        LOGGER.trace("desc was set");
         this.description = description;
     }
 
@@ -100,10 +109,12 @@ public class Shop implements IComment {
             LOGGER.error(OnlineShopNegativeValuesException.NEGATIVE_VALUE_MESSAGE);
             throw new OnlineShopNegativeValuesException();
         }
+        LOGGER.trace("orders count was set");
         this.ordersCount = ordersCount;
     }
 
     public void setProducts(List<Product> products) {
+        LOGGER.trace("products was set");
         this.products = products;
     }
 

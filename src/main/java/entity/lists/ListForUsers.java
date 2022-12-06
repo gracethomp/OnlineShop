@@ -1,13 +1,17 @@
 package entity.lists;
 
 import entity.goods.Product;
+import entity.goods.Shop;
 import entity.interfaces.Clearable;
+import org.apache.log4j.Logger;
 
 import java.util.List;
 import java.util.Objects;
 
 public abstract class ListForUsers implements Clearable {
     private List<Product> products;
+
+    private static final Logger LOGGER = Logger.getLogger(ListForUsers.class);
 
     public ListForUsers(){}
     public ListForUsers(List<Product> products) {
@@ -17,17 +21,21 @@ public abstract class ListForUsers implements Clearable {
     @Override
     public void clear() {
         products.clear();
+        LOGGER.info("list is cleared");
     }
 
     public boolean addProduct(Product product) {
+        LOGGER.debug(product + "was added");
         return products.add(product);
     }
 
     public List<Product> getProducts() {
+        LOGGER.trace("products were gotten");
         return products;
     }
 
     public void setProducts(List<Product> products) {
+        LOGGER.trace("products were set");
         this.products = products;
     }
 

@@ -44,30 +44,37 @@ public class Stock implements IComment {
 
     @Override
     public boolean addReview(Review review) {
+        LOGGER.debug(review + "was added");
         return reviews.add(review);
     }
 
     public String getTitle() {
+        LOGGER.trace("title was gotten");
         return title;
     }
 
     public String getDescription() {
+        LOGGER.trace("desc was gotten");
         return description;
     }
 
     public int getDiscount() {
+        LOGGER.trace("discount was gotten");
         return discount;
     }
 
     public LocalDate getDateFrom() {
+        LOGGER.trace("date from was gotten");
         return dateFrom;
     }
 
     public LocalDate getDateTo() {
+        LOGGER.trace("date to was gotten");
         return dateTo;
     }
 
     public ProductTypes getProductType() {
+        LOGGER.trace("product type was gotten");
         return productType;
     }
 
@@ -77,18 +84,22 @@ public class Stock implements IComment {
             LOGGER.error(OnlineShopEmptyTitleException.EMPTY_TITLE_MESSAGE);
             throw new OnlineShopEmptyTitleException();
         }
+        LOGGER.trace("title was set");
         this.title = title;
     }
 
     public void setDescription(String description) {
+        LOGGER.trace("desc was set");
         this.description = description;
     }
 
     public void setDateFrom(LocalDate dateFrom) {
+        LOGGER.trace("date from was set");
         this.dateFrom = dateFrom;
     }
 
     public void setDateTo(LocalDate dateTo) {
+        LOGGER.trace("date to was set");
         this.dateTo = dateTo;
     }
 
@@ -97,10 +108,12 @@ public class Stock implements IComment {
             LOGGER.error(OnlineShopNegativeValuesException.NEGATIVE_VALUE_MESSAGE);
             throw new OnlineShopNegativeValuesException();
         }
+        LOGGER.trace("discount was set");
         this.discount = discount;
     }
 
     public void setProductType(ProductTypes productType) {
+        LOGGER.trace("product type was set");
         this.productType = productType;
     }
 

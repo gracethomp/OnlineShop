@@ -12,3 +12,6 @@ entity.goods.Catalog.<init>(Catalog.java:24) 2022-12-06 01:13:30 - empty title i
 entity.goods.Catalog.<init>(Catalog.java:20) 2022-12-06 01:14:01 - title is null
 exceptions.OnlineShopNullPointerException.checkTitle(OnlineShopNullPointerException.java:10) 2022-12-06 01:29:28 - title is null
 exceptions.OnlineShopNullPointerException.checkTitle(OnlineShopNullPointerException.java:10) 2022-12-06 01:46:27 - title is null
+exceptions.OnlineShopNullPointerException.checkTitle(OnlineShopNullPointerException.java:10) 2022-12-06 15:16:35 - title is null
+exceptions.OnlineShopNullPointerException.checkTitle(OnlineShopNullPointerException.java:10) 2022-12-06 15:17:10 - title is null class org.apache.log4j.Logger
+exceptions.OnlineShopNullPointerException.checkTitle(OnlineShopNullPointerException.java:10) 2022-12-06 15:17:38 - title is null org.apache.log4j.Category@2dc54ad4

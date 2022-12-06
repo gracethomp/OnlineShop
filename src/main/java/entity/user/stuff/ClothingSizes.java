@@ -50,6 +50,7 @@ public final class ClothingSizes {
             hips += 2;
             sizeValue++;
         }
+        LOGGER.info("Clothing sizes is entered");
     }
 
     private static void printInfoByValue(int value){

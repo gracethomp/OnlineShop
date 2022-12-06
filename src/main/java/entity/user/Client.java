@@ -61,19 +61,25 @@ public class Client extends User implements Calculable {
     public boolean deleteCard() {
         if(card.getCVV() != 0 && card.getMonth() != 0 && card.getNumber() != 0 && card.getYear() != 0) {
             card = new PaymentCard();
+            LOGGER.info("card deleted");
             return true;
         }
-        else
+        else {
+            LOGGER.warn("card can't be deleted because of troubles in data");
             return false;
+        }
     }
 
     public boolean createWishList(WishList wishList) {
+        LOGGER.info("wishlist was added");
         return wishLists.add(wishList);
     }
 
     @Override
     public double calculateTotalPrice() {
-        return orders.stream().mapToDouble(Order::getTotalPrice).sum();
+        double sum = orders.stream().mapToDouble(Order::getTotalPrice).sum();
+        LOGGER.info("total price is " + sum + " without delivery");
+        return sum;
     }
 
     public String getCountry() {
