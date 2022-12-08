@@ -17,3 +17,4 @@ exceptions.OnlineShopNullPointerException.checkTitle(OnlineShopNullPointerExcept
 exceptions.OnlineShopNullPointerException.checkTitle(OnlineShopNullPointerException.java:10) 2022-12-06 15:17:38 - title is null org.apache.log4j.Category@2dc54ad4
 exceptions.OnlineShopNullPointerException.checkTitle(OnlineShopNullPointerException.java:10) 2022-12-06 16:01:33 - title is null
 exceptions.OnlineShopNullPointerException.checkTitle(OnlineShopNullPointerException.java:10) 2022-12-06 16:01:42 - title is null
+entity.user.stuff.ClothingSizes.printSizesInfo(ClothingSizes.java:53) 2022-12-06 16:01:58 - Clothing sizes is entered
