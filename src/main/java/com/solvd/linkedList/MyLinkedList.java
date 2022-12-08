@@ -1,6 +1,4 @@
 package com.solvd.linkedList;
-
-import com.solvd.entity.lists.WishList;
 import org.apache.log4j.Logger;
 
 public class MyLinkedList<T>  implements IStructure<T>{
@@ -12,8 +10,8 @@ public class MyLinkedList<T>  implements IStructure<T>{
 
     @Override
     public void add(T toAdd) {
-        Node<T> node = new Node<>(toAdd);
         size++;
+        Node<T> node = new Node<>(toAdd);
         if(first == null) {
             first = node;
             first.setNext(last);
@@ -27,9 +25,35 @@ public class MyLinkedList<T>  implements IStructure<T>{
     }
 
     public void add(T afterThat, T toAdd) {
-        Node<T> node = search(afterThat);
-        if(node == null){
-            last.setNext(new Node<>(toAdd));
+        Node<T> afterThatNode = search(afterThat);
+        helpToAdd(afterThatNode, toAdd);
+    }
+
+    public void add(int index, T toAdd) {
+        Node<T> afterThatNode = get(index);
+        helpToAdd(afterThatNode, toAdd);
+    }
+
+    public void addToFront(T toAdd) {
+        size++;
+        Node<T> node = new Node<>(toAdd);
+        node.setNext(first);
+        first.setPrev(node);
+        first = node;
+    }
+
+    @Override
+    public Node<T> get(int index) {
+        if(first == null || index < 0 || index > size) {
+            LOGGER.warn("element can't be add");
+            return null;
+        }
+        else {
+            Node<T> current = first;
+            for (int i = 0; i < index; i++) {
+                current = current.getNext();
+            }
+            return current;
         }
     }
 
@@ -39,22 +63,40 @@ public class MyLinkedList<T>  implements IStructure<T>{
         if(node != null){
             node.getPrev().setNext(node.getNext());
             node.getNext().setPrev(node.getPrev());
+            size--;
         }
     }
 
     @Override
     public Node<T> search(T searchNode) {
         Node<T> node = first;
-        while (!node.getValue().equals(searchNode)) {
+        while (node != null && !node.getValue().equals(searchNode)) {
             if(node.getNext() == null)
                 break;
             node = node.getNext();
         }
-        if(node.equals(last) && !last.getValue().equals(searchNode)) {
+        if(node != null && node.equals(last) && !last.getValue().equals(searchNode)) {
             LOGGER.warn("No such element in list");
             return null;
         }
         return node;
+    }
+
+    public int getSize() {
+        return size;
+    }
+
+    private void helpToAdd(Node<T> afterThatNode, T toAdd) {
+        if(afterThatNode == null || afterThatNode.getNext() == null){
+            add(toAdd);
+        } else  {
+            size++;
+            Node<T> toInsert = new Node<>(toAdd);
+            toInsert.setNext(afterThatNode.getNext());
+            afterThatNode.getNext().setPrev(toInsert);
+            afterThatNode.setNext(toInsert);
+            toInsert.setPrev(afterThatNode);
+        }
     }
 
     @Override

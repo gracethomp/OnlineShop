@@ -31,14 +31,26 @@ public class Main {
         strings.addFirst("4 string");
         strings.addLast("5 string");
         LOGGER.info(strings);
+        strings.add(1, "6 string");
+        LOGGER.info(strings);
 
         MyLinkedList<String> myLinkedList = new MyLinkedList<>();
         myLinkedList.add("1 string");
         myLinkedList.add("2 string");
         myLinkedList.add("3 string");
-        LOGGER.info(myLinkedList);
         myLinkedList.remove("2 string");
+        myLinkedList.add("3 string", "4 string");
         LOGGER.info(myLinkedList);
+        LOGGER.info(myLinkedList.getSize());
+        myLinkedList.add(2, "5 string");
+        myLinkedList.add(2, "5 string");
+        myLinkedList.add(2, "5 string");
+        myLinkedList.add(3, "6 string");
+        myLinkedList.add(0, "7 string");
+        myLinkedList.add(7, "8 string");
+        myLinkedList.addToFront("9 string");
+        LOGGER.info(myLinkedList);
+        LOGGER.info(myLinkedList.getSize());
 
         ClothingSizes.printSizesInfo();
         System.out.println('\n');
