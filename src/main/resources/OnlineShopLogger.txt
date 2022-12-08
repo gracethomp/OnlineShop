@@ -19,3 +19,75 @@ com.solvd.exceptions.OnlineShopNullPointerException.checkTitle(OnlineShopNullPoi
 com.solvd.exceptions.OnlineShopNullPointerException.checkTitle(OnlineShopNullPointerException.java:10) 2022-12-06 16:01:42 - title is null
 com.solvd.entity.user.stuff.ClothingSizes.printSizesInfo(ClothingSizes.java:53) 2022-12-06 16:01:58 - Clothing sizes is entered
 com.solvd.entity.user.stuff.ClothingSizes.printSizesInfo(ClothingSizes.java:53) 2022-12-06 19:01:02 - Clothing sizes is entered
+com.solvd.entity.user.stuff.ClothingSizes.printSizesInfo(ClothingSizes.java:53) 2022-12-08 22:47:31 - Clothing sizes is entered
+com.solvd.entity.user.stuff.ClothingSizes.printSizesInfo(ClothingSizes.java:53) 2022-12-08 22:47:41 - Clothing sizes is entered
+com.solvd.Main.main(Main.java:32) 2022-12-08 22:48:46 - [4 string, 1 string, 2 string, 3 string]
+com.solvd.entity.user.stuff.ClothingSizes.printSizesInfo(ClothingSizes.java:53) 2022-12-08 22:48:46 - Clothing sizes is entered
+com.solvd.Main.main(Main.java:33) 2022-12-08 22:49:20 - [4 string, 1 string, 2 string, 3 string, 5 string]
+com.solvd.entity.user.stuff.ClothingSizes.printSizesInfo(ClothingSizes.java:53) 2022-12-08 22:49:20 - Clothing sizes is entered
+com.solvd.Main.main(Main.java:34) 2022-12-08 23:43:12 - [4 string, 1 string, 2 string, 3 string, 5 string]
+com.solvd.Main.main(Main.java:34) 2022-12-08 23:43:49 - [4 string, 1 string, 2 string, 3 string, 5 string]
+com.solvd.Main.main(Main.java:34) 2022-12-08 23:44:47 - [4 string, 1 string, 2 string, 3 string, 5 string]
+com.solvd.Main.main(Main.java:34) 2022-12-08 23:45:01 - [4 string, 1 string, 2 string, 3 string, 5 string]
+com.solvd.Main.main(Main.java:34) 2022-12-08 23:46:10 - [4 string, 1 string, 2 string, 3 string, 5 string]
+com.solvd.Main.main(Main.java:34) 2022-12-08 23:46:33 - [4 string, 1 string, 2 string, 3 string, 5 string]
+com.solvd.Main.main(Main.java:34) 2022-12-08 23:47:03 - [4 string, 1 string, 2 string, 3 string, 5 string]
+com.solvd.Main.main(Main.java:34) 2022-12-08 23:47:50 - [4 string, 1 string, 2 string, 3 string, 5 string]
+com.solvd.Main.main(Main.java:34) 2022-12-08 23:48:17 - [4 string, 1 string, 2 string, 3 string, 5 string]
+com.solvd.linkedList.MyLinkedList.toString(MyLinkedList.java:49) 2022-12-08 23:48:17 - null
+com.solvd.Main.main(Main.java:34) 2022-12-08 23:48:44 - [4 string, 1 string, 2 string, 3 string, 5 string]
+com.solvd.linkedList.MyLinkedList.add(MyLinkedList.java:16) 2022-12-08 23:48:44 - Node{value=1 string}
+com.solvd.linkedList.MyLinkedList.add(MyLinkedList.java:16) 2022-12-08 23:48:44 - Node{value=2 string}
+com.solvd.linkedList.MyLinkedList.add(MyLinkedList.java:16) 2022-12-08 23:48:44 - Node{value=3 string}
+com.solvd.linkedList.MyLinkedList.toString(MyLinkedList.java:50) 2022-12-08 23:48:44 - null
+com.solvd.Main.main(Main.java:34) 2022-12-08 23:49:18 - [4 string, 1 string, 2 string, 3 string, 5 string]
+com.solvd.linkedList.MyLinkedList.add(MyLinkedList.java:16) 2022-12-08 23:49:18 - Node{value=1 string}
+com.solvd.linkedList.MyLinkedList.add(MyLinkedList.java:16) 2022-12-08 23:49:18 - Node{value=2 string}
+com.solvd.linkedList.MyLinkedList.add(MyLinkedList.java:16) 2022-12-08 23:49:18 - Node{value=3 string}
+com.solvd.linkedList.MyLinkedList.toString(MyLinkedList.java:51) 2022-12-08 23:49:18 - null
+com.solvd.Main.main(Main.java:34) 2022-12-08 23:49:47 - [4 string, 1 string, 2 string, 3 string, 5 string]
+com.solvd.linkedList.MyLinkedList.add(MyLinkedList.java:16) 2022-12-08 23:49:47 - Node{value=1 string}
+com.solvd.linkedList.MyLinkedList.add(MyLinkedList.java:16) 2022-12-08 23:49:47 - Node{value=2 string}
+com.solvd.linkedList.MyLinkedList.add(MyLinkedList.java:16) 2022-12-08 23:49:47 - Node{value=3 string}
+com.solvd.linkedList.MyLinkedList.toString(MyLinkedList.java:50) 2022-12-08 23:49:47 - 1 string
+com.solvd.linkedList.MyLinkedList.toString(MyLinkedList.java:50) 2022-12-08 23:49:47 - 2 string
+com.solvd.Main.main(Main.java:40) 2022-12-08 23:49:47 - List: Node{value=1 string}, Node{value=2 string}, 
+com.solvd.entity.user.stuff.ClothingSizes.printSizesInfo(ClothingSizes.java:53) 2022-12-08 23:49:47 - Clothing sizes is entered
+com.solvd.Main.main(Main.java:34) 2022-12-08 23:51:03 - [4 string, 1 string, 2 string, 3 string, 5 string]
+com.solvd.linkedList.MyLinkedList.toString(MyLinkedList.java:50) 2022-12-08 23:51:03 - 1 string
+com.solvd.linkedList.MyLinkedList.toString(MyLinkedList.java:50) 2022-12-08 23:51:03 - 2 string
+com.solvd.linkedList.MyLinkedList.toString(MyLinkedList.java:50) 2022-12-08 23:51:03 - 3 string
+com.solvd.Main.main(Main.java:40) 2022-12-08 23:51:03 - List: Node{value=1 string}, Node{value=2 string}, Node{value=3 string}, 
+com.solvd.entity.user.stuff.ClothingSizes.printSizesInfo(ClothingSizes.java:53) 2022-12-08 23:51:03 - Clothing sizes is entered
+com.solvd.Main.main(Main.java:34) 2022-12-08 23:53:43 - [4 string, 1 string, 2 string, 3 string, 5 string]
+com.solvd.Main.main(Main.java:40) 2022-12-08 23:53:43 - List: Node{value=1 string}, Node{value=2 string}, Node{value=3 string}, 
+com.solvd.entity.user.stuff.ClothingSizes.printSizesInfo(ClothingSizes.java:53) 2022-12-08 23:53:43 - Clothing sizes is entered
+com.solvd.Main.main(Main.java:34) 2022-12-09 00:14:51 - [4 string, 1 string, 2 string, 3 string, 5 string]
+com.solvd.Main.main(Main.java:40) 2022-12-09 00:14:51 - List: Node{value=1 string}, Node{value=2 string}, Node{value=3 string}, 
+com.solvd.Main.main(Main.java:41) 2022-12-09 00:14:51 - Node{value=3 string}
+com.solvd.entity.user.stuff.ClothingSizes.printSizesInfo(ClothingSizes.java:53) 2022-12-09 00:14:51 - Clothing sizes is entered
+com.solvd.Main.main(Main.java:34) 2022-12-09 00:15:10 - [4 string, 1 string, 2 string, 3 string, 5 string]
+com.solvd.Main.main(Main.java:40) 2022-12-09 00:15:10 - List: Node{value=1 string}, Node{value=2 string}, Node{value=3 string}, 
+com.solvd.Main.main(Main.java:34) 2022-12-09 00:18:09 - [4 string, 1 string, 2 string, 3 string, 5 string]
+com.solvd.Main.main(Main.java:40) 2022-12-09 00:18:09 - List: Node{value=1 string}, Node{value=2 string}, Node{value=3 string}, 
+com.solvd.Main.main(Main.java:34) 2022-12-09 00:18:52 - [4 string, 1 string, 2 string, 3 string, 5 string]
+com.solvd.Main.main(Main.java:40) 2022-12-09 00:18:52 - List: Node{value=1 string}, Node{value=2 string}, Node{value=3 string}, 
+com.solvd.Main.main(Main.java:41) 2022-12-09 00:18:52 - Node{value=null}
+com.solvd.entity.user.stuff.ClothingSizes.printSizesInfo(ClothingSizes.java:53) 2022-12-09 00:18:52 - Clothing sizes is entered
+com.solvd.Main.main(Main.java:34) 2022-12-09 00:19:40 - [4 string, 1 string, 2 string, 3 string, 5 string]
+com.solvd.Main.main(Main.java:34) 2022-12-09 00:28:10 - [4 string, 1 string, 2 string, 3 string, 5 string]
+com.solvd.Main.main(Main.java:41) 2022-12-09 00:28:10 - List: Node{value=1 string}, Node{value=2 string}, Node{value=3 string}, 
+com.solvd.linkedList.MyLinkedList.search(MyLinkedList.java:47) 2022-12-09 00:28:10 - No such element in list
+com.solvd.Main.main(Main.java:42) 2022-12-09 00:28:10 - null
+com.solvd.entity.user.stuff.ClothingSizes.printSizesInfo(ClothingSizes.java:53) 2022-12-09 00:28:10 - Clothing sizes is entered
+com.solvd.Main.main(Main.java:34) 2022-12-09 00:28:53 - [4 string, 1 string, 2 string, 3 string, 5 string]
+com.solvd.Main.main(Main.java:40) 2022-12-09 00:28:53 - List: Node{value=1 string}, Node{value=2 string}, Node{value=3 string}, 
+com.solvd.entity.user.stuff.ClothingSizes.printSizesInfo(ClothingSizes.java:53) 2022-12-09 00:28:53 - Clothing sizes is entered
+com.solvd.Main.main(Main.java:34) 2022-12-09 00:29:05 - [4 string, 1 string, 2 string, 3 string, 5 string]
+com.solvd.Main.main(Main.java:40) 2022-12-09 00:29:05 - List: Node{value=1 string}, Node{value=2 string}, Node{value=3 string}, 
+com.solvd.Main.main(Main.java:42) 2022-12-09 00:29:05 - List: Node{value=1 string}, Node{value=3 string}, 
+com.solvd.entity.user.stuff.ClothingSizes.printSizesInfo(ClothingSizes.java:53) 2022-12-09 00:29:05 - Clothing sizes is entered
+com.solvd.Main.main(Main.java:34) 2022-12-09 00:30:07 - [4 string, 1 string, 2 string, 3 string, 5 string]
+com.solvd.Main.main(Main.java:40) 2022-12-09 00:30:07 - List: Node{value=1 string}, Node{value=2 string}, Node{value=3 string}
+com.solvd.Main.main(Main.java:42) 2022-12-09 00:30:07 - List: Node{value=1 string}, Node{value=3 string}
+com.solvd.entity.user.stuff.ClothingSizes.printSizesInfo(ClothingSizes.java:53) 2022-12-09 00:30:07 - Clothing sizes is entered

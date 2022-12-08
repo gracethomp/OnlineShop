@@ -10,23 +10,42 @@ import com.solvd.entity.user.Manager;
 import com.solvd.entity.user.User;
 import com.solvd.entity.user.stuff.ClothingSizes;
 import com.solvd.entity.user.stuff.Order;
+import com.solvd.linkedList.MyLinkedList;
+import org.apache.log4j.Logger;
 import org.apache.log4j.PropertyConfigurator;
 
 import java.util.ArrayList;
+import java.util.LinkedList;
 import java.util.List;
 
 public class Main {
+    private static final Logger LOGGER = Logger.getLogger(Main.class);
+
     public static void main(String[] args) {
         PropertyConfigurator.configure("src/main/resources/log4j.properties");
-        //ClothingSizes clothingSizes = new ClothingSizes("me", 0, 0, 0);
-        //Catalog catalog = new Catalog(null);
-        //static method
+
+        LinkedList<String> strings = new LinkedList<>();
+        strings.add("1 string");
+        strings.add("2 string");
+        strings.add("3 string");
+        strings.addFirst("4 string");
+        strings.addLast("5 string");
+        LOGGER.info(strings);
+
+        MyLinkedList<String> myLinkedList = new MyLinkedList<>();
+        myLinkedList.add("1 string");
+        myLinkedList.add("2 string");
+        myLinkedList.add("3 string");
+        LOGGER.info(myLinkedList);
+        myLinkedList.remove("2 string");
+        LOGGER.info(myLinkedList);
+
         ClothingSizes.printSizesInfo();
         System.out.println('\n');
 
         //polymorphism with interface
         Order order = new Order("Grace", "Thompson", "Kiev",
-                "Nova Posta 5", 6000, WaysToPay.CASH, OrderStatus.REGISTERED);
+                "Nova Post 5", 6000, WaysToPay.CASH, OrderStatus.REGISTERED);
 
         Admin admin = new Admin();
         admin.setRole(Role.ADMIN);
