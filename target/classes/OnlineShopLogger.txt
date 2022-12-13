@@ -235,3 +235,140 @@ com.solvd.Main.main(Main.java:44) 2022-12-09 01:47:39 - 3
 com.solvd.Main.main(Main.java:52) 2022-12-09 01:47:39 - List: Node{value=9 string}, Node{value=1 string}, Node{value=7 string}, Node{value=3 string}, Node{value=4 string}, Node{value=5 string}, Node{value=6 string}, Node{value=5 string}, Node{value=5 string}, Node{value=8 string}
 com.solvd.Main.main(Main.java:53) 2022-12-09 01:47:39 - 9
 com.solvd.entity.user.stuff.ClothingSizes.printSizesInfo(ClothingSizes.java:53) 2022-12-09 01:47:39 - Clothing sizes is entered
+com.solvd.Main.main(Main.java:33) 2022-12-09 01:48:09 - [4 string, 1 string, 2 string, 3 string, 5 string]
+com.solvd.Main.main(Main.java:35) 2022-12-09 01:48:09 - [4 string, 6 string, 1 string, 2 string, 3 string, 5 string]
+com.solvd.Main.main(Main.java:43) 2022-12-09 01:48:09 - List: Node{value=1 string}, Node{value=3 string}, Node{value=4 string}
+com.solvd.Main.main(Main.java:44) 2022-12-09 01:48:09 - 3
+com.solvd.Main.main(Main.java:52) 2022-12-09 01:48:09 - List: Node{value=9 string}, Node{value=1 string}, Node{value=7 string}, Node{value=3 string}, Node{value=4 string}, Node{value=5 string}, Node{value=6 string}, Node{value=5 string}, Node{value=5 string}, Node{value=8 string}
+com.solvd.Main.main(Main.java:53) 2022-12-09 01:48:09 - 10
+com.solvd.entity.user.stuff.ClothingSizes.printSizesInfo(ClothingSizes.java:53) 2022-12-09 01:48:09 - Clothing sizes is entered
+com.solvd.Main.main(Main.java:33) 2022-12-12 19:58:02 - List: Node{value=1 string}, Node{value=3 string}, Node{value=4 string}
+com.solvd.Main.main(Main.java:34) 2022-12-12 19:58:02 - 3
+com.solvd.Main.main(Main.java:42) 2022-12-12 19:58:02 - List: Node{value=9 string}, Node{value=1 string}, Node{value=7 string}, Node{value=3 string}, Node{value=4 string}, Node{value=5 string}, Node{value=6 string}, Node{value=5 string}, Node{value=5 string}, Node{value=8 string}
+com.solvd.Main.main(Main.java:43) 2022-12-12 19:58:02 - 10
+com.solvd.entity.user.stuff.ClothingSizes.printSizesInfo(ClothingSizes.java:53) 2022-12-12 19:58:02 - Clothing sizes is entered
+com.solvd.Main.main(Main.java:31) 2022-12-12 19:59:39 - List: Node{value=1 string}, Node{value=2 string}, Node{value=3 string}
+com.solvd.Main.main(Main.java:34) 2022-12-12 19:59:39 - List: Node{value=1 string}, Node{value=3 string}, Node{value=4 string}
+com.solvd.Main.main(Main.java:35) 2022-12-12 19:59:39 - 3
+com.solvd.Main.main(Main.java:43) 2022-12-12 19:59:39 - List: Node{value=9 string}, Node{value=1 string}, Node{value=7 string}, Node{value=3 string}, Node{value=4 string}, Node{value=5 string}, Node{value=6 string}, Node{value=5 string}, Node{value=5 string}, Node{value=8 string}
+com.solvd.Main.main(Main.java:44) 2022-12-12 19:59:39 - 10
+com.solvd.entity.user.stuff.ClothingSizes.printSizesInfo(ClothingSizes.java:53) 2022-12-12 19:59:39 - Clothing sizes is entered
+com.solvd.Main.main(Main.java:31) 2022-12-12 20:00:46 - List: Node{value=1 string}, Node{value=2 string}, Node{value=3 string}
+com.solvd.linkedList.MyLinkedList.search(MyLinkedList.java:79) 2022-12-12 20:00:46 - No such element in list
+com.solvd.Main.main(Main.java:34) 2022-12-12 20:00:46 - List: Node{value=1 string}, Node{value=3 string}, Node{value=4 string}
+com.solvd.Main.main(Main.java:35) 2022-12-12 20:00:46 - 3
+com.solvd.Main.main(Main.java:43) 2022-12-12 20:00:46 - List: Node{value=9 string}, Node{value=1 string}, Node{value=7 string}, Node{value=3 string}, Node{value=4 string}, Node{value=5 string}, Node{value=6 string}, Node{value=5 string}, Node{value=5 string}, Node{value=8 string}
+com.solvd.Main.main(Main.java:44) 2022-12-12 20:00:46 - 10
+com.solvd.entity.user.stuff.ClothingSizes.printSizesInfo(ClothingSizes.java:53) 2022-12-12 20:00:46 - Clothing sizes is entered
+com.solvd.Main.main(Main.java:31) 2022-12-12 20:01:57 - List: Node{value=1 string}, Node{value=2 string}, Node{value=3 string}
+com.solvd.Main.main(Main.java:34) 2022-12-12 20:01:57 - List: Node{value=1 string}, Node{value=3 string}, Node{value=4 string}
+com.solvd.Main.main(Main.java:35) 2022-12-12 20:01:57 - 3
+com.solvd.Main.main(Main.java:43) 2022-12-12 20:01:57 - List: Node{value=9 string}, Node{value=1 string}, Node{value=7 string}, Node{value=3 string}, Node{value=4 string}, Node{value=5 string}, Node{value=6 string}, Node{value=5 string}, Node{value=5 string}, Node{value=8 string}
+com.solvd.Main.main(Main.java:44) 2022-12-12 20:01:57 - 10
+com.solvd.entity.user.stuff.ClothingSizes.printSizesInfo(ClothingSizes.java:53) 2022-12-12 20:01:57 - Clothing sizes is entered
+com.solvd.Main.main(Main.java:31) 2022-12-12 20:04:14 - List: Node{value=1 string}, Node{value=2 string}, Node{value=3 string}
+com.solvd.Main.main(Main.java:34) 2022-12-12 20:04:14 - List: Node{value=1 string}, Node{value=3 string}, Node{value=4 string}
+com.solvd.Main.main(Main.java:35) 2022-12-12 20:04:14 - 3
+com.solvd.Main.main(Main.java:43) 2022-12-12 20:04:14 - List: Node{value=9 string}, Node{value=1 string}, Node{value=7 string}, Node{value=3 string}, Node{value=4 string}, Node{value=5 string}, Node{value=6 string}, Node{value=5 string}, Node{value=5 string}, Node{value=8 string}
+com.solvd.Main.main(Main.java:44) 2022-12-12 20:04:14 - 10
+com.solvd.entity.user.stuff.ClothingSizes.printSizesInfo(ClothingSizes.java:53) 2022-12-12 20:04:14 - Clothing sizes is entered
+com.solvd.Main.main(Main.java:31) 2022-12-12 20:09:47 - List: Node{value=1 string}, Node{value=2 string}, Node{value=3 string}
+com.solvd.Main.main(Main.java:34) 2022-12-12 20:09:47 - List: Node{value=1 string}, Node{value=3 string}, Node{value=4 string}
+com.solvd.Main.main(Main.java:35) 2022-12-12 20:09:47 - 3
+com.solvd.Main.main(Main.java:43) 2022-12-12 20:09:47 - List: Node{value=9 string}, Node{value=1 string}, Node{value=7 string}, Node{value=3 string}, Node{value=4 string}, Node{value=5 string}, Node{value=6 string}, Node{value=5 string}, Node{value=5 string}, Node{value=8 string}
+com.solvd.Main.main(Main.java:44) 2022-12-12 20:09:47 - 10
+com.solvd.entity.user.stuff.ClothingSizes.printSizesInfo(ClothingSizes.java:53) 2022-12-12 20:09:47 - Clothing sizes is entered
+com.solvd.Main.main(Main.java:31) 2022-12-12 20:12:16 - List: Node{value=1 string}, Node{value=2 string}, Node{value=3 string}
+com.solvd.Main.main(Main.java:34) 2022-12-12 20:12:16 - List: Node{value=1 string}, Node{value=3 string}, Node{value=4 string}
+com.solvd.Main.main(Main.java:35) 2022-12-12 20:12:16 - 3
+com.solvd.Main.main(Main.java:43) 2022-12-12 20:12:16 - Node{value=5 string}
+com.solvd.Main.main(Main.java:44) 2022-12-12 20:12:16 - List: Node{value=9 string}, Node{value=1 string}, Node{value=7 string}, Node{value=3 string}, Node{value=4 string}, Node{value=5 string}, Node{value=6 string}, Node{value=5 string}, Node{value=5 string}, Node{value=8 string}
+com.solvd.Main.main(Main.java:45) 2022-12-12 20:12:16 - 10
+com.solvd.entity.user.stuff.ClothingSizes.printSizesInfo(ClothingSizes.java:53) 2022-12-12 20:12:16 - Clothing sizes is entered
+com.solvd.Main.main(Main.java:31) 2022-12-12 20:12:38 - List: Node{value=1 string}, Node{value=2 string}, Node{value=3 string}
+com.solvd.Main.main(Main.java:34) 2022-12-12 20:12:38 - List: Node{value=1 string}, Node{value=3 string}, Node{value=4 string}
+com.solvd.Main.main(Main.java:35) 2022-12-12 20:12:38 - 3
+com.solvd.linkedList.MyLinkedList.get(MyLinkedList.java:52) 2022-12-12 20:12:38 - element can't be found
+com.solvd.Main.main(Main.java:43) 2022-12-12 20:12:38 - null
+com.solvd.Main.main(Main.java:44) 2022-12-12 20:12:38 - List: Node{value=9 string}, Node{value=1 string}, Node{value=7 string}, Node{value=3 string}, Node{value=4 string}, Node{value=5 string}, Node{value=6 string}, Node{value=5 string}, Node{value=5 string}, Node{value=8 string}
+com.solvd.Main.main(Main.java:45) 2022-12-12 20:12:38 - 10
+com.solvd.entity.user.stuff.ClothingSizes.printSizesInfo(ClothingSizes.java:53) 2022-12-12 20:12:38 - Clothing sizes is entered
+com.solvd.Main.main(Main.java:31) 2022-12-12 20:12:56 - List: Node{value=1 string}, Node{value=2 string}, Node{value=3 string}
+com.solvd.Main.main(Main.java:34) 2022-12-12 20:12:56 - List: Node{value=1 string}, Node{value=3 string}, Node{value=4 string}
+com.solvd.Main.main(Main.java:35) 2022-12-12 20:12:56 - 3
+com.solvd.linkedList.MyLinkedList.get(MyLinkedList.java:52) 2022-12-12 20:12:56 - element can't be found
+com.solvd.Main.main(Main.java:43) 2022-12-12 20:12:56 - null
+com.solvd.Main.main(Main.java:44) 2022-12-12 20:12:56 - List: Node{value=9 string}, Node{value=1 string}, Node{value=7 string}, Node{value=3 string}, Node{value=4 string}, Node{value=5 string}, Node{value=6 string}, Node{value=5 string}, Node{value=5 string}, Node{value=8 string}
+com.solvd.Main.main(Main.java:45) 2022-12-12 20:12:56 - 10
+com.solvd.entity.user.stuff.ClothingSizes.printSizesInfo(ClothingSizes.java:53) 2022-12-12 20:12:56 - Clothing sizes is entered
+com.solvd.Main.main(Main.java:31) 2022-12-12 20:13:02 - List: Node{value=1 string}, Node{value=2 string}, Node{value=3 string}
+com.solvd.Main.main(Main.java:34) 2022-12-12 20:13:02 - List: Node{value=1 string}, Node{value=3 string}, Node{value=4 string}
+com.solvd.Main.main(Main.java:35) 2022-12-12 20:13:02 - 3
+com.solvd.Main.main(Main.java:43) 2022-12-12 20:13:02 - Node{value=5 string}
+com.solvd.Main.main(Main.java:44) 2022-12-12 20:13:02 - List: Node{value=9 string}, Node{value=1 string}, Node{value=7 string}, Node{value=3 string}, Node{value=4 string}, Node{value=5 string}, Node{value=6 string}, Node{value=5 string}, Node{value=5 string}, Node{value=8 string}
+com.solvd.Main.main(Main.java:45) 2022-12-12 20:13:02 - 10
+com.solvd.entity.user.stuff.ClothingSizes.printSizesInfo(ClothingSizes.java:53) 2022-12-12 20:13:02 - Clothing sizes is entered
+com.solvd.linkedList.MyLinkedList.get(MyLinkedList.java:52) 2022-12-12 20:13:14 - element can't be found
+com.solvd.Main.main(Main.java:28) 2022-12-12 20:13:14 - null
+com.solvd.Main.main(Main.java:32) 2022-12-12 20:13:14 - List: Node{value=1 string}, Node{value=2 string}, Node{value=3 string}
+com.solvd.Main.main(Main.java:35) 2022-12-12 20:13:14 - List: Node{value=1 string}, Node{value=3 string}, Node{value=4 string}
+com.solvd.Main.main(Main.java:36) 2022-12-12 20:13:14 - 3
+com.solvd.Main.main(Main.java:44) 2022-12-12 20:13:14 - Node{value=5 string}
+com.solvd.Main.main(Main.java:45) 2022-12-12 20:13:14 - List: Node{value=9 string}, Node{value=1 string}, Node{value=7 string}, Node{value=3 string}, Node{value=4 string}, Node{value=5 string}, Node{value=6 string}, Node{value=5 string}, Node{value=5 string}, Node{value=8 string}
+com.solvd.Main.main(Main.java:46) 2022-12-12 20:13:14 - 10
+com.solvd.entity.user.stuff.ClothingSizes.printSizesInfo(ClothingSizes.java:53) 2022-12-12 20:13:14 - Clothing sizes is entered
+com.solvd.linkedList.MyLinkedList.get(MyLinkedList.java:48) 2022-12-13 17:35:52 - element can't be found
+com.solvd.Main.main(Main.java:27) 2022-12-13 17:35:52 - null
+com.solvd.Main.main(Main.java:31) 2022-12-13 17:35:52 - List: Node{value=1 string}, Node{value=2 string}, Node{value=3 string}
+com.solvd.Main.main(Main.java:34) 2022-12-13 17:35:52 - List: Node{value=1 string}, Node{value=3 string}, Node{value=4 string}
+com.solvd.Main.main(Main.java:35) 2022-12-13 17:35:52 - 3
+com.solvd.Main.main(Main.java:43) 2022-12-13 17:35:52 - Node{value=5 string}
+com.solvd.Main.main(Main.java:44) 2022-12-13 17:35:52 - List: Node{value=9 string}, Node{value=1 string}, Node{value=7 string}, Node{value=3 string}, Node{value=4 string}, Node{value=5 string}, Node{value=6 string}, Node{value=5 string}, Node{value=5 string}, Node{value=8 string}
+com.solvd.Main.main(Main.java:45) 2022-12-13 17:35:52 - 10
+com.solvd.entity.user.stuff.ClothingSizes.printSizesInfo(ClothingSizes.java:53) 2022-12-13 17:35:52 - Clothing sizes is entered
+com.solvd.Main.main(Main.java:74) 2022-12-13 17:35:52 - order processed by admin
+com.solvd.Main.main(Main.java:75) 2022-12-13 17:35:52 - order accepted
+
+com.solvd.Main.main(Main.java:79) 2022-12-13 17:35:52 - order accepted
+
+com.solvd.Main.main(Main.java:79) 2022-12-13 17:35:52 - order accepted
+
+com.solvd.Main.main(Main.java:91) 2022-12-13 17:35:52 - ADMIN
+com.solvd.Main.main(Main.java:91) 2022-12-13 17:35:52 - CLIENT
+com.solvd.Main.main(Main.java:91) 2022-12-13 17:35:52 - MANAGER
+com.solvd.Main.main(Main.java:91) 2022-12-13 17:35:52 - ADMIN
+com.solvd.Main.main(Main.java:91) 2022-12-13 17:35:52 - ADMIN
+com.solvd.Main.main(Main.java:91) 2022-12-13 17:35:52 - CLIENT
+com.solvd.linkedList.MyLinkedList.get(MyLinkedList.java:48) 2022-12-13 17:37:50 - element can't be found
+com.solvd.Main.main(Main.java:27) 2022-12-13 17:37:50 - null
+com.solvd.Main.main(Main.java:31) 2022-12-13 17:37:50 - List: Node{value=1 string}, Node{value=2 string}, Node{value=3 string}
+com.solvd.Main.main(Main.java:34) 2022-12-13 17:37:50 - List: Node{value=1 string}, Node{value=3 string}, Node{value=4 string}
+com.solvd.Main.main(Main.java:35) 2022-12-13 17:37:50 - 3
+com.solvd.Main.main(Main.java:43) 2022-12-13 17:37:50 - Node{value=5 string}
+com.solvd.Main.main(Main.java:44) 2022-12-13 17:37:50 - List: Node{value=9 string}, Node{value=1 string}, Node{value=7 string}, Node{value=3 string}, Node{value=4 string}, Node{value=5 string}, Node{value=6 string}, Node{value=5 string}, Node{value=5 string}, Node{value=8 string}
+com.solvd.Main.main(Main.java:45) 2022-12-13 17:37:50 - 10
+com.solvd.Main.main(Main.java:48) 2022-12-13 17:37:50 - null
+com.solvd.Main.main(Main.java:48) 2022-12-13 17:37:50 - Node{value=8 string}
+com.solvd.Main.main(Main.java:48) 2022-12-13 17:37:50 - Node{value=5 string}
+com.solvd.Main.main(Main.java:48) 2022-12-13 17:37:50 - Node{value=5 string}
+com.solvd.Main.main(Main.java:48) 2022-12-13 17:37:50 - Node{value=6 string}
+com.solvd.Main.main(Main.java:48) 2022-12-13 17:37:50 - Node{value=5 string}
+com.solvd.Main.main(Main.java:48) 2022-12-13 17:37:50 - Node{value=4 string}
+com.solvd.Main.main(Main.java:48) 2022-12-13 17:37:50 - Node{value=3 string}
+com.solvd.Main.main(Main.java:48) 2022-12-13 17:37:50 - Node{value=7 string}
+com.solvd.Main.main(Main.java:48) 2022-12-13 17:37:50 - Node{value=1 string}
+com.solvd.Main.main(Main.java:48) 2022-12-13 17:37:50 - Node{value=9 string}
+com.solvd.entity.user.stuff.ClothingSizes.printSizesInfo(ClothingSizes.java:53) 2022-12-13 17:37:50 - Clothing sizes is entered
+com.solvd.Main.main(Main.java:78) 2022-12-13 17:37:50 - order processed by admin
+com.solvd.Main.main(Main.java:79) 2022-12-13 17:37:50 - order accepted
+
+com.solvd.Main.main(Main.java:83) 2022-12-13 17:37:50 - order accepted
+
+com.solvd.Main.main(Main.java:83) 2022-12-13 17:37:50 - order accepted
+
+com.solvd.Main.main(Main.java:95) 2022-12-13 17:37:50 - ADMIN
+com.solvd.Main.main(Main.java:95) 2022-12-13 17:37:50 - CLIENT
+com.solvd.Main.main(Main.java:95) 2022-12-13 17:37:50 - MANAGER
+com.solvd.Main.main(Main.java:95) 2022-12-13 17:37:50 - ADMIN
+com.solvd.Main.main(Main.java:95) 2022-12-13 17:37:50 - ADMIN
+com.solvd.Main.main(Main.java:95) 2022-12-13 17:37:50 - CLIENT

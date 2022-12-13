@@ -15,7 +15,6 @@ import org.apache.log4j.Logger;
 import org.apache.log4j.PropertyConfigurator;
 
 import java.util.ArrayList;
-import java.util.LinkedList;
 import java.util.List;
 
 public class Main {
@@ -24,20 +23,12 @@ public class Main {
     public static void main(String[] args) {
         PropertyConfigurator.configure("src/main/resources/log4j.properties");
 
-        LinkedList<String> strings = new LinkedList<>();
-        strings.add("1 string");
-        strings.add("2 string");
-        strings.add("3 string");
-        strings.addFirst("4 string");
-        strings.addLast("5 string");
-        LOGGER.info(strings);
-        strings.add(1, "6 string");
-        LOGGER.info(strings);
-
         MyLinkedList<String> myLinkedList = new MyLinkedList<>();
+        LOGGER.info(myLinkedList.get(7));
         myLinkedList.add("1 string");
         myLinkedList.add("2 string");
         myLinkedList.add("3 string");
+        LOGGER.info(myLinkedList);
         myLinkedList.remove("2 string");
         myLinkedList.add("3 string", "4 string");
         LOGGER.info(myLinkedList);
@@ -49,8 +40,13 @@ public class Main {
         myLinkedList.add(0, "7 string");
         myLinkedList.add(7, "8 string");
         myLinkedList.addToFront("9 string");
+        LOGGER.info(myLinkedList.get(7));
         LOGGER.info(myLinkedList);
         LOGGER.info(myLinkedList.getSize());
+
+        for (int i = myLinkedList.getSize(); i >= 0; i--) {
+            LOGGER.info(myLinkedList.get(i));
+        }
 
         ClothingSizes.printSizesInfo();
         System.out.println('\n');
@@ -79,12 +75,12 @@ public class Main {
 
         for (IManage e : manageList) {
             if (e instanceof Admin && e.acceptOrder(order, client)) {
-                System.out.println(Admin.ORDER_PROCESSED_BY_ADMIN);
-                System.out.println(Manager.ORDER_ACCEPTED);
+                LOGGER.info(Admin.ORDER_PROCESSED_BY_ADMIN);
+                LOGGER.info(Manager.ORDER_ACCEPTED);
                 continue;
             }
             e.acceptOrder(order, client);
-            System.out.println(Manager.ORDER_ACCEPTED);
+            LOGGER.info(Manager.ORDER_ACCEPTED);
         }
 
         //polymorphism with abstract class
@@ -96,7 +92,7 @@ public class Main {
         users.add(admin);
         users.add(client);
         for (User u : users) {
-            System.out.println(u.getRole());
+            LOGGER.info(u.getRole());
         }
     }
 }

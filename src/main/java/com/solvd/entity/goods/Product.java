@@ -10,6 +10,7 @@ import com.solvd.exceptions.OnlineShopEmptyTitleException;
 import com.solvd.exceptions.OnlineShopNegativeValuesException;
 import com.solvd.exceptions.OnlineShopNullPointerException;
 import com.solvd.exceptions.OnlineShopIOException;
+import com.solvd.linkedList.MyLinkedList;
 import org.apache.log4j.Logger;
 
 import java.io.FileWriter;
@@ -28,7 +29,7 @@ public class Product implements IComment {
     private String description;
     private ProductTypes type;
     private List<Review> reviews;
-    private List<WaysToPay> waysToPay;
+    private MyLinkedList<WaysToPay> waysToPay;
 
     private static final Logger LOGGER = Logger.getLogger(Product.class);
 
@@ -47,16 +48,16 @@ public class Product implements IComment {
         this.description = description;
         this.type = type;
         this.reviews = new ArrayList<>();
-        this.waysToPay = new ArrayList<>();
+        this.waysToPay = new MyLinkedList<>();
     }
 
-    public boolean addWayToPay(WaysToPay way) {
+    public void addWayToPay(WaysToPay way) {
         LOGGER.debug(way + " was added");
-        return waysToPay.add(way);
+        waysToPay.add(way);
     }
 
     public boolean deleteWayToPay(WaysToPay way) {
-        if(waysToPay.contains(way)) {
+        if(waysToPay.search(way) != null) {
             LOGGER.debug("one of ways to pay (" + way + ") was deleted");
             return waysToPay.remove(way);
         }
@@ -132,7 +133,7 @@ public class Product implements IComment {
         return type;
     }
 
-    public List<WaysToPay> getWaysToPay() {
+    public MyLinkedList<WaysToPay> getWaysToPay() {
         LOGGER.trace("ways to pay was gotten");
         return waysToPay;
     }
@@ -182,7 +183,7 @@ public class Product implements IComment {
         this.type = type;
     }
 
-    public void setWaysToPay(List<WaysToPay> waysToPay) {
+    public void setWaysToPay(MyLinkedList<WaysToPay> waysToPay) {
         LOGGER.trace("ways to pay was set");
         this.waysToPay = waysToPay;
     }

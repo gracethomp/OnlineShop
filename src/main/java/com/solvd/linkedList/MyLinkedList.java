@@ -34,6 +34,7 @@ public class MyLinkedList<T>  implements IStructure<T>{
         helpToAdd(afterThatNode, toAdd);
     }
 
+    @Override
     public void addToFront(T toAdd) {
         size++;
         Node<T> node = new Node<>(toAdd);
@@ -45,7 +46,7 @@ public class MyLinkedList<T>  implements IStructure<T>{
     @Override
     public Node<T> get(int index) {
         if(first == null || index < 0 || index > size) {
-            LOGGER.warn("element can't be add");
+            LOGGER.warn("element can't be found");
             return null;
         }
         else {
@@ -58,13 +59,15 @@ public class MyLinkedList<T>  implements IStructure<T>{
     }
 
     @Override
-    public void remove(T toRemove) {
+    public boolean remove(T toRemove) {
         Node<T> node = search(toRemove);
         if(node != null){
             node.getPrev().setNext(node.getNext());
             node.getNext().setPrev(node.getPrev());
             size--;
+            return true;
         }
+        return false;
     }
 
     @Override
