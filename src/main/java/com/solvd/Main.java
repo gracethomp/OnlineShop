@@ -17,10 +17,12 @@ import org.apache.log4j.PropertyConfigurator;
 import java.util.ArrayList;
 import java.util.List;
 
+
 public class Main {
     private static final Logger LOGGER = Logger.getLogger(Main.class);
 
     public static void main(String[] args) {
+        WordsCounter.countWords("src/main/resources/text.txt");
         PropertyConfigurator.configure("src/main/resources/log4j.properties");
 
         MyLinkedList<String> myLinkedList = new MyLinkedList<>();
