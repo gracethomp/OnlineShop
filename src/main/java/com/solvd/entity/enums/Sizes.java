@@ -1,15 +1,25 @@
 package com.solvd.entity.enums;
 
 public enum Sizes {
-    XS(1), S(2), M(3), L(4), XL(5);
+    XS(1, 44),
+    S(2, 46),
+    M(3, 48),
+    L(4, 50),
+    XL(5, 52);
 
-    private final int value;
+    private final int logicOrder;
+    private final int europeanSize;
 
-    Sizes(int i) {
-        this.value = i;
+    Sizes(int i, int europeanSize) {
+        this.logicOrder = i;
+        this.europeanSize = europeanSize;
     }
 
-    public int getValue() {
-        return value;
+    public int getLogicOrder() {
+        return logicOrder;
+    }
+
+    public int getEuropeanSize() {
+        return europeanSize;
     }
 }

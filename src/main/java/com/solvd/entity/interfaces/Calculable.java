@@ -1,5 +1,7 @@
 package com.solvd.entity.interfaces;
 
-public interface Calculable {
-    double calculateTotalPrice();
+import com.solvd.lambda.IGet;
+
+public interface Calculable<T> {
+    double calculateTotalPrice(IGet<T> summarize);
 }

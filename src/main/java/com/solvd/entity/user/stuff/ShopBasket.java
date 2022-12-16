@@ -7,11 +7,12 @@ import com.solvd.entity.user.Client;
 import com.solvd.entity.user.Manager;
 import com.solvd.entity.interfaces.Calculable;
 import com.solvd.exceptions.OnlineShopNegativeValuesException;
+import com.solvd.lambda.IGet;
 import org.apache.log4j.Logger;
 
 import java.util.List;
 
-public class ShopBasket implements Calculable {
+public class ShopBasket implements Calculable<Product> {
     private List<Product> products;
     private double totalPrice;
 
@@ -26,17 +27,16 @@ public class ShopBasket implements Calculable {
     }
 
     @Override
-    public double calculateTotalPrice() {
+    public double calculateTotalPrice(IGet<Product> summarize) {
         double sum = 0;
-        for (Product p : products) {
-            sum += p.getPrice();
-        }
+        for (Product p : products)
+            sum += summarize.get(p);
         LOGGER.debug("total price is " + sum + " without delivery");
         return sum;
     }
 
-    public double calculateTotalPrice(double delivery) {
-        double sum = calculateTotalPrice();
+    public double calculateTotalPrice(double delivery, IGet<Product> summarize) {
+        double sum = calculateTotalPrice(summarize);
         sum += delivery;
         LOGGER.debug("total price is " + sum + " without delivery");
         return sum;

@@ -1,0 +1,1 @@
+com.solvd.WordsCounter.countWords(WordsCounter.java:32) 2022-12-16 16:58:26 - File error while words counting

@@ -9,6 +9,7 @@ import com.solvd.entity.interfaces.Calculable;
 import com.solvd.entity.user.stuff.*;
 import com.solvd.exceptions.OnlineShopNegativeValuesException;
 import com.solvd.exceptions.PaymentCardIllegalArgumentException;
+import com.solvd.lambda.IGet;
 import org.apache.log4j.Logger;
 
 import java.util.ArrayList;
@@ -76,7 +77,7 @@ public class Client extends User implements Calculable {
     }
 
     @Override
-    public double calculateTotalPrice() {
+    public double calculateTotalPrice(IGet summarize) {
         double sum = getOrders().stream().mapToDouble(Order::getTotalPrice).sum();
         LOGGER.debug("total price is " + sum + " without delivery");
         return sum;

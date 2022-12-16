@@ -3,6 +3,7 @@ package com.solvd;
 import com.solvd.entity.enums.OrderStatus;
 import com.solvd.entity.enums.Role;
 import com.solvd.entity.enums.WaysToPay;
+import com.solvd.entity.goods.Product;
 import com.solvd.entity.interfaces.IManage;
 import com.solvd.entity.user.Admin;
 import com.solvd.entity.user.Client;
@@ -10,9 +11,9 @@ import com.solvd.entity.user.Manager;
 import com.solvd.entity.user.User;
 import com.solvd.entity.user.stuff.ClothingSizes;
 import com.solvd.entity.user.stuff.Order;
+import com.solvd.entity.user.stuff.ShopBasket;
 import com.solvd.linkedList.MyLinkedList;
 import org.apache.log4j.Logger;
-import org.apache.log4j.PropertyConfigurator;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -23,7 +24,6 @@ public class Main {
 
     public static void main(String[] args) {
         WordsCounter.countWords("src/main/resources/text.txt");
-        PropertyConfigurator.configure("src/main/resources/log4j.properties");
 
         MyLinkedList<String> myLinkedList = new MyLinkedList<>();
         LOGGER.info(myLinkedList.get(7));
@@ -46,9 +46,8 @@ public class Main {
         LOGGER.info(myLinkedList);
         LOGGER.info(myLinkedList.getSize());
 
-        for (int i = myLinkedList.getSize(); i >= 0; i--) {
+        for (int i = myLinkedList.getSize(); i >= 0; i--)
             LOGGER.info(myLinkedList.get(i));
-        }
 
         ClothingSizes.printSizesInfo();
         System.out.println('\n');
@@ -93,8 +92,17 @@ public class Main {
         users.add(admin);
         users.add(admin);
         users.add(client);
-        for (User u : users) {
+        for (User u : users)
             LOGGER.info(u.getRole());
+
+        List<Product> products = new ArrayList<>();
+        for (int i = 100; i < 1000; i += 100) {
+            Product product = new Product();
+            product.setPrice(i);
+            products.add(product);
         }
+        ShopBasket shopBasket = new ShopBasket();
+        shopBasket.setProducts(products);
+        shopBasket.calculateTotalPrice(Product::getPrice);
     }
 }
