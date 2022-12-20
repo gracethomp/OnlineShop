@@ -3,6 +3,7 @@ package com.solvd;
 import com.solvd.entity.enums.OrderStatus;
 import com.solvd.entity.enums.Role;
 import com.solvd.entity.enums.WaysToPay;
+import com.solvd.entity.goods.Catalog;
 import com.solvd.entity.goods.Product;
 import com.solvd.entity.interfaces.IManage;
 import com.solvd.entity.user.Admin;
@@ -15,7 +16,11 @@ import com.solvd.entity.user.stuff.ShopBasket;
 import com.solvd.linkedList.MyLinkedList;
 import org.apache.log4j.Logger;
 
+import java.lang.reflect.Constructor;
+import java.lang.reflect.Field;
+import java.lang.reflect.Method;
 import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.List;
 
 
@@ -25,29 +30,7 @@ public class Main {
     public static void main(String[] args) {
         WordsCounter.countWords("src/main/resources/text.txt");
 
-        MyLinkedList<String> myLinkedList = new MyLinkedList<>();
-        LOGGER.info(myLinkedList.get(7));
-        myLinkedList.add("1 string");
-        myLinkedList.add("2 string");
-        myLinkedList.add("3 string");
-        LOGGER.info(myLinkedList);
-        myLinkedList.remove("2 string");
-        myLinkedList.add("3 string", "4 string");
-        LOGGER.info(myLinkedList);
-        LOGGER.info(myLinkedList.getSize());
-        myLinkedList.add(2, "5 string");
-        myLinkedList.add(2, "5 string");
-        myLinkedList.add(2, "5 string");
-        myLinkedList.add(3, "6 string");
-        myLinkedList.add(0, "7 string");
-        myLinkedList.add(7, "8 string");
-        myLinkedList.addToFront("9 string");
-        LOGGER.info(myLinkedList.get(7));
-        LOGGER.info(myLinkedList);
-        LOGGER.info(myLinkedList.getSize());
-
-        for (int i = myLinkedList.getSize(); i >= 0; i--)
-            LOGGER.info(myLinkedList.get(i));
+        MyLinkedList.testLinkedList();
 
         ClothingSizes.printSizesInfo();
         System.out.println('\n');
@@ -94,15 +77,46 @@ public class Main {
         users.add(client);
         for (User u : users)
             LOGGER.info(u.getRole());
-
         List<Product> products = new ArrayList<>();
         for (int i = 100; i < 1000; i += 100) {
             Product product = new Product();
+            product.setTitle("phone");
             product.setPrice(i);
             products.add(product);
         }
         ShopBasket shopBasket = new ShopBasket();
         shopBasket.setProducts(products);
         shopBasket.calculateTotalPrice(Product::getPrice);
+
+        Product p = new Product();
+        p.setTitle("book");
+        products.add(p);
+        p = new Product();
+        p.setTitle("game");
+        products.add(p);
+        Catalog catalog = new Catalog();
+        catalog.setProducts(products);
+        LOGGER.info(catalog.search(p1 -> p1.getTitle().equals("book")));
+
+        Order order1 = new Order();
+        order1.setId(103);
+        order1.deliverOrder(((deliveryMessage, itemToDeliver) -> deliveryMessage + itemToDeliver), "new item is in progress, id ");
+
+        try {
+            Class<?> c = Class.forName("com.solvd.entity.user.Admin");
+            Constructor<?>[] constructor = c.getConstructors();
+            Field[] fields = c.getDeclaredFields();
+            Method[] methods = c.getMethods();
+            Arrays.stream(fields).toList().forEach(LOGGER::info);
+            System.out.println();
+            Arrays.stream(constructor).toList().forEach(LOGGER::info);
+            System.out.println();
+            Arrays.stream(methods).toList().forEach(LOGGER::info);
+            Class<?> cSuperclass = c.getSuperclass();
+            System.out.println();
+            LOGGER.info(cSuperclass.getName());
+        } catch (ClassNotFoundException e) {
+            LOGGER.error(e);
+        }
     }
 }

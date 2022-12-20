@@ -204,4 +204,17 @@ public class Product implements IComment {
         return Objects.hash(title, rating, price, count, description, type, reviews, waysToPay);
     }
 
+    @Override
+    public String toString() {
+        return "Product{" +
+                "title='" + title + '\'' +
+                ", rating=" + rating +
+                ", price=" + price +
+                ", count=" + count +
+                ", description='" + description + '\'' +
+                ", type=" + type +
+                ", reviews=" + reviews +
+                ", waysToPay=" + waysToPay +
+                '}';
+    }
 }

@@ -8,6 +8,31 @@ public class MyLinkedList<T>  implements IStructure<T>{
 
     private static final Logger LOGGER = Logger.getLogger(MyLinkedList.class);
 
+    public static void testLinkedList() {
+        MyLinkedList<String> myLinkedList = new MyLinkedList<>();
+        LOGGER.info(myLinkedList.get(7));
+        myLinkedList.add("1 string");
+        myLinkedList.add("2 string");
+        myLinkedList.add("3 string");
+        LOGGER.info(myLinkedList);
+        myLinkedList.remove("2 string");
+        myLinkedList.add("3 string", "4 string");
+        LOGGER.info(myLinkedList);
+        LOGGER.info(myLinkedList.getSize());
+        myLinkedList.add(2, "5 string");
+        myLinkedList.add(2, "5 string");
+        myLinkedList.add(2, "5 string");
+        myLinkedList.add(3, "6 string");
+        myLinkedList.add(0, "7 string");
+        myLinkedList.add(7, "8 string");
+        myLinkedList.addToFront("9 string");
+        LOGGER.info(myLinkedList.get(7));
+        LOGGER.info(myLinkedList);
+        LOGGER.info(myLinkedList.getSize());
+        for (int i = myLinkedList.getSize(); i >= 0; i--)
+            LOGGER.info(myLinkedList.get(i));
+    }
+
     @Override
     public void add(T toAdd) {
         size++;

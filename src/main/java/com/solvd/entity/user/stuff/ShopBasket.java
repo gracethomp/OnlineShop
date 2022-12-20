@@ -3,6 +3,7 @@ package com.solvd.entity.user.stuff;
 import com.solvd.entity.enums.OrderStatus;
 import com.solvd.entity.goods.Product;
 import com.solvd.entity.enums.WaysToPay;
+import com.solvd.entity.interfaces.Clearable;
 import com.solvd.entity.user.Client;
 import com.solvd.entity.user.Manager;
 import com.solvd.entity.interfaces.Calculable;
@@ -12,7 +13,7 @@ import org.apache.log4j.Logger;
 
 import java.util.List;
 
-public class ShopBasket implements Calculable<Product> {
+public class ShopBasket implements Calculable<Product>, Clearable {
     private List<Product> products;
     private double totalPrice;
 
@@ -24,6 +25,11 @@ public class ShopBasket implements Calculable<Product> {
             LOGGER.error(OnlineShopNegativeValuesException.NEGATIVE_VALUE_MESSAGE);
             throw new OnlineShopNegativeValuesException();
         }
+    }
+
+    @Override
+    public void clear(){
+        products.clear();
     }
 
     @Override
@@ -42,6 +48,7 @@ public class ShopBasket implements Calculable<Product> {
         return sum;
 
     }
+
     public void formOrder(Client client, String recipientName, String recipientSurname, String location,
                           String post, double totalPrice, WaysToPay wayToPay, Manager manager) {
         Order order = new Order(recipientName, recipientSurname, location, post,

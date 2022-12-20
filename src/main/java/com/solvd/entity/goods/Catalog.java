@@ -1,5 +1,6 @@
 package com.solvd.entity.goods;
 
+import com.solvd.lambda.Searchable;
 import com.solvd.exceptions.OnlineShopEmptyTitleException;
 import com.solvd.exceptions.OnlineShopNullPointerException;
 import org.apache.log4j.Logger;
@@ -8,7 +9,7 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.Objects;
 
-public class Catalog {
+public class Catalog{
     private String title;
     private List<Product> products;
 
@@ -20,6 +21,15 @@ public class Catalog {
         OnlineShopEmptyTitleException.check(title, LOGGER);
         this.title = title;
         products = new ArrayList<>();
+    }
+
+    public List<Product> search(Searchable<Product> func) {
+        List<Product> result = new ArrayList<>();
+        for (Product p: products) {
+            if(func.search(p))
+                result.add(p);
+        }
+        return result;
     }
 
     public List<Product> getProducts() {

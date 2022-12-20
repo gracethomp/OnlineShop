@@ -5,6 +5,7 @@ import com.solvd.entity.goods.Product;
 import com.solvd.entity.enums.WaysToPay;
 import com.solvd.exceptions.NotMatchRegexException;
 import com.solvd.exceptions.OnlineShopNegativeValuesException;
+import com.solvd.lambda.IDeliver;
 import org.apache.log4j.Logger;
 
 import java.util.ArrayList;
@@ -14,6 +15,7 @@ import java.util.Objects;
 public class Order {
     private static final String NAME_SURNAME_REGEX = "[a-zA-Z]{2,20}";
 
+    private long id;
     private List<Product> products;
     private String recipientName;
     private String recipientSurname;
@@ -63,6 +65,10 @@ public class Order {
         this.products = new ArrayList<>();
     }
 
+    public void deliverOrder(IDeliver<Long> printable, String message){
+        LOGGER.info(printable.deliver(message, id));
+    }
+
     public double getTotalPrice() {
         LOGGER.trace("total price was gotten");
         return totalPrice;
@@ -103,6 +109,10 @@ public class Order {
         return status;
     }
 
+    public long getId() {
+        return id;
+    }
+
     public List<Product> getProducts() {
         LOGGER.trace("products were gotten");
         return products;
@@ -135,6 +145,10 @@ public class Order {
     public void setPromocode(String promocode) {
         LOGGER.trace("promocode was set");
         this.promocode = promocode;
+    }
+
+    public void setId(long id) {
+        this.id = id;
     }
 
     public void setRecipientName(String recipientName) {
