@@ -8,6 +8,7 @@ import java.time.LocalDate;
 import java.util.Comparator;
 import java.util.List;
 import java.util.Objects;
+import java.util.stream.Collectors;
 
 public class SeenList extends ListForUsers implements IOrderBy {
     private LocalDate dateFrom;
@@ -22,17 +23,15 @@ public class SeenList extends ListForUsers implements IOrderBy {
     @Override
     public List<Product> orderByPrice() {
         Comparator<Product> comparator = Comparator.comparing(Product::getPrice);
-        getProducts().sort(comparator);
         LOGGER.debug("Products in seen list order by price");
-        return getProducts();
+        return getProducts().stream().sorted(comparator).collect(Collectors.toList()); //3
     }
 
     @Override
     public List<Product> orderByTitle() {
         Comparator<Product> comparator = Comparator.comparing(Product::getTitle);
-        getProducts().sort(comparator);
         LOGGER.debug("Products in seen list order by title");
-        return getProducts();
+        return getProducts().stream().sorted(comparator).collect(Collectors.toList()); //4
     }
 
     public LocalDate getDateFrom() {

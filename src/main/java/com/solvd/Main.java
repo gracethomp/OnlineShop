@@ -18,6 +18,7 @@ import org.apache.log4j.Logger;
 
 import java.lang.reflect.Constructor;
 import java.lang.reflect.Field;
+import java.lang.reflect.InvocationTargetException;
 import java.lang.reflect.Method;
 import java.util.ArrayList;
 import java.util.Arrays;
@@ -115,7 +116,9 @@ public class Main {
             Class<?> cSuperclass = c.getSuperclass();
             System.out.println();
             LOGGER.info(cSuperclass.getName());
-        } catch (ClassNotFoundException e) {
+            Object v = c.getConstructor().newInstance();
+            LOGGER.info(v);
+        } catch (ClassNotFoundException | InstantiationException | IllegalAccessException | NoSuchMethodException | InvocationTargetException e) {
             LOGGER.error(e);
         }
     }

@@ -1,5 +1,7 @@
 package com.solvd.entity.goods;
 
+import com.solvd.entity.enums.ProductTypes;
+import com.solvd.entity.interfaces.Filterable;
 import com.solvd.lambda.Searchable;
 import com.solvd.exceptions.OnlineShopEmptyTitleException;
 import com.solvd.exceptions.OnlineShopNullPointerException;
@@ -8,8 +10,9 @@ import org.apache.log4j.Logger;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Objects;
+import java.util.stream.Collectors;
 
-public class Catalog{
+public class Catalog implements Filterable {
     private String title;
     private List<Product> products;
 
@@ -30,6 +33,22 @@ public class Catalog{
                 result.add(p);
         }
         return result;
+    }
+
+    @Override
+    public List<Product> filterByTitle(String title) {
+        return products.stream().filter(x -> x.getTitle().equals(title)).collect(Collectors.toList()); //1
+    }
+
+    @Override
+    public List<Product> filterByPrice(double priceFrom, double priceTo) {
+        return products.stream().filter(x -> x.getPrice() >= priceFrom && x.getPrice() <= priceTo)
+                .collect(Collectors.toList());
+    }
+
+    @Override
+    public List<Product> filterByType(ProductTypes type) {
+        return products.stream().filter(x -> x.getType() == type).collect(Collectors.toList());
     }
 
     public List<Product> getProducts() {

@@ -1,6 +1,8 @@
 package com.solvd.entity.goods;
 
+import com.solvd.entity.enums.ProductTypes;
 import com.solvd.entity.enums.Rating;
+import com.solvd.entity.interfaces.Filterable;
 import com.solvd.entity.reviews.Review;
 import com.solvd.entity.interfaces.IComment;
 import com.solvd.exceptions.OnlineShopEmptyTitleException;
@@ -11,8 +13,9 @@ import org.apache.log4j.Logger;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Objects;
+import java.util.stream.Collectors;
 
-public class Shop implements IComment {
+public class Shop implements IComment, Filterable {
     public static final String fileName = "src/main/resources/Shops.txt";
 
     private String title;
@@ -53,6 +56,22 @@ public class Shop implements IComment {
 
     public boolean deleteProduct(Product product) {
         return products.remove(product);
+    }
+
+    @Override
+    public List<Product> filterByTitle(String title) {
+        return products.stream().filter(x -> x.getTitle().equals(title)).collect(Collectors.toList()); //1
+    }
+
+    @Override
+    public List<Product> filterByPrice(double priceFrom, double priceTo) {
+        return products.stream().filter(x -> x.getPrice() >= priceFrom && x.getPrice() <= priceTo)
+                .collect(Collectors.toList());
+    }
+
+    @Override
+    public List<Product> filterByType(ProductTypes type) {
+        return products.stream().filter(x -> x.getType() == type).collect(Collectors.toList());
     }
 
     public String getTitle() {

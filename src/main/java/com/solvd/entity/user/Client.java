@@ -16,7 +16,7 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.Objects;
 
-public class Client extends User implements Calculable {
+public class Client extends User implements Calculable<Order> {
     private String country;
     private String city;
     private String streetTitle;
@@ -77,8 +77,8 @@ public class Client extends User implements Calculable {
     }
 
     @Override
-    public double calculateTotalPrice(IGet summarize) {
-        double sum = getOrders().stream().mapToDouble(Order::getTotalPrice).sum();
+    public double calculateTotalPrice(IGet<Order> summarize) {
+        double sum = getOrders().stream().mapToDouble(Order::getTotalPrice).sum(); //2
         LOGGER.debug("total price is " + sum + " without delivery");
         return sum;
     }

@@ -2877,3 +2877,484 @@ java.lang.Iterable.forEach(Iterable.java:75) 2022-12-20 17:27:47 - public final 
 java.lang.Iterable.forEach(Iterable.java:75) 2022-12-20 17:27:47 - public final native void java.lang.Object.notify()
 java.lang.Iterable.forEach(Iterable.java:75) 2022-12-20 17:27:47 - public final native void java.lang.Object.notifyAll()
 com.solvd.Main.main(Main.java:117) 2022-12-20 17:27:47 - com.solvd.entity.user.Manager
+com.solvd.linkedList.MyLinkedList.get(MyLinkedList.java:74) 2022-12-20 17:32:54 - element can't be found
+com.solvd.linkedList.MyLinkedList.testLinkedList(MyLinkedList.java:13) 2022-12-20 17:32:54 - 
+com.solvd.linkedList.MyLinkedList.testLinkedList(MyLinkedList.java:17) 2022-12-20 17:32:54 - List: Node{value=1 string}, Node{value=2 string}, Node{value=3 string}
+com.solvd.linkedList.MyLinkedList.testLinkedList(MyLinkedList.java:20) 2022-12-20 17:32:54 - List: Node{value=1 string}, Node{value=3 string}, Node{value=4 string}
+com.solvd.linkedList.MyLinkedList.testLinkedList(MyLinkedList.java:21) 2022-12-20 17:32:54 - 3
+com.solvd.linkedList.MyLinkedList.testLinkedList(MyLinkedList.java:29) 2022-12-20 17:32:54 - Node{value=5 string}
+com.solvd.linkedList.MyLinkedList.testLinkedList(MyLinkedList.java:30) 2022-12-20 17:32:54 - List: Node{value=9 string}, Node{value=1 string}, Node{value=7 string}, Node{value=3 string}, Node{value=4 string}, Node{value=5 string}, Node{value=6 string}, Node{value=5 string}, Node{value=5 string}, Node{value=8 string}
+com.solvd.linkedList.MyLinkedList.testLinkedList(MyLinkedList.java:31) 2022-12-20 17:32:54 - 10
+com.solvd.linkedList.MyLinkedList.testLinkedList(MyLinkedList.java:33) 2022-12-20 17:32:54 - 
+com.solvd.linkedList.MyLinkedList.testLinkedList(MyLinkedList.java:33) 2022-12-20 17:32:54 - Node{value=8 string}
+com.solvd.linkedList.MyLinkedList.testLinkedList(MyLinkedList.java:33) 2022-12-20 17:32:54 - Node{value=5 string}
+com.solvd.linkedList.MyLinkedList.testLinkedList(MyLinkedList.java:33) 2022-12-20 17:32:54 - Node{value=5 string}
+com.solvd.linkedList.MyLinkedList.testLinkedList(MyLinkedList.java:33) 2022-12-20 17:32:54 - Node{value=6 string}
+com.solvd.linkedList.MyLinkedList.testLinkedList(MyLinkedList.java:33) 2022-12-20 17:32:54 - Node{value=5 string}
+com.solvd.linkedList.MyLinkedList.testLinkedList(MyLinkedList.java:33) 2022-12-20 17:32:54 - Node{value=4 string}
+com.solvd.linkedList.MyLinkedList.testLinkedList(MyLinkedList.java:33) 2022-12-20 17:32:54 - Node{value=3 string}
+com.solvd.linkedList.MyLinkedList.testLinkedList(MyLinkedList.java:33) 2022-12-20 17:32:54 - Node{value=7 string}
+com.solvd.linkedList.MyLinkedList.testLinkedList(MyLinkedList.java:33) 2022-12-20 17:32:54 - Node{value=1 string}
+com.solvd.linkedList.MyLinkedList.testLinkedList(MyLinkedList.java:33) 2022-12-20 17:32:54 - Node{value=9 string}
+com.solvd.entity.user.stuff.ClothingSizes.printSizesInfo(ClothingSizes.java:53) 2022-12-20 17:32:54 - Clothing sizes is entered
+com.solvd.entity.user.Manager.acceptOrder(Manager.java:39) 2022-12-20 17:32:54 - Order has the next products: []
+ The recipient full name: 'Grace Thompson, location: Kiev, post: Nova Post 5, totalPrice: 6000.0, wayToPay: CASH, promocode: null, status: IN_PROGRESS was accepted
+com.solvd.Main.main(Main.java:63) 2022-12-20 17:32:54 - order processed by admin
+com.solvd.Main.main(Main.java:64) 2022-12-20 17:32:54 - order accepted
+
+com.solvd.entity.user.Manager.acceptOrder(Manager.java:42) 2022-12-20 17:32:54 - Order has the next products: []
+ The recipient full name: 'Grace Thompson, location: Kiev, post: Nova Post 5, totalPrice: 6000.0, wayToPay: CASH, promocode: null, status: IN_PROGRESS isn't accepted
+com.solvd.Main.main(Main.java:68) 2022-12-20 17:32:54 - order accepted
+
+com.solvd.entity.user.Manager.acceptOrder(Manager.java:42) 2022-12-20 17:32:54 - Order has the next products: []
+ The recipient full name: 'Grace Thompson, location: Kiev, post: Nova Post 5, totalPrice: 6000.0, wayToPay: CASH, promocode: null, status: IN_PROGRESS isn't accepted
+com.solvd.Main.main(Main.java:68) 2022-12-20 17:32:54 - order accepted
+
+com.solvd.Main.main(Main.java:80) 2022-12-20 17:32:54 - ADMIN
+com.solvd.Main.main(Main.java:80) 2022-12-20 17:32:54 - CLIENT
+com.solvd.Main.main(Main.java:80) 2022-12-20 17:32:54 - MANAGER
+com.solvd.Main.main(Main.java:80) 2022-12-20 17:32:54 - ADMIN
+com.solvd.Main.main(Main.java:80) 2022-12-20 17:32:54 - ADMIN
+com.solvd.Main.main(Main.java:80) 2022-12-20 17:32:54 - CLIENT
+com.solvd.entity.user.stuff.ShopBasket.calculateTotalPrice(ShopBasket.java:40) 2022-12-20 17:32:54 - total price is 4500.0 without delivery
+com.solvd.Main.main(Main.java:100) 2022-12-20 17:32:54 - [Product{title='book', rating=null, price=0.0, count=0, description='null', type=null, reviews=null, waysToPay=null}]
+com.solvd.entity.user.stuff.Order.deliverOrder(Order.java:69) 2022-12-20 17:32:54 - new item is in progress, id 103
+java.lang.Iterable.forEach(Iterable.java:75) 2022-12-20 17:32:54 - public static final java.lang.String com.solvd.entity.user.Admin.ORDER_PROCESSED_BY_ADMIN
+java.lang.Iterable.forEach(Iterable.java:75) 2022-12-20 17:32:54 - private boolean com.solvd.entity.user.Admin.rightsForStatus
+java.lang.Iterable.forEach(Iterable.java:75) 2022-12-20 17:32:54 - private boolean com.solvd.entity.user.Admin.rightsForShop
+java.lang.Iterable.forEach(Iterable.java:75) 2022-12-20 17:32:54 - private boolean com.solvd.entity.user.Admin.rightsForProduct
+java.lang.Iterable.forEach(Iterable.java:75) 2022-12-20 17:32:54 - private static final org.apache.log4j.Logger com.solvd.entity.user.Admin.LOGGER
+java.lang.Iterable.forEach(Iterable.java:75) 2022-12-20 17:32:54 - public com.solvd.entity.user.Admin()
+java.lang.Iterable.forEach(Iterable.java:75) 2022-12-20 17:32:54 - public com.solvd.entity.user.Admin(java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,com.solvd.entity.enums.UserStatus,boolean,boolean,boolean,boolean)
+java.lang.Iterable.forEach(Iterable.java:75) 2022-12-20 17:32:54 - public boolean com.solvd.entity.user.Admin.equals(java.lang.Object)
+java.lang.Iterable.forEach(Iterable.java:75) 2022-12-20 17:32:54 - public java.lang.String com.solvd.entity.user.Admin.toString()
+java.lang.Iterable.forEach(Iterable.java:75) 2022-12-20 17:32:54 - public int com.solvd.entity.user.Admin.hashCode()
+java.lang.Iterable.forEach(Iterable.java:75) 2022-12-20 17:32:54 - public void com.solvd.entity.user.Admin.setManagerRights(com.solvd.entity.user.Manager,boolean)
+java.lang.Iterable.forEach(Iterable.java:75) 2022-12-20 17:32:54 - public boolean com.solvd.entity.user.Admin.deleteProduct(com.solvd.entity.goods.Product,com.solvd.entity.goods.Shop)
+java.lang.Iterable.forEach(Iterable.java:75) 2022-12-20 17:32:54 - public void com.solvd.entity.user.Admin.blockUser(com.solvd.entity.user.User)
+java.lang.Iterable.forEach(Iterable.java:75) 2022-12-20 17:32:54 - public void com.solvd.entity.user.Admin.unblockUser(com.solvd.entity.user.User)
+java.lang.Iterable.forEach(Iterable.java:75) 2022-12-20 17:32:54 - public com.solvd.entity.goods.Shop com.solvd.entity.user.Admin.createShop(com.solvd.entity.goods.Shop) throws com.solvd.exceptions.OnlineShopIOException
+java.lang.Iterable.forEach(Iterable.java:75) 2022-12-20 17:32:54 - public com.solvd.entity.goods.Product com.solvd.entity.user.Admin.createProduct(com.solvd.entity.goods.Product,com.solvd.entity.goods.Shop) throws com.solvd.exceptions.OnlineShopIOException
+java.lang.Iterable.forEach(Iterable.java:75) 2022-12-20 17:32:54 - public boolean com.solvd.entity.user.Admin.isRightsForProduct()
+java.lang.Iterable.forEach(Iterable.java:75) 2022-12-20 17:32:54 - public boolean com.solvd.entity.user.Admin.isRightsForShop()
+java.lang.Iterable.forEach(Iterable.java:75) 2022-12-20 17:32:54 - public boolean com.solvd.entity.user.Admin.isRightsForStatus()
+java.lang.Iterable.forEach(Iterable.java:75) 2022-12-20 17:32:54 - public void com.solvd.entity.user.Admin.setRightsForProduct(boolean)
+java.lang.Iterable.forEach(Iterable.java:75) 2022-12-20 17:32:54 - public void com.solvd.entity.user.Admin.setRightsForShop(boolean)
+java.lang.Iterable.forEach(Iterable.java:75) 2022-12-20 17:32:54 - public void com.solvd.entity.user.Admin.setRightsForStatus(boolean)
+java.lang.Iterable.forEach(Iterable.java:75) 2022-12-20 17:32:54 - public void com.solvd.entity.user.Manager.setProcessRights(boolean)
+java.lang.Iterable.forEach(Iterable.java:75) 2022-12-20 17:32:54 - public boolean com.solvd.entity.user.Manager.addOrderToProcess(com.solvd.entity.user.stuff.Order)
+java.lang.Iterable.forEach(Iterable.java:75) 2022-12-20 17:32:54 - public boolean com.solvd.entity.user.Manager.isProcessRights()
+java.lang.Iterable.forEach(Iterable.java:75) 2022-12-20 17:32:54 - public boolean com.solvd.entity.user.Manager.cancelOrder(com.solvd.entity.user.stuff.Order,com.solvd.entity.user.Client)
+java.lang.Iterable.forEach(Iterable.java:75) 2022-12-20 17:32:54 - public boolean com.solvd.entity.user.Manager.acceptOrder(com.solvd.entity.user.stuff.Order,com.solvd.entity.user.Client)
+java.lang.Iterable.forEach(Iterable.java:75) 2022-12-20 17:32:54 - public java.lang.String com.solvd.entity.user.User.getName()
+java.lang.Iterable.forEach(Iterable.java:75) 2022-12-20 17:32:54 - public void com.solvd.entity.user.User.setName(java.lang.String)
+java.lang.Iterable.forEach(Iterable.java:75) 2022-12-20 17:32:54 - public com.solvd.entity.enums.UserStatus com.solvd.entity.user.User.getStatus()
+java.lang.Iterable.forEach(Iterable.java:75) 2022-12-20 17:32:54 - public void com.solvd.entity.user.User.setStatus(com.solvd.entity.enums.UserStatus)
+java.lang.Iterable.forEach(Iterable.java:75) 2022-12-20 17:32:54 - public java.lang.String com.solvd.entity.user.User.getSurname()
+java.lang.Iterable.forEach(Iterable.java:75) 2022-12-20 17:32:54 - public final boolean com.solvd.entity.user.User.addReview(com.solvd.entity.reviews.Review) throws com.solvd.exceptions.OnlineShopIOException
+java.lang.Iterable.forEach(Iterable.java:75) 2022-12-20 17:32:54 - public java.lang.String com.solvd.entity.user.User.getEmail()
+java.lang.Iterable.forEach(Iterable.java:75) 2022-12-20 17:32:54 - public java.util.List com.solvd.entity.user.User.getReviews()
+java.lang.Iterable.forEach(Iterable.java:75) 2022-12-20 17:32:54 - public java.lang.String com.solvd.entity.user.User.getPhoneNumber()
+java.lang.Iterable.forEach(Iterable.java:75) 2022-12-20 17:32:54 - public void com.solvd.entity.user.User.setSurname(java.lang.String)
+java.lang.Iterable.forEach(Iterable.java:75) 2022-12-20 17:32:54 - public void com.solvd.entity.user.User.setEmail(java.lang.String)
+java.lang.Iterable.forEach(Iterable.java:75) 2022-12-20 17:32:54 - public void com.solvd.entity.user.User.setPassword(java.lang.String)
+java.lang.Iterable.forEach(Iterable.java:75) 2022-12-20 17:32:54 - public void com.solvd.entity.user.User.setPhoneNumber(java.lang.String)
+java.lang.Iterable.forEach(Iterable.java:75) 2022-12-20 17:32:54 - public void com.solvd.entity.user.User.setReviews(java.util.List)
+java.lang.Iterable.forEach(Iterable.java:75) 2022-12-20 17:32:54 - public void com.solvd.entity.user.User.setOrders(java.util.List)
+java.lang.Iterable.forEach(Iterable.java:75) 2022-12-20 17:32:54 - public void com.solvd.entity.user.User.setRole(com.solvd.entity.enums.Role)
+java.lang.Iterable.forEach(Iterable.java:75) 2022-12-20 17:32:54 - public java.util.List com.solvd.entity.user.User.getOrders()
+java.lang.Iterable.forEach(Iterable.java:75) 2022-12-20 17:32:54 - public com.solvd.entity.enums.Role com.solvd.entity.user.User.getRole()
+java.lang.Iterable.forEach(Iterable.java:75) 2022-12-20 17:32:54 - public java.lang.String com.solvd.entity.user.User.getPassword()
+java.lang.Iterable.forEach(Iterable.java:75) 2022-12-20 17:32:54 - public final void java.lang.Object.wait(long,int) throws java.lang.InterruptedException
+java.lang.Iterable.forEach(Iterable.java:75) 2022-12-20 17:32:54 - public final void java.lang.Object.wait() throws java.lang.InterruptedException
+java.lang.Iterable.forEach(Iterable.java:75) 2022-12-20 17:32:54 - public final native void java.lang.Object.wait(long) throws java.lang.InterruptedException
+java.lang.Iterable.forEach(Iterable.java:75) 2022-12-20 17:32:54 - public final native java.lang.Class java.lang.Object.getClass()
+java.lang.Iterable.forEach(Iterable.java:75) 2022-12-20 17:32:54 - public final native void java.lang.Object.notify()
+java.lang.Iterable.forEach(Iterable.java:75) 2022-12-20 17:32:54 - public final native void java.lang.Object.notifyAll()
+com.solvd.Main.main(Main.java:118) 2022-12-20 17:32:54 - com.solvd.entity.user.Manager
+com.solvd.linkedList.MyLinkedList.get(MyLinkedList.java:74) 2022-12-20 17:35:43 - element can't be found
+com.solvd.linkedList.MyLinkedList.testLinkedList(MyLinkedList.java:13) 2022-12-20 17:35:43 - 
+com.solvd.linkedList.MyLinkedList.testLinkedList(MyLinkedList.java:17) 2022-12-20 17:35:43 - List: Node{value=1 string}, Node{value=2 string}, Node{value=3 string}
+com.solvd.linkedList.MyLinkedList.testLinkedList(MyLinkedList.java:20) 2022-12-20 17:35:43 - List: Node{value=1 string}, Node{value=3 string}, Node{value=4 string}
+com.solvd.linkedList.MyLinkedList.testLinkedList(MyLinkedList.java:21) 2022-12-20 17:35:43 - 3
+com.solvd.linkedList.MyLinkedList.testLinkedList(MyLinkedList.java:29) 2022-12-20 17:35:43 - Node{value=5 string}
+com.solvd.linkedList.MyLinkedList.testLinkedList(MyLinkedList.java:30) 2022-12-20 17:35:43 - List: Node{value=9 string}, Node{value=1 string}, Node{value=7 string}, Node{value=3 string}, Node{value=4 string}, Node{value=5 string}, Node{value=6 string}, Node{value=5 string}, Node{value=5 string}, Node{value=8 string}
+com.solvd.linkedList.MyLinkedList.testLinkedList(MyLinkedList.java:31) 2022-12-20 17:35:43 - 10
+com.solvd.linkedList.MyLinkedList.testLinkedList(MyLinkedList.java:33) 2022-12-20 17:35:43 - 
+com.solvd.linkedList.MyLinkedList.testLinkedList(MyLinkedList.java:33) 2022-12-20 17:35:43 - Node{value=8 string}
+com.solvd.linkedList.MyLinkedList.testLinkedList(MyLinkedList.java:33) 2022-12-20 17:35:43 - Node{value=5 string}
+com.solvd.linkedList.MyLinkedList.testLinkedList(MyLinkedList.java:33) 2022-12-20 17:35:43 - Node{value=5 string}
+com.solvd.linkedList.MyLinkedList.testLinkedList(MyLinkedList.java:33) 2022-12-20 17:35:43 - Node{value=6 string}
+com.solvd.linkedList.MyLinkedList.testLinkedList(MyLinkedList.java:33) 2022-12-20 17:35:43 - Node{value=5 string}
+com.solvd.linkedList.MyLinkedList.testLinkedList(MyLinkedList.java:33) 2022-12-20 17:35:43 - Node{value=4 string}
+com.solvd.linkedList.MyLinkedList.testLinkedList(MyLinkedList.java:33) 2022-12-20 17:35:43 - Node{value=3 string}
+com.solvd.linkedList.MyLinkedList.testLinkedList(MyLinkedList.java:33) 2022-12-20 17:35:43 - Node{value=7 string}
+com.solvd.linkedList.MyLinkedList.testLinkedList(MyLinkedList.java:33) 2022-12-20 17:35:43 - Node{value=1 string}
+com.solvd.linkedList.MyLinkedList.testLinkedList(MyLinkedList.java:33) 2022-12-20 17:35:43 - Node{value=9 string}
+com.solvd.entity.user.stuff.ClothingSizes.printSizesInfo(ClothingSizes.java:53) 2022-12-20 17:35:43 - Clothing sizes is entered
+com.solvd.entity.user.Manager.acceptOrder(Manager.java:39) 2022-12-20 17:35:43 - Order has the next products: []
+ The recipient full name: 'Grace Thompson, location: Kiev, post: Nova Post 5, totalPrice: 6000.0, wayToPay: CASH, promocode: null, status: IN_PROGRESS was accepted
+com.solvd.Main.main(Main.java:63) 2022-12-20 17:35:43 - order processed by admin
+com.solvd.Main.main(Main.java:64) 2022-12-20 17:35:43 - order accepted
+
+com.solvd.entity.user.Manager.acceptOrder(Manager.java:42) 2022-12-20 17:35:43 - Order has the next products: []
+ The recipient full name: 'Grace Thompson, location: Kiev, post: Nova Post 5, totalPrice: 6000.0, wayToPay: CASH, promocode: null, status: IN_PROGRESS isn't accepted
+com.solvd.Main.main(Main.java:68) 2022-12-20 17:35:43 - order accepted
+
+com.solvd.entity.user.Manager.acceptOrder(Manager.java:42) 2022-12-20 17:35:43 - Order has the next products: []
+ The recipient full name: 'Grace Thompson, location: Kiev, post: Nova Post 5, totalPrice: 6000.0, wayToPay: CASH, promocode: null, status: IN_PROGRESS isn't accepted
+com.solvd.Main.main(Main.java:68) 2022-12-20 17:35:43 - order accepted
+
+com.solvd.Main.main(Main.java:80) 2022-12-20 17:35:43 - ADMIN
+com.solvd.Main.main(Main.java:80) 2022-12-20 17:35:43 - CLIENT
+com.solvd.Main.main(Main.java:80) 2022-12-20 17:35:43 - MANAGER
+com.solvd.Main.main(Main.java:80) 2022-12-20 17:35:43 - ADMIN
+com.solvd.Main.main(Main.java:80) 2022-12-20 17:35:43 - ADMIN
+com.solvd.Main.main(Main.java:80) 2022-12-20 17:35:43 - CLIENT
+com.solvd.entity.user.stuff.ShopBasket.calculateTotalPrice(ShopBasket.java:40) 2022-12-20 17:35:43 - total price is 4500.0 without delivery
+com.solvd.Main.main(Main.java:100) 2022-12-20 17:35:43 - [Product{title='book', rating=null, price=0.0, count=0, description='null', type=null, reviews=null, waysToPay=null}]
+com.solvd.entity.user.stuff.Order.deliverOrder(Order.java:69) 2022-12-20 17:35:43 - new item is in progress, id 103
+java.lang.Iterable.forEach(Iterable.java:75) 2022-12-20 17:35:43 - public static final java.lang.String com.solvd.entity.user.Admin.ORDER_PROCESSED_BY_ADMIN
+java.lang.Iterable.forEach(Iterable.java:75) 2022-12-20 17:35:43 - private boolean com.solvd.entity.user.Admin.rightsForStatus
+java.lang.Iterable.forEach(Iterable.java:75) 2022-12-20 17:35:43 - private boolean com.solvd.entity.user.Admin.rightsForShop
+java.lang.Iterable.forEach(Iterable.java:75) 2022-12-20 17:35:43 - private boolean com.solvd.entity.user.Admin.rightsForProduct
+java.lang.Iterable.forEach(Iterable.java:75) 2022-12-20 17:35:43 - private static final org.apache.log4j.Logger com.solvd.entity.user.Admin.LOGGER
+java.lang.Iterable.forEach(Iterable.java:75) 2022-12-20 17:35:43 - public com.solvd.entity.user.Admin()
+java.lang.Iterable.forEach(Iterable.java:75) 2022-12-20 17:35:43 - public com.solvd.entity.user.Admin(java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,com.solvd.entity.enums.UserStatus,boolean,boolean,boolean,boolean)
+java.lang.Iterable.forEach(Iterable.java:75) 2022-12-20 17:35:43 - public boolean com.solvd.entity.user.Admin.equals(java.lang.Object)
+java.lang.Iterable.forEach(Iterable.java:75) 2022-12-20 17:35:43 - public java.lang.String com.solvd.entity.user.Admin.toString()
+java.lang.Iterable.forEach(Iterable.java:75) 2022-12-20 17:35:43 - public int com.solvd.entity.user.Admin.hashCode()
+java.lang.Iterable.forEach(Iterable.java:75) 2022-12-20 17:35:43 - public void com.solvd.entity.user.Admin.setManagerRights(com.solvd.entity.user.Manager,boolean)
+java.lang.Iterable.forEach(Iterable.java:75) 2022-12-20 17:35:43 - public boolean com.solvd.entity.user.Admin.deleteProduct(com.solvd.entity.goods.Product,com.solvd.entity.goods.Shop)
+java.lang.Iterable.forEach(Iterable.java:75) 2022-12-20 17:35:43 - public void com.solvd.entity.user.Admin.blockUser(com.solvd.entity.user.User)
+java.lang.Iterable.forEach(Iterable.java:75) 2022-12-20 17:35:43 - public void com.solvd.entity.user.Admin.unblockUser(com.solvd.entity.user.User)
+java.lang.Iterable.forEach(Iterable.java:75) 2022-12-20 17:35:43 - public com.solvd.entity.goods.Shop com.solvd.entity.user.Admin.createShop(com.solvd.entity.goods.Shop) throws com.solvd.exceptions.OnlineShopIOException
+java.lang.Iterable.forEach(Iterable.java:75) 2022-12-20 17:35:43 - public com.solvd.entity.goods.Product com.solvd.entity.user.Admin.createProduct(com.solvd.entity.goods.Product,com.solvd.entity.goods.Shop) throws com.solvd.exceptions.OnlineShopIOException
+java.lang.Iterable.forEach(Iterable.java:75) 2022-12-20 17:35:43 - public boolean com.solvd.entity.user.Admin.isRightsForProduct()
+java.lang.Iterable.forEach(Iterable.java:75) 2022-12-20 17:35:43 - public boolean com.solvd.entity.user.Admin.isRightsForShop()
+java.lang.Iterable.forEach(Iterable.java:75) 2022-12-20 17:35:43 - public boolean com.solvd.entity.user.Admin.isRightsForStatus()
+java.lang.Iterable.forEach(Iterable.java:75) 2022-12-20 17:35:43 - public void com.solvd.entity.user.Admin.setRightsForProduct(boolean)
+java.lang.Iterable.forEach(Iterable.java:75) 2022-12-20 17:35:43 - public void com.solvd.entity.user.Admin.setRightsForShop(boolean)
+java.lang.Iterable.forEach(Iterable.java:75) 2022-12-20 17:35:43 - public void com.solvd.entity.user.Admin.setRightsForStatus(boolean)
+java.lang.Iterable.forEach(Iterable.java:75) 2022-12-20 17:35:43 - public void com.solvd.entity.user.Manager.setProcessRights(boolean)
+java.lang.Iterable.forEach(Iterable.java:75) 2022-12-20 17:35:43 - public boolean com.solvd.entity.user.Manager.addOrderToProcess(com.solvd.entity.user.stuff.Order)
+java.lang.Iterable.forEach(Iterable.java:75) 2022-12-20 17:35:43 - public boolean com.solvd.entity.user.Manager.isProcessRights()
+java.lang.Iterable.forEach(Iterable.java:75) 2022-12-20 17:35:43 - public boolean com.solvd.entity.user.Manager.cancelOrder(com.solvd.entity.user.stuff.Order,com.solvd.entity.user.Client)
+java.lang.Iterable.forEach(Iterable.java:75) 2022-12-20 17:35:43 - public boolean com.solvd.entity.user.Manager.acceptOrder(com.solvd.entity.user.stuff.Order,com.solvd.entity.user.Client)
+java.lang.Iterable.forEach(Iterable.java:75) 2022-12-20 17:35:43 - public java.lang.String com.solvd.entity.user.User.getName()
+java.lang.Iterable.forEach(Iterable.java:75) 2022-12-20 17:35:43 - public void com.solvd.entity.user.User.setName(java.lang.String)
+java.lang.Iterable.forEach(Iterable.java:75) 2022-12-20 17:35:43 - public java.lang.String com.solvd.entity.user.User.getSurname()
+java.lang.Iterable.forEach(Iterable.java:75) 2022-12-20 17:35:43 - public final boolean com.solvd.entity.user.User.addReview(com.solvd.entity.reviews.Review) throws com.solvd.exceptions.OnlineShopIOException
+java.lang.Iterable.forEach(Iterable.java:75) 2022-12-20 17:35:43 - public java.lang.String com.solvd.entity.user.User.getEmail()
+java.lang.Iterable.forEach(Iterable.java:75) 2022-12-20 17:35:43 - public java.util.List com.solvd.entity.user.User.getReviews()
+java.lang.Iterable.forEach(Iterable.java:75) 2022-12-20 17:35:43 - public java.lang.String com.solvd.entity.user.User.getPhoneNumber()
+java.lang.Iterable.forEach(Iterable.java:75) 2022-12-20 17:35:43 - public void com.solvd.entity.user.User.setSurname(java.lang.String)
+java.lang.Iterable.forEach(Iterable.java:75) 2022-12-20 17:35:43 - public void com.solvd.entity.user.User.setEmail(java.lang.String)
+java.lang.Iterable.forEach(Iterable.java:75) 2022-12-20 17:35:43 - public void com.solvd.entity.user.User.setPassword(java.lang.String)
+java.lang.Iterable.forEach(Iterable.java:75) 2022-12-20 17:35:43 - public void com.solvd.entity.user.User.setPhoneNumber(java.lang.String)
+java.lang.Iterable.forEach(Iterable.java:75) 2022-12-20 17:35:43 - public void com.solvd.entity.user.User.setReviews(java.util.List)
+java.lang.Iterable.forEach(Iterable.java:75) 2022-12-20 17:35:43 - public void com.solvd.entity.user.User.setOrders(java.util.List)
+java.lang.Iterable.forEach(Iterable.java:75) 2022-12-20 17:35:43 - public void com.solvd.entity.user.User.setRole(com.solvd.entity.enums.Role)
+java.lang.Iterable.forEach(Iterable.java:75) 2022-12-20 17:35:43 - public java.util.List com.solvd.entity.user.User.getOrders()
+java.lang.Iterable.forEach(Iterable.java:75) 2022-12-20 17:35:43 - public com.solvd.entity.enums.Role com.solvd.entity.user.User.getRole()
+java.lang.Iterable.forEach(Iterable.java:75) 2022-12-20 17:35:43 - public com.solvd.entity.enums.UserStatus com.solvd.entity.user.User.getStatus()
+java.lang.Iterable.forEach(Iterable.java:75) 2022-12-20 17:35:43 - public void com.solvd.entity.user.User.setStatus(com.solvd.entity.enums.UserStatus)
+java.lang.Iterable.forEach(Iterable.java:75) 2022-12-20 17:35:43 - public java.lang.String com.solvd.entity.user.User.getPassword()
+java.lang.Iterable.forEach(Iterable.java:75) 2022-12-20 17:35:43 - public final void java.lang.Object.wait(long,int) throws java.lang.InterruptedException
+java.lang.Iterable.forEach(Iterable.java:75) 2022-12-20 17:35:43 - public final void java.lang.Object.wait() throws java.lang.InterruptedException
+java.lang.Iterable.forEach(Iterable.java:75) 2022-12-20 17:35:43 - public final native void java.lang.Object.wait(long) throws java.lang.InterruptedException
+java.lang.Iterable.forEach(Iterable.java:75) 2022-12-20 17:35:43 - public final native java.lang.Class java.lang.Object.getClass()
+java.lang.Iterable.forEach(Iterable.java:75) 2022-12-20 17:35:43 - public final native void java.lang.Object.notify()
+java.lang.Iterable.forEach(Iterable.java:75) 2022-12-20 17:35:43 - public final native void java.lang.Object.notifyAll()
+com.solvd.Main.main(Main.java:118) 2022-12-20 17:35:43 - com.solvd.entity.user.Manager
+com.solvd.Main.main(Main.java:122) 2022-12-20 17:35:43 - com.solvd.entity.user.Admin
+com.solvd.linkedList.MyLinkedList.get(MyLinkedList.java:74) 2022-12-20 17:36:59 - element can't be found
+com.solvd.linkedList.MyLinkedList.testLinkedList(MyLinkedList.java:13) 2022-12-20 17:36:59 - 
+com.solvd.linkedList.MyLinkedList.testLinkedList(MyLinkedList.java:17) 2022-12-20 17:36:59 - List: Node{value=1 string}, Node{value=2 string}, Node{value=3 string}
+com.solvd.linkedList.MyLinkedList.testLinkedList(MyLinkedList.java:20) 2022-12-20 17:36:59 - List: Node{value=1 string}, Node{value=3 string}, Node{value=4 string}
+com.solvd.linkedList.MyLinkedList.testLinkedList(MyLinkedList.java:21) 2022-12-20 17:36:59 - 3
+com.solvd.linkedList.MyLinkedList.testLinkedList(MyLinkedList.java:29) 2022-12-20 17:36:59 - Node{value=5 string}
+com.solvd.linkedList.MyLinkedList.testLinkedList(MyLinkedList.java:30) 2022-12-20 17:36:59 - List: Node{value=9 string}, Node{value=1 string}, Node{value=7 string}, Node{value=3 string}, Node{value=4 string}, Node{value=5 string}, Node{value=6 string}, Node{value=5 string}, Node{value=5 string}, Node{value=8 string}
+com.solvd.linkedList.MyLinkedList.testLinkedList(MyLinkedList.java:31) 2022-12-20 17:36:59 - 10
+com.solvd.linkedList.MyLinkedList.testLinkedList(MyLinkedList.java:33) 2022-12-20 17:36:59 - 
+com.solvd.linkedList.MyLinkedList.testLinkedList(MyLinkedList.java:33) 2022-12-20 17:36:59 - Node{value=8 string}
+com.solvd.linkedList.MyLinkedList.testLinkedList(MyLinkedList.java:33) 2022-12-20 17:36:59 - Node{value=5 string}
+com.solvd.linkedList.MyLinkedList.testLinkedList(MyLinkedList.java:33) 2022-12-20 17:36:59 - Node{value=5 string}
+com.solvd.linkedList.MyLinkedList.testLinkedList(MyLinkedList.java:33) 2022-12-20 17:36:59 - Node{value=6 string}
+com.solvd.linkedList.MyLinkedList.testLinkedList(MyLinkedList.java:33) 2022-12-20 17:36:59 - Node{value=5 string}
+com.solvd.linkedList.MyLinkedList.testLinkedList(MyLinkedList.java:33) 2022-12-20 17:36:59 - Node{value=4 string}
+com.solvd.linkedList.MyLinkedList.testLinkedList(MyLinkedList.java:33) 2022-12-20 17:36:59 - Node{value=3 string}
+com.solvd.linkedList.MyLinkedList.testLinkedList(MyLinkedList.java:33) 2022-12-20 17:36:59 - Node{value=7 string}
+com.solvd.linkedList.MyLinkedList.testLinkedList(MyLinkedList.java:33) 2022-12-20 17:36:59 - Node{value=1 string}
+com.solvd.linkedList.MyLinkedList.testLinkedList(MyLinkedList.java:33) 2022-12-20 17:36:59 - Node{value=9 string}
+com.solvd.entity.user.stuff.ClothingSizes.printSizesInfo(ClothingSizes.java:53) 2022-12-20 17:36:59 - Clothing sizes is entered
+com.solvd.entity.user.Manager.acceptOrder(Manager.java:39) 2022-12-20 17:36:59 - Order has the next products: []
+ The recipient full name: 'Grace Thompson, location: Kiev, post: Nova Post 5, totalPrice: 6000.0, wayToPay: CASH, promocode: null, status: IN_PROGRESS was accepted
+com.solvd.Main.main(Main.java:63) 2022-12-20 17:36:59 - order processed by admin
+com.solvd.Main.main(Main.java:64) 2022-12-20 17:36:59 - order accepted
+
+com.solvd.entity.user.Manager.acceptOrder(Manager.java:42) 2022-12-20 17:36:59 - Order has the next products: []
+ The recipient full name: 'Grace Thompson, location: Kiev, post: Nova Post 5, totalPrice: 6000.0, wayToPay: CASH, promocode: null, status: IN_PROGRESS isn't accepted
+com.solvd.Main.main(Main.java:68) 2022-12-20 17:36:59 - order accepted
+
+com.solvd.entity.user.Manager.acceptOrder(Manager.java:42) 2022-12-20 17:36:59 - Order has the next products: []
+ The recipient full name: 'Grace Thompson, location: Kiev, post: Nova Post 5, totalPrice: 6000.0, wayToPay: CASH, promocode: null, status: IN_PROGRESS isn't accepted
+com.solvd.Main.main(Main.java:68) 2022-12-20 17:36:59 - order accepted
+
+com.solvd.Main.main(Main.java:80) 2022-12-20 17:36:59 - ADMIN
+com.solvd.Main.main(Main.java:80) 2022-12-20 17:36:59 - CLIENT
+com.solvd.Main.main(Main.java:80) 2022-12-20 17:36:59 - MANAGER
+com.solvd.Main.main(Main.java:80) 2022-12-20 17:36:59 - ADMIN
+com.solvd.Main.main(Main.java:80) 2022-12-20 17:36:59 - ADMIN
+com.solvd.Main.main(Main.java:80) 2022-12-20 17:36:59 - CLIENT
+com.solvd.entity.user.stuff.ShopBasket.calculateTotalPrice(ShopBasket.java:40) 2022-12-20 17:36:59 - total price is 4500.0 without delivery
+com.solvd.Main.main(Main.java:100) 2022-12-20 17:36:59 - [Product{title='book', rating=null, price=0.0, count=0, description='null', type=null, reviews=null, waysToPay=null}]
+com.solvd.entity.user.stuff.Order.deliverOrder(Order.java:69) 2022-12-20 17:36:59 - new item is in progress, id 103
+java.lang.Iterable.forEach(Iterable.java:75) 2022-12-20 17:36:59 - public static final java.lang.String com.solvd.entity.user.Admin.ORDER_PROCESSED_BY_ADMIN
+java.lang.Iterable.forEach(Iterable.java:75) 2022-12-20 17:36:59 - private boolean com.solvd.entity.user.Admin.rightsForStatus
+java.lang.Iterable.forEach(Iterable.java:75) 2022-12-20 17:36:59 - private boolean com.solvd.entity.user.Admin.rightsForShop
+java.lang.Iterable.forEach(Iterable.java:75) 2022-12-20 17:36:59 - private boolean com.solvd.entity.user.Admin.rightsForProduct
+java.lang.Iterable.forEach(Iterable.java:75) 2022-12-20 17:36:59 - private static final org.apache.log4j.Logger com.solvd.entity.user.Admin.LOGGER
+java.lang.Iterable.forEach(Iterable.java:75) 2022-12-20 17:36:59 - public com.solvd.entity.user.Admin()
+java.lang.Iterable.forEach(Iterable.java:75) 2022-12-20 17:36:59 - public com.solvd.entity.user.Admin(java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,com.solvd.entity.enums.UserStatus,boolean,boolean,boolean,boolean)
+java.lang.Iterable.forEach(Iterable.java:75) 2022-12-20 17:36:59 - public boolean com.solvd.entity.user.Admin.equals(java.lang.Object)
+java.lang.Iterable.forEach(Iterable.java:75) 2022-12-20 17:36:59 - public java.lang.String com.solvd.entity.user.Admin.toString()
+java.lang.Iterable.forEach(Iterable.java:75) 2022-12-20 17:36:59 - public int com.solvd.entity.user.Admin.hashCode()
+java.lang.Iterable.forEach(Iterable.java:75) 2022-12-20 17:36:59 - public void com.solvd.entity.user.Admin.setManagerRights(com.solvd.entity.user.Manager,boolean)
+java.lang.Iterable.forEach(Iterable.java:75) 2022-12-20 17:36:59 - public boolean com.solvd.entity.user.Admin.deleteProduct(com.solvd.entity.goods.Product,com.solvd.entity.goods.Shop)
+java.lang.Iterable.forEach(Iterable.java:75) 2022-12-20 17:36:59 - public void com.solvd.entity.user.Admin.blockUser(com.solvd.entity.user.User)
+java.lang.Iterable.forEach(Iterable.java:75) 2022-12-20 17:36:59 - public void com.solvd.entity.user.Admin.unblockUser(com.solvd.entity.user.User)
+java.lang.Iterable.forEach(Iterable.java:75) 2022-12-20 17:36:59 - public com.solvd.entity.goods.Shop com.solvd.entity.user.Admin.createShop(com.solvd.entity.goods.Shop) throws com.solvd.exceptions.OnlineShopIOException
+java.lang.Iterable.forEach(Iterable.java:75) 2022-12-20 17:36:59 - public com.solvd.entity.goods.Product com.solvd.entity.user.Admin.createProduct(com.solvd.entity.goods.Product,com.solvd.entity.goods.Shop) throws com.solvd.exceptions.OnlineShopIOException
+java.lang.Iterable.forEach(Iterable.java:75) 2022-12-20 17:36:59 - public boolean com.solvd.entity.user.Admin.isRightsForProduct()
+java.lang.Iterable.forEach(Iterable.java:75) 2022-12-20 17:36:59 - public boolean com.solvd.entity.user.Admin.isRightsForShop()
+java.lang.Iterable.forEach(Iterable.java:75) 2022-12-20 17:36:59 - public boolean com.solvd.entity.user.Admin.isRightsForStatus()
+java.lang.Iterable.forEach(Iterable.java:75) 2022-12-20 17:36:59 - public void com.solvd.entity.user.Admin.setRightsForProduct(boolean)
+java.lang.Iterable.forEach(Iterable.java:75) 2022-12-20 17:36:59 - public void com.solvd.entity.user.Admin.setRightsForShop(boolean)
+java.lang.Iterable.forEach(Iterable.java:75) 2022-12-20 17:36:59 - public void com.solvd.entity.user.Admin.setRightsForStatus(boolean)
+java.lang.Iterable.forEach(Iterable.java:75) 2022-12-20 17:36:59 - public void com.solvd.entity.user.Manager.setProcessRights(boolean)
+java.lang.Iterable.forEach(Iterable.java:75) 2022-12-20 17:36:59 - public boolean com.solvd.entity.user.Manager.addOrderToProcess(com.solvd.entity.user.stuff.Order)
+java.lang.Iterable.forEach(Iterable.java:75) 2022-12-20 17:36:59 - public boolean com.solvd.entity.user.Manager.isProcessRights()
+java.lang.Iterable.forEach(Iterable.java:75) 2022-12-20 17:36:59 - public boolean com.solvd.entity.user.Manager.cancelOrder(com.solvd.entity.user.stuff.Order,com.solvd.entity.user.Client)
+java.lang.Iterable.forEach(Iterable.java:75) 2022-12-20 17:36:59 - public boolean com.solvd.entity.user.Manager.acceptOrder(com.solvd.entity.user.stuff.Order,com.solvd.entity.user.Client)
+java.lang.Iterable.forEach(Iterable.java:75) 2022-12-20 17:36:59 - public java.lang.String com.solvd.entity.user.User.getName()
+java.lang.Iterable.forEach(Iterable.java:75) 2022-12-20 17:36:59 - public void com.solvd.entity.user.User.setName(java.lang.String)
+java.lang.Iterable.forEach(Iterable.java:75) 2022-12-20 17:36:59 - public com.solvd.entity.enums.UserStatus com.solvd.entity.user.User.getStatus()
+java.lang.Iterable.forEach(Iterable.java:75) 2022-12-20 17:36:59 - public void com.solvd.entity.user.User.setStatus(com.solvd.entity.enums.UserStatus)
+java.lang.Iterable.forEach(Iterable.java:75) 2022-12-20 17:36:59 - public java.lang.String com.solvd.entity.user.User.getSurname()
+java.lang.Iterable.forEach(Iterable.java:75) 2022-12-20 17:36:59 - public final boolean com.solvd.entity.user.User.addReview(com.solvd.entity.reviews.Review) throws com.solvd.exceptions.OnlineShopIOException
+java.lang.Iterable.forEach(Iterable.java:75) 2022-12-20 17:36:59 - public java.lang.String com.solvd.entity.user.User.getEmail()
+java.lang.Iterable.forEach(Iterable.java:75) 2022-12-20 17:36:59 - public java.util.List com.solvd.entity.user.User.getReviews()
+java.lang.Iterable.forEach(Iterable.java:75) 2022-12-20 17:36:59 - public java.lang.String com.solvd.entity.user.User.getPhoneNumber()
+java.lang.Iterable.forEach(Iterable.java:75) 2022-12-20 17:36:59 - public void com.solvd.entity.user.User.setSurname(java.lang.String)
+java.lang.Iterable.forEach(Iterable.java:75) 2022-12-20 17:36:59 - public void com.solvd.entity.user.User.setEmail(java.lang.String)
+java.lang.Iterable.forEach(Iterable.java:75) 2022-12-20 17:36:59 - public void com.solvd.entity.user.User.setPassword(java.lang.String)
+java.lang.Iterable.forEach(Iterable.java:75) 2022-12-20 17:36:59 - public void com.solvd.entity.user.User.setPhoneNumber(java.lang.String)
+java.lang.Iterable.forEach(Iterable.java:75) 2022-12-20 17:36:59 - public void com.solvd.entity.user.User.setReviews(java.util.List)
+java.lang.Iterable.forEach(Iterable.java:75) 2022-12-20 17:36:59 - public void com.solvd.entity.user.User.setOrders(java.util.List)
+java.lang.Iterable.forEach(Iterable.java:75) 2022-12-20 17:36:59 - public void com.solvd.entity.user.User.setRole(com.solvd.entity.enums.Role)
+java.lang.Iterable.forEach(Iterable.java:75) 2022-12-20 17:36:59 - public java.util.List com.solvd.entity.user.User.getOrders()
+java.lang.Iterable.forEach(Iterable.java:75) 2022-12-20 17:36:59 - public com.solvd.entity.enums.Role com.solvd.entity.user.User.getRole()
+java.lang.Iterable.forEach(Iterable.java:75) 2022-12-20 17:36:59 - public java.lang.String com.solvd.entity.user.User.getPassword()
+java.lang.Iterable.forEach(Iterable.java:75) 2022-12-20 17:36:59 - public final void java.lang.Object.wait(long,int) throws java.lang.InterruptedException
+java.lang.Iterable.forEach(Iterable.java:75) 2022-12-20 17:36:59 - public final void java.lang.Object.wait() throws java.lang.InterruptedException
+java.lang.Iterable.forEach(Iterable.java:75) 2022-12-20 17:36:59 - public final native void java.lang.Object.wait(long) throws java.lang.InterruptedException
+java.lang.Iterable.forEach(Iterable.java:75) 2022-12-20 17:36:59 - public final native java.lang.Class java.lang.Object.getClass()
+java.lang.Iterable.forEach(Iterable.java:75) 2022-12-20 17:36:59 - public final native void java.lang.Object.notify()
+java.lang.Iterable.forEach(Iterable.java:75) 2022-12-20 17:36:59 - public final native void java.lang.Object.notifyAll()
+com.solvd.Main.main(Main.java:118) 2022-12-20 17:36:59 - com.solvd.entity.user.Manager
+com.solvd.linkedList.MyLinkedList.get(MyLinkedList.java:74) 2022-12-22 20:48:28 - element can't be found
+com.solvd.linkedList.MyLinkedList.testLinkedList(MyLinkedList.java:13) 2022-12-22 20:48:28 - 
+com.solvd.linkedList.MyLinkedList.testLinkedList(MyLinkedList.java:17) 2022-12-22 20:48:28 - List: Node{value=1 string}, Node{value=2 string}, Node{value=3 string}
+com.solvd.linkedList.MyLinkedList.testLinkedList(MyLinkedList.java:20) 2022-12-22 20:48:28 - List: Node{value=1 string}, Node{value=3 string}, Node{value=4 string}
+com.solvd.linkedList.MyLinkedList.testLinkedList(MyLinkedList.java:21) 2022-12-22 20:48:28 - 3
+com.solvd.linkedList.MyLinkedList.testLinkedList(MyLinkedList.java:29) 2022-12-22 20:48:28 - Node{value=5 string}
+com.solvd.linkedList.MyLinkedList.testLinkedList(MyLinkedList.java:30) 2022-12-22 20:48:28 - List: Node{value=9 string}, Node{value=1 string}, Node{value=7 string}, Node{value=3 string}, Node{value=4 string}, Node{value=5 string}, Node{value=6 string}, Node{value=5 string}, Node{value=5 string}, Node{value=8 string}
+com.solvd.linkedList.MyLinkedList.testLinkedList(MyLinkedList.java:31) 2022-12-22 20:48:28 - 10
+com.solvd.linkedList.MyLinkedList.testLinkedList(MyLinkedList.java:33) 2022-12-22 20:48:28 - 
+com.solvd.linkedList.MyLinkedList.testLinkedList(MyLinkedList.java:33) 2022-12-22 20:48:28 - Node{value=8 string}
+com.solvd.linkedList.MyLinkedList.testLinkedList(MyLinkedList.java:33) 2022-12-22 20:48:28 - Node{value=5 string}
+com.solvd.linkedList.MyLinkedList.testLinkedList(MyLinkedList.java:33) 2022-12-22 20:48:28 - Node{value=5 string}
+com.solvd.linkedList.MyLinkedList.testLinkedList(MyLinkedList.java:33) 2022-12-22 20:48:28 - Node{value=6 string}
+com.solvd.linkedList.MyLinkedList.testLinkedList(MyLinkedList.java:33) 2022-12-22 20:48:28 - Node{value=5 string}
+com.solvd.linkedList.MyLinkedList.testLinkedList(MyLinkedList.java:33) 2022-12-22 20:48:28 - Node{value=4 string}
+com.solvd.linkedList.MyLinkedList.testLinkedList(MyLinkedList.java:33) 2022-12-22 20:48:28 - Node{value=3 string}
+com.solvd.linkedList.MyLinkedList.testLinkedList(MyLinkedList.java:33) 2022-12-22 20:48:28 - Node{value=7 string}
+com.solvd.linkedList.MyLinkedList.testLinkedList(MyLinkedList.java:33) 2022-12-22 20:48:28 - Node{value=1 string}
+com.solvd.linkedList.MyLinkedList.testLinkedList(MyLinkedList.java:33) 2022-12-22 20:48:28 - Node{value=9 string}
+com.solvd.entity.user.stuff.ClothingSizes.printSizesInfo(ClothingSizes.java:53) 2022-12-22 20:48:28 - Clothing sizes is entered
+com.solvd.entity.user.Manager.acceptOrder(Manager.java:39) 2022-12-22 20:48:28 - Order has the next products: []
+ The recipient full name: 'Grace Thompson, location: Kiev, post: Nova Post 5, totalPrice: 6000.0, wayToPay: CASH, promocode: null, status: IN_PROGRESS was accepted
+com.solvd.Main.main(Main.java:63) 2022-12-22 20:48:28 - order processed by admin
+com.solvd.Main.main(Main.java:64) 2022-12-22 20:48:28 - order accepted
+
+com.solvd.entity.user.Manager.acceptOrder(Manager.java:42) 2022-12-22 20:48:28 - Order has the next products: []
+ The recipient full name: 'Grace Thompson, location: Kiev, post: Nova Post 5, totalPrice: 6000.0, wayToPay: CASH, promocode: null, status: IN_PROGRESS isn't accepted
+com.solvd.Main.main(Main.java:68) 2022-12-22 20:48:28 - order accepted
+
+com.solvd.entity.user.Manager.acceptOrder(Manager.java:42) 2022-12-22 20:48:28 - Order has the next products: []
+ The recipient full name: 'Grace Thompson, location: Kiev, post: Nova Post 5, totalPrice: 6000.0, wayToPay: CASH, promocode: null, status: IN_PROGRESS isn't accepted
+com.solvd.Main.main(Main.java:68) 2022-12-22 20:48:28 - order accepted
+
+com.solvd.Main.main(Main.java:80) 2022-12-22 20:48:28 - ADMIN
+com.solvd.Main.main(Main.java:80) 2022-12-22 20:48:28 - CLIENT
+com.solvd.Main.main(Main.java:80) 2022-12-22 20:48:28 - MANAGER
+com.solvd.Main.main(Main.java:80) 2022-12-22 20:48:28 - ADMIN
+com.solvd.Main.main(Main.java:80) 2022-12-22 20:48:28 - ADMIN
+com.solvd.Main.main(Main.java:80) 2022-12-22 20:48:28 - CLIENT
+com.solvd.entity.user.stuff.ShopBasket.calculateTotalPrice(ShopBasket.java:40) 2022-12-22 20:48:28 - total price is 4500.0 without delivery
+com.solvd.Main.main(Main.java:100) 2022-12-22 20:48:28 - [Product{title='book', rating=null, price=0.0, count=0, description='null', type=null, reviews=null, waysToPay=null}]
+com.solvd.entity.user.stuff.Order.deliverOrder(Order.java:69) 2022-12-22 20:48:28 - new item is in progress, id 103
+java.lang.Iterable.forEach(Iterable.java:75) 2022-12-22 20:48:28 - public static final java.lang.String com.solvd.entity.user.Admin.ORDER_PROCESSED_BY_ADMIN
+java.lang.Iterable.forEach(Iterable.java:75) 2022-12-22 20:48:28 - private boolean com.solvd.entity.user.Admin.rightsForStatus
+java.lang.Iterable.forEach(Iterable.java:75) 2022-12-22 20:48:28 - private boolean com.solvd.entity.user.Admin.rightsForShop
+java.lang.Iterable.forEach(Iterable.java:75) 2022-12-22 20:48:28 - private boolean com.solvd.entity.user.Admin.rightsForProduct
+java.lang.Iterable.forEach(Iterable.java:75) 2022-12-22 20:48:28 - private static final org.apache.log4j.Logger com.solvd.entity.user.Admin.LOGGER
+java.lang.Iterable.forEach(Iterable.java:75) 2022-12-22 20:48:28 - public com.solvd.entity.user.Admin()
+java.lang.Iterable.forEach(Iterable.java:75) 2022-12-22 20:48:28 - public com.solvd.entity.user.Admin(java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,com.solvd.entity.enums.UserStatus,boolean,boolean,boolean,boolean)
+java.lang.Iterable.forEach(Iterable.java:75) 2022-12-22 20:48:28 - public boolean com.solvd.entity.user.Admin.equals(java.lang.Object)
+java.lang.Iterable.forEach(Iterable.java:75) 2022-12-22 20:48:28 - public java.lang.String com.solvd.entity.user.Admin.toString()
+java.lang.Iterable.forEach(Iterable.java:75) 2022-12-22 20:48:28 - public int com.solvd.entity.user.Admin.hashCode()
+java.lang.Iterable.forEach(Iterable.java:75) 2022-12-22 20:48:28 - public void com.solvd.entity.user.Admin.setManagerRights(com.solvd.entity.user.Manager,boolean)
+java.lang.Iterable.forEach(Iterable.java:75) 2022-12-22 20:48:28 - public boolean com.solvd.entity.user.Admin.deleteProduct(com.solvd.entity.goods.Product,com.solvd.entity.goods.Shop)
+java.lang.Iterable.forEach(Iterable.java:75) 2022-12-22 20:48:28 - public void com.solvd.entity.user.Admin.blockUser(com.solvd.entity.user.User)
+java.lang.Iterable.forEach(Iterable.java:75) 2022-12-22 20:48:28 - public void com.solvd.entity.user.Admin.unblockUser(com.solvd.entity.user.User)
+java.lang.Iterable.forEach(Iterable.java:75) 2022-12-22 20:48:28 - public com.solvd.entity.goods.Shop com.solvd.entity.user.Admin.createShop(com.solvd.entity.goods.Shop) throws com.solvd.exceptions.OnlineShopIOException
+java.lang.Iterable.forEach(Iterable.java:75) 2022-12-22 20:48:28 - public com.solvd.entity.goods.Product com.solvd.entity.user.Admin.createProduct(com.solvd.entity.goods.Product,com.solvd.entity.goods.Shop) throws com.solvd.exceptions.OnlineShopIOException
+java.lang.Iterable.forEach(Iterable.java:75) 2022-12-22 20:48:28 - public boolean com.solvd.entity.user.Admin.isRightsForProduct()
+java.lang.Iterable.forEach(Iterable.java:75) 2022-12-22 20:48:28 - public boolean com.solvd.entity.user.Admin.isRightsForShop()
+java.lang.Iterable.forEach(Iterable.java:75) 2022-12-22 20:48:28 - public boolean com.solvd.entity.user.Admin.isRightsForStatus()
+java.lang.Iterable.forEach(Iterable.java:75) 2022-12-22 20:48:28 - public void com.solvd.entity.user.Admin.setRightsForProduct(boolean)
+java.lang.Iterable.forEach(Iterable.java:75) 2022-12-22 20:48:28 - public void com.solvd.entity.user.Admin.setRightsForShop(boolean)
+java.lang.Iterable.forEach(Iterable.java:75) 2022-12-22 20:48:28 - public void com.solvd.entity.user.Admin.setRightsForStatus(boolean)
+java.lang.Iterable.forEach(Iterable.java:75) 2022-12-22 20:48:28 - public boolean com.solvd.entity.user.Manager.acceptOrder(com.solvd.entity.user.stuff.Order,com.solvd.entity.user.Client)
+java.lang.Iterable.forEach(Iterable.java:75) 2022-12-22 20:48:28 - public void com.solvd.entity.user.Manager.setProcessRights(boolean)
+java.lang.Iterable.forEach(Iterable.java:75) 2022-12-22 20:48:28 - public boolean com.solvd.entity.user.Manager.addOrderToProcess(com.solvd.entity.user.stuff.Order)
+java.lang.Iterable.forEach(Iterable.java:75) 2022-12-22 20:48:28 - public boolean com.solvd.entity.user.Manager.isProcessRights()
+java.lang.Iterable.forEach(Iterable.java:75) 2022-12-22 20:48:28 - public boolean com.solvd.entity.user.Manager.cancelOrder(com.solvd.entity.user.stuff.Order,com.solvd.entity.user.Client)
+java.lang.Iterable.forEach(Iterable.java:75) 2022-12-22 20:48:28 - public java.lang.String com.solvd.entity.user.User.getName()
+java.lang.Iterable.forEach(Iterable.java:75) 2022-12-22 20:48:28 - public void com.solvd.entity.user.User.setName(java.lang.String)
+java.lang.Iterable.forEach(Iterable.java:75) 2022-12-22 20:48:28 - public java.util.List com.solvd.entity.user.User.getOrders()
+java.lang.Iterable.forEach(Iterable.java:75) 2022-12-22 20:48:28 - public com.solvd.entity.enums.Role com.solvd.entity.user.User.getRole()
+java.lang.Iterable.forEach(Iterable.java:75) 2022-12-22 20:48:28 - public com.solvd.entity.enums.UserStatus com.solvd.entity.user.User.getStatus()
+java.lang.Iterable.forEach(Iterable.java:75) 2022-12-22 20:48:28 - public void com.solvd.entity.user.User.setStatus(com.solvd.entity.enums.UserStatus)
+java.lang.Iterable.forEach(Iterable.java:75) 2022-12-22 20:48:28 - public final boolean com.solvd.entity.user.User.addReview(com.solvd.entity.reviews.Review) throws com.solvd.exceptions.OnlineShopIOException
+java.lang.Iterable.forEach(Iterable.java:75) 2022-12-22 20:48:28 - public java.lang.String com.solvd.entity.user.User.getEmail()
+java.lang.Iterable.forEach(Iterable.java:75) 2022-12-22 20:48:28 - public java.util.List com.solvd.entity.user.User.getReviews()
+java.lang.Iterable.forEach(Iterable.java:75) 2022-12-22 20:48:28 - public java.lang.String com.solvd.entity.user.User.getPhoneNumber()
+java.lang.Iterable.forEach(Iterable.java:75) 2022-12-22 20:48:28 - public void com.solvd.entity.user.User.setSurname(java.lang.String)
+java.lang.Iterable.forEach(Iterable.java:75) 2022-12-22 20:48:28 - public void com.solvd.entity.user.User.setEmail(java.lang.String)
+java.lang.Iterable.forEach(Iterable.java:75) 2022-12-22 20:48:28 - public void com.solvd.entity.user.User.setPassword(java.lang.String)
+java.lang.Iterable.forEach(Iterable.java:75) 2022-12-22 20:48:28 - public void com.solvd.entity.user.User.setPhoneNumber(java.lang.String)
+java.lang.Iterable.forEach(Iterable.java:75) 2022-12-22 20:48:28 - public void com.solvd.entity.user.User.setReviews(java.util.List)
+java.lang.Iterable.forEach(Iterable.java:75) 2022-12-22 20:48:28 - public void com.solvd.entity.user.User.setOrders(java.util.List)
+java.lang.Iterable.forEach(Iterable.java:75) 2022-12-22 20:48:28 - public java.lang.String com.solvd.entity.user.User.getSurname()
+java.lang.Iterable.forEach(Iterable.java:75) 2022-12-22 20:48:28 - public void com.solvd.entity.user.User.setRole(com.solvd.entity.enums.Role)
+java.lang.Iterable.forEach(Iterable.java:75) 2022-12-22 20:48:28 - public java.lang.String com.solvd.entity.user.User.getPassword()
+java.lang.Iterable.forEach(Iterable.java:75) 2022-12-22 20:48:28 - public final void java.lang.Object.wait(long,int) throws java.lang.InterruptedException
+java.lang.Iterable.forEach(Iterable.java:75) 2022-12-22 20:48:28 - public final void java.lang.Object.wait() throws java.lang.InterruptedException
+java.lang.Iterable.forEach(Iterable.java:75) 2022-12-22 20:48:28 - public final native void java.lang.Object.wait(long) throws java.lang.InterruptedException
+java.lang.Iterable.forEach(Iterable.java:75) 2022-12-22 20:48:28 - public final native java.lang.Class java.lang.Object.getClass()
+java.lang.Iterable.forEach(Iterable.java:75) 2022-12-22 20:48:28 - public final native void java.lang.Object.notify()
+java.lang.Iterable.forEach(Iterable.java:75) 2022-12-22 20:48:28 - public final native void java.lang.Object.notifyAll()
+com.solvd.Main.main(Main.java:118) 2022-12-22 20:48:28 - com.solvd.entity.user.Manager
+com.solvd.Main.main(Main.java:120) 2022-12-22 20:48:28 - User info: 
+name and surname: null null, email: null, password: null, reviews: [], role: null, phoneNumber: null, status: 'nullManager{processRights=false}Admin{rightsForStatus=false, rightsForShop=false, rightsForProduct=false}
+com.solvd.linkedList.MyLinkedList.get(MyLinkedList.java:74) 2022-12-22 21:00:56 - element can't be found
+com.solvd.linkedList.MyLinkedList.testLinkedList(MyLinkedList.java:13) 2022-12-22 21:00:56 - 
+com.solvd.linkedList.MyLinkedList.testLinkedList(MyLinkedList.java:17) 2022-12-22 21:00:56 - List: Node{value=1 string}, Node{value=2 string}, Node{value=3 string}
+com.solvd.linkedList.MyLinkedList.testLinkedList(MyLinkedList.java:20) 2022-12-22 21:00:56 - List: Node{value=1 string}, Node{value=3 string}, Node{value=4 string}
+com.solvd.linkedList.MyLinkedList.testLinkedList(MyLinkedList.java:21) 2022-12-22 21:00:56 - 3
+com.solvd.linkedList.MyLinkedList.testLinkedList(MyLinkedList.java:29) 2022-12-22 21:00:56 - Node{value=5 string}
+com.solvd.linkedList.MyLinkedList.testLinkedList(MyLinkedList.java:30) 2022-12-22 21:00:56 - List: Node{value=9 string}, Node{value=1 string}, Node{value=7 string}, Node{value=3 string}, Node{value=4 string}, Node{value=5 string}, Node{value=6 string}, Node{value=5 string}, Node{value=5 string}, Node{value=8 string}
+com.solvd.linkedList.MyLinkedList.testLinkedList(MyLinkedList.java:31) 2022-12-22 21:00:56 - 10
+com.solvd.linkedList.MyLinkedList.testLinkedList(MyLinkedList.java:33) 2022-12-22 21:00:56 - 
+com.solvd.linkedList.MyLinkedList.testLinkedList(MyLinkedList.java:33) 2022-12-22 21:00:56 - Node{value=8 string}
+com.solvd.linkedList.MyLinkedList.testLinkedList(MyLinkedList.java:33) 2022-12-22 21:00:56 - Node{value=5 string}
+com.solvd.linkedList.MyLinkedList.testLinkedList(MyLinkedList.java:33) 2022-12-22 21:00:56 - Node{value=5 string}
+com.solvd.linkedList.MyLinkedList.testLinkedList(MyLinkedList.java:33) 2022-12-22 21:00:56 - Node{value=6 string}
+com.solvd.linkedList.MyLinkedList.testLinkedList(MyLinkedList.java:33) 2022-12-22 21:00:56 - Node{value=5 string}
+com.solvd.linkedList.MyLinkedList.testLinkedList(MyLinkedList.java:33) 2022-12-22 21:00:56 - Node{value=4 string}
+com.solvd.linkedList.MyLinkedList.testLinkedList(MyLinkedList.java:33) 2022-12-22 21:00:56 - Node{value=3 string}
+com.solvd.linkedList.MyLinkedList.testLinkedList(MyLinkedList.java:33) 2022-12-22 21:00:56 - Node{value=7 string}
+com.solvd.linkedList.MyLinkedList.testLinkedList(MyLinkedList.java:33) 2022-12-22 21:00:56 - Node{value=1 string}
+com.solvd.linkedList.MyLinkedList.testLinkedList(MyLinkedList.java:33) 2022-12-22 21:00:56 - Node{value=9 string}
+com.solvd.entity.user.stuff.ClothingSizes.printSizesInfo(ClothingSizes.java:53) 2022-12-22 21:00:56 - Clothing sizes is entered
+com.solvd.entity.user.Manager.acceptOrder(Manager.java:39) 2022-12-22 21:00:56 - Order has the next products: []
+ The recipient full name: 'Grace Thompson, location: Kiev, post: Nova Post 5, totalPrice: 6000.0, wayToPay: CASH, promocode: null, status: IN_PROGRESS was accepted
+com.solvd.Main.main(Main.java:63) 2022-12-22 21:00:56 - order processed by admin
+com.solvd.Main.main(Main.java:64) 2022-12-22 21:00:56 - order accepted
+
+com.solvd.entity.user.Manager.acceptOrder(Manager.java:42) 2022-12-22 21:00:56 - Order has the next products: []
+ The recipient full name: 'Grace Thompson, location: Kiev, post: Nova Post 5, totalPrice: 6000.0, wayToPay: CASH, promocode: null, status: IN_PROGRESS isn't accepted
+com.solvd.Main.main(Main.java:68) 2022-12-22 21:00:56 - order accepted
+
+com.solvd.entity.user.Manager.acceptOrder(Manager.java:42) 2022-12-22 21:00:56 - Order has the next products: []
+ The recipient full name: 'Grace Thompson, location: Kiev, post: Nova Post 5, totalPrice: 6000.0, wayToPay: CASH, promocode: null, status: IN_PROGRESS isn't accepted
+com.solvd.Main.main(Main.java:68) 2022-12-22 21:00:56 - order accepted
+
+com.solvd.Main.main(Main.java:80) 2022-12-22 21:00:56 - ADMIN
+com.solvd.Main.main(Main.java:80) 2022-12-22 21:00:56 - CLIENT
+com.solvd.Main.main(Main.java:80) 2022-12-22 21:00:56 - MANAGER
+com.solvd.Main.main(Main.java:80) 2022-12-22 21:00:56 - ADMIN
+com.solvd.Main.main(Main.java:80) 2022-12-22 21:00:56 - ADMIN
+com.solvd.Main.main(Main.java:80) 2022-12-22 21:00:56 - CLIENT
+com.solvd.entity.user.stuff.ShopBasket.calculateTotalPrice(ShopBasket.java:40) 2022-12-22 21:00:56 - total price is 4500.0 without delivery
+com.solvd.Main.main(Main.java:100) 2022-12-22 21:00:56 - [Product{title='book', rating=null, price=0.0, count=0, description='null', type=null, reviews=null, waysToPay=null}]
+com.solvd.entity.user.stuff.Order.deliverOrder(Order.java:69) 2022-12-22 21:00:56 - new item is in progress, id 103
+java.lang.Iterable.forEach(Iterable.java:75) 2022-12-22 21:00:56 - public static final java.lang.String com.solvd.entity.user.Admin.ORDER_PROCESSED_BY_ADMIN
+java.lang.Iterable.forEach(Iterable.java:75) 2022-12-22 21:00:56 - private boolean com.solvd.entity.user.Admin.rightsForStatus
+java.lang.Iterable.forEach(Iterable.java:75) 2022-12-22 21:00:56 - private boolean com.solvd.entity.user.Admin.rightsForShop
+java.lang.Iterable.forEach(Iterable.java:75) 2022-12-22 21:00:56 - private boolean com.solvd.entity.user.Admin.rightsForProduct
+java.lang.Iterable.forEach(Iterable.java:75) 2022-12-22 21:00:56 - private static final org.apache.log4j.Logger com.solvd.entity.user.Admin.LOGGER
+java.lang.Iterable.forEach(Iterable.java:75) 2022-12-22 21:00:56 - public com.solvd.entity.user.Admin()
+java.lang.Iterable.forEach(Iterable.java:75) 2022-12-22 21:00:56 - public com.solvd.entity.user.Admin(java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,com.solvd.entity.enums.UserStatus,boolean,boolean,boolean,boolean)
+java.lang.Iterable.forEach(Iterable.java:75) 2022-12-22 21:00:56 - public boolean com.solvd.entity.user.Admin.equals(java.lang.Object)
+java.lang.Iterable.forEach(Iterable.java:75) 2022-12-22 21:00:56 - public java.lang.String com.solvd.entity.user.Admin.toString()
+java.lang.Iterable.forEach(Iterable.java:75) 2022-12-22 21:00:56 - public int com.solvd.entity.user.Admin.hashCode()
+java.lang.Iterable.forEach(Iterable.java:75) 2022-12-22 21:00:56 - public void com.solvd.entity.user.Admin.setManagerRights(com.solvd.entity.user.Manager,boolean)
+java.lang.Iterable.forEach(Iterable.java:75) 2022-12-22 21:00:56 - public boolean com.solvd.entity.user.Admin.deleteProduct(com.solvd.entity.goods.Product,com.solvd.entity.goods.Shop)
+java.lang.Iterable.forEach(Iterable.java:75) 2022-12-22 21:00:56 - public void com.solvd.entity.user.Admin.blockUser(com.solvd.entity.user.User)
+java.lang.Iterable.forEach(Iterable.java:75) 2022-12-22 21:00:56 - public void com.solvd.entity.user.Admin.unblockUser(com.solvd.entity.user.User)
+java.lang.Iterable.forEach(Iterable.java:75) 2022-12-22 21:00:56 - public com.solvd.entity.goods.Shop com.solvd.entity.user.Admin.createShop(com.solvd.entity.goods.Shop) throws com.solvd.exceptions.OnlineShopIOException
+java.lang.Iterable.forEach(Iterable.java:75) 2022-12-22 21:00:56 - public com.solvd.entity.goods.Product com.solvd.entity.user.Admin.createProduct(com.solvd.entity.goods.Product,com.solvd.entity.goods.Shop) throws com.solvd.exceptions.OnlineShopIOException
+java.lang.Iterable.forEach(Iterable.java:75) 2022-12-22 21:00:56 - public boolean com.solvd.entity.user.Admin.isRightsForProduct()
+java.lang.Iterable.forEach(Iterable.java:75) 2022-12-22 21:00:56 - public boolean com.solvd.entity.user.Admin.isRightsForShop()
+java.lang.Iterable.forEach(Iterable.java:75) 2022-12-22 21:00:56 - public boolean com.solvd.entity.user.Admin.isRightsForStatus()
+java.lang.Iterable.forEach(Iterable.java:75) 2022-12-22 21:00:56 - public void com.solvd.entity.user.Admin.setRightsForProduct(boolean)
+java.lang.Iterable.forEach(Iterable.java:75) 2022-12-22 21:00:56 - public void com.solvd.entity.user.Admin.setRightsForShop(boolean)
+java.lang.Iterable.forEach(Iterable.java:75) 2022-12-22 21:00:56 - public void com.solvd.entity.user.Admin.setRightsForStatus(boolean)
+java.lang.Iterable.forEach(Iterable.java:75) 2022-12-22 21:00:56 - public void com.solvd.entity.user.Manager.setProcessRights(boolean)
+java.lang.Iterable.forEach(Iterable.java:75) 2022-12-22 21:00:56 - public boolean com.solvd.entity.user.Manager.addOrderToProcess(com.solvd.entity.user.stuff.Order)
+java.lang.Iterable.forEach(Iterable.java:75) 2022-12-22 21:00:56 - public boolean com.solvd.entity.user.Manager.isProcessRights()
+java.lang.Iterable.forEach(Iterable.java:75) 2022-12-22 21:00:56 - public boolean com.solvd.entity.user.Manager.cancelOrder(com.solvd.entity.user.stuff.Order,com.solvd.entity.user.Client)
+java.lang.Iterable.forEach(Iterable.java:75) 2022-12-22 21:00:56 - public boolean com.solvd.entity.user.Manager.acceptOrder(com.solvd.entity.user.stuff.Order,com.solvd.entity.user.Client)
+java.lang.Iterable.forEach(Iterable.java:75) 2022-12-22 21:00:56 - public java.lang.String com.solvd.entity.user.User.getName()
+java.lang.Iterable.forEach(Iterable.java:75) 2022-12-22 21:00:56 - public void com.solvd.entity.user.User.setName(java.lang.String)
+java.lang.Iterable.forEach(Iterable.java:75) 2022-12-22 21:00:56 - public com.solvd.entity.enums.UserStatus com.solvd.entity.user.User.getStatus()
+java.lang.Iterable.forEach(Iterable.java:75) 2022-12-22 21:00:56 - public void com.solvd.entity.user.User.setStatus(com.solvd.entity.enums.UserStatus)
+java.lang.Iterable.forEach(Iterable.java:75) 2022-12-22 21:00:56 - public java.lang.String com.solvd.entity.user.User.getSurname()
+java.lang.Iterable.forEach(Iterable.java:75) 2022-12-22 21:00:56 - public final boolean com.solvd.entity.user.User.addReview(com.solvd.entity.reviews.Review) throws com.solvd.exceptions.OnlineShopIOException
+java.lang.Iterable.forEach(Iterable.java:75) 2022-12-22 21:00:56 - public java.lang.String com.solvd.entity.user.User.getEmail()
+java.lang.Iterable.forEach(Iterable.java:75) 2022-12-22 21:00:56 - public java.util.List com.solvd.entity.user.User.getReviews()
+java.lang.Iterable.forEach(Iterable.java:75) 2022-12-22 21:00:56 - public java.lang.String com.solvd.entity.user.User.getPhoneNumber()
+java.lang.Iterable.forEach(Iterable.java:75) 2022-12-22 21:00:56 - public void com.solvd.entity.user.User.setSurname(java.lang.String)
+java.lang.Iterable.forEach(Iterable.java:75) 2022-12-22 21:00:56 - public void com.solvd.entity.user.User.setEmail(java.lang.String)
+java.lang.Iterable.forEach(Iterable.java:75) 2022-12-22 21:00:56 - public void com.solvd.entity.user.User.setPassword(java.lang.String)
+java.lang.Iterable.forEach(Iterable.java:75) 2022-12-22 21:00:56 - public void com.solvd.entity.user.User.setPhoneNumber(java.lang.String)
+java.lang.Iterable.forEach(Iterable.java:75) 2022-12-22 21:00:56 - public void com.solvd.entity.user.User.setReviews(java.util.List)
+java.lang.Iterable.forEach(Iterable.java:75) 2022-12-22 21:00:56 - public void com.solvd.entity.user.User.setOrders(java.util.List)
+java.lang.Iterable.forEach(Iterable.java:75) 2022-12-22 21:00:56 - public void com.solvd.entity.user.User.setRole(com.solvd.entity.enums.Role)
+java.lang.Iterable.forEach(Iterable.java:75) 2022-12-22 21:00:56 - public java.util.List com.solvd.entity.user.User.getOrders()
+java.lang.Iterable.forEach(Iterable.java:75) 2022-12-22 21:00:56 - public com.solvd.entity.enums.Role com.solvd.entity.user.User.getRole()
+java.lang.Iterable.forEach(Iterable.java:75) 2022-12-22 21:00:56 - public java.lang.String com.solvd.entity.user.User.getPassword()
+java.lang.Iterable.forEach(Iterable.java:75) 2022-12-22 21:00:56 - public final void java.lang.Object.wait(long,int) throws java.lang.InterruptedException
+java.lang.Iterable.forEach(Iterable.java:75) 2022-12-22 21:00:56 - public final void java.lang.Object.wait() throws java.lang.InterruptedException
+java.lang.Iterable.forEach(Iterable.java:75) 2022-12-22 21:00:56 - public final native void java.lang.Object.wait(long) throws java.lang.InterruptedException
+java.lang.Iterable.forEach(Iterable.java:75) 2022-12-22 21:00:56 - public final native java.lang.Class java.lang.Object.getClass()
+java.lang.Iterable.forEach(Iterable.java:75) 2022-12-22 21:00:56 - public final native void java.lang.Object.notify()
+java.lang.Iterable.forEach(Iterable.java:75) 2022-12-22 21:00:56 - public final native void java.lang.Object.notifyAll()
+com.solvd.Main.main(Main.java:118) 2022-12-22 21:00:56 - com.solvd.entity.user.Manager
+com.solvd.Main.main(Main.java:120) 2022-12-22 21:00:56 - User info: 
+name and surname: null null, email: null, password: null, reviews: [], role: null, phoneNumber: null, status: 'nullManager{processRights=false}Admin{rightsForStatus=false, rightsForShop=false, rightsForProduct=false}
+com.solvd.Main.main(Main.java:125) 2022-12-22 21:00:56 - [Product{title='game', rating=null, price=0.0, count=0, description='null', type=null, reviews=null, waysToPay=null}]

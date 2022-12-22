@@ -41,10 +41,10 @@ public class ShopBasket implements Calculable<Product>, Clearable {
         return sum;
     }
 
-    public double calculateTotalPrice(double delivery, IGet<Product> summarize) {
-        double sum = calculateTotalPrice(summarize);
+    public double calculateTotalPrice(double delivery) {
+        double sum = products.stream().mapToDouble(Product::getPrice).sum(); //8
         sum += delivery;
-        LOGGER.debug("total price is " + sum + " without delivery");
+        LOGGER.debug("total price is " + sum + " with delivery");
         return sum;
 
     }
