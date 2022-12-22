@@ -36,11 +36,6 @@ public class Catalog implements Filterable {
     }
 
     @Override
-    public List<Product> filterByTitle(String title) {
-        return products.stream().filter(x -> x.getTitle().equals(title)).collect(Collectors.toList()); //1
-    }
-
-    @Override
     public List<Product> filterByPrice(double priceFrom, double priceTo) {
         return products.stream().filter(x -> x.getPrice() >= priceFrom && x.getPrice() <= priceTo)
                 .collect(Collectors.toList());

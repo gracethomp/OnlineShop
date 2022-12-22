@@ -101,7 +101,8 @@ public class Main {
 
         Order order1 = new Order();
         order1.setId(103);
-        order1.deliverOrder(((deliveryMessage, itemToDeliver) -> deliveryMessage + itemToDeliver), "new item is in progress, id ");
+        order1.deliverOrder(((deliveryMessage, itemToDeliver) -> deliveryMessage + itemToDeliver),
+                "new item is in progress, id ");
 
         try {
             Class<?> c = Class.forName("com.solvd.entity.user.Admin");
@@ -118,7 +119,8 @@ public class Main {
             LOGGER.info(cSuperclass.getName());
             Object v = c.getConstructor().newInstance();
             LOGGER.info(v);
-        } catch (ClassNotFoundException | InstantiationException | IllegalAccessException | NoSuchMethodException | InvocationTargetException e) {
+        } catch (ClassNotFoundException | InstantiationException | IllegalAccessException
+                | NoSuchMethodException | InvocationTargetException e) {
             LOGGER.error(e);
         }
     }
