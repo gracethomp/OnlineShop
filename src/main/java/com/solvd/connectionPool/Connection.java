@@ -11,7 +11,9 @@ public class Connection {
         this.user = user;
         this.password = password;
     }
-
+    public String processMessage() {
+        return this + " is processing";
+    }
     public String getPassword() {
         return password;
     }
@@ -34,5 +36,14 @@ public class Connection {
 
     public void setUrl(String url) {
         this.url = url;
+    }
+
+    @Override
+    public String toString() {
+        return "Connection{" +
+                "url='" + url + '\'' +
+                ", user='" + user + '\'' +
+                ", password='" + password + '\'' +
+                '}';
     }
 }
