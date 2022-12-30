@@ -9,12 +9,11 @@ import com.solvd.helperClasses.LambdaTask;
 import com.solvd.helperClasses.PolymorphismTask;
 import com.solvd.helperClasses.ReflectionTask;
 import com.solvd.linkedList.MyLinkedList;
-import org.apache.log4j.Logger;
+import com.solvd.threads.MyThreadExtension;
+import com.solvd.threads.MyThreadImplementation;
 
 
 public class Main {
-    private static final Logger LOGGER = Logger.getLogger(Main.class);
-
     public static void main(String[] args) throws ConnectionPoolException, ReflectionException {
         WordsCounter.countWords("src/main/resources/text.txt");
 
@@ -38,7 +37,13 @@ public class Main {
         ReflectionTask.showReflectionTaskResult();
         System.out.println('\n');
 
-        ConnectionPool.doTest();
-        ConnectionPoolFuture.doTest();
+        //ConnectionPool.doTest();
+        //ConnectionPoolFuture.doTest();
+
+        Thread thread = new MyThreadExtension();
+        thread.start();
+
+        Thread thread1 = new Thread(new MyThreadImplementation());
+        thread1.start();
     }
 }
