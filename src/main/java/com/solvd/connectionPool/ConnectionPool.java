@@ -10,20 +10,26 @@ public class ConnectionPool {
     public static final String USER = "user";
     public static final String PASSWORD = "password";
     public static final int COUNT = 5;
+    private static final ConnectionPool instance = new ConnectionPool();
 
     public BlockingQueue<Connection> availableConnection;
 
     private static final Logger LOGGER = Logger.getLogger(ConnectionPool.class);
 
-    public ConnectionPool(){
+    private ConnectionPool(){
         this.availableConnection = new ArrayBlockingQueue<>(COUNT);
         for (int i = 0; i < COUNT; i++) {
             Connection connection = new Connection(URL, USER, PASSWORD);
             availableConnection.add(connection);
         }
     }
+
+    public static ConnectionPool getInstance() {
+        return instance;
+    }
+
     public static void doTest() throws ConnectionPoolException {
-        ConnectionPool connectionPool = new ConnectionPool();
+        ConnectionPool connectionPool = getInstance();
         Connection c = connectionPool.getConnection();
         Connection c1 = connectionPool.getConnection();
         Connection c2 = connectionPool.getConnection();

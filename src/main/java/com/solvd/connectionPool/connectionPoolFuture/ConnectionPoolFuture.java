@@ -8,6 +8,7 @@ import org.apache.log4j.Logger;
 import java.util.concurrent.*;
 
 public class ConnectionPoolFuture {
+    private static final ConnectionPoolFuture instance = new ConnectionPoolFuture();
     private static final int COUNT = 5;
 
     private final BlockingQueue<FutureTask<Connection>> futureTasks = new ArrayBlockingQueue<>(ConnectionPool.COUNT);
@@ -15,7 +16,7 @@ public class ConnectionPoolFuture {
 
     private static final Logger LOGGER = Logger.getLogger(ConnectionPoolFuture.class);
 
-    public ConnectionPoolFuture(){
+    private ConnectionPoolFuture(){
         for (int i = 0; i < COUNT; i++) {
             Connection connection = new Connection(ConnectionPool.URL, ConnectionPool.USER, ConnectionPool.PASSWORD);
             ConnectionCallable connectionCallable = new ConnectionCallable(connection);
@@ -23,6 +24,9 @@ public class ConnectionPoolFuture {
             futureTasks.add(futureTask);
             executorService.execute(futureTask);
         }
+    }
+    public static ConnectionPoolFuture getInstance() {
+        return instance;
     }
 
     public static void doTest() throws ConnectionPoolException {
